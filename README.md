@@ -4,7 +4,7 @@
 </div>
 
 <div align="center">
-  <a href="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status"><img src="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status" /></a>
+  <a href="https://sonarcloud.io/summary/new_code?id=bartvdbraak_hellob.art"><img src="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status" /></a>
   <a href="https://github.com/bartvdbraak/hellob.art/deployments/activity_log?environment=Production"><img src="https://img.shields.io/github/deployments/bartvdbraak/hellob.art/production?label=vercel&logo=vercel" /></a>
 </div>
 

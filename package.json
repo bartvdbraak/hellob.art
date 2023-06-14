@@ -2,6 +2,10 @@
   "name": "hellob.art",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Bart van der Braak",
+    "url": "https://hellob.art"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

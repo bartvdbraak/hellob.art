@@ -1,7 +1,6 @@
 export const siteConfig = {
-  name: "Taxonomy",
-  description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
+  name: "hellob.art",
+  description: "a simple portfolio made by bart van der braak.",
   url: "https://hellob.art",
   ogImage: "https://hellob.art/og.jpg",
   links: {

@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.6.5",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "prettier": "2.8.8"
   }
 }

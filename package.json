@@ -11,7 +11,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "typecheck": "tsc --noEmit",
+    "format:write": "prettier . --write --cache",
+    "format:check": "prettier . --check --cache"
   },
   "dependencies": {
     "@types/node": "20.3.1",

@@ -1,79 +1,96 @@
-import { Inter, Fjalla_One } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 
+import "@/styles/globals.css";
+import { siteConfig } from "@/config/site";
+import { absoluteUrl, cn } from "@/lib/utils";
+import { Analytics } from "@/components/analytics";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
-import "tailwindcss/tailwind.css";
 
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
+export const metadata = {
   title: {
-    default: "hellob.art",
-    template: "%s | hellob.art",
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: "a simple portfolio made by bart van der braak",
-  metadataBase: new URL("https://hellob.art"),
-  openGraph: {
-    title: "hellob.art",
-    description: "a simple portfolio made by bart van der braak",
-    url: "https://hellob.art",
-    siteName: "hellob.art",
-    locale: "en-US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+  description: siteConfig.description,
+  keywords: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Server Components",
+    "Radix UI",
+  ],
+  authors: [
+    {
+      name: "Bart van der Braak",
+      url: siteConfig.url,
     },
+  ],
+  creator: "shadcn",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
   },
   twitter: {
-    title: "hellob.art",
     card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: "@bartvdbraak",
   },
   icons: {
-    shortcut: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
+  manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const inter = Inter({
+const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
 });
 
-const fjallaOne = Fjalla_One({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-fjalla-one",
+// Font files can be colocated inside of `pages`
+const fontHeading = localFont({
+  src: "../assets/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-heading",
 });
 
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html
-        lang="en"
-        suppressHydrationWarning
-        className={[inter.variable, fjallaOne.variable].join(" ")}
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable,
+          fontHeading.variable
+        )}
       >
-        <head />
-        <body className="min-h-screen antialiased">
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <Analytics />
+          <TailwindIndicator />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

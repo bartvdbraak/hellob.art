@@ -1,7 +1,9 @@
+import { env } from "@/env.mjs";
+
 export const siteConfig = {
   name: "hellob.art",
   description: "a simple portfolio made by bart van der braak.",
-  url: "https://hellob.art",
+  url: env.NEXT_PUBLIC_APP_URL || "https://hellob.art",
   ogImage: "https://hellob.art/og.jpg",
   links: {
     linkedIn: "https://linkedin.com/in/bartvdbraak",

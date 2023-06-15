@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 
 import "@/styles/globals.css";
 import { siteConfig } from "@/config/site";
-import { absoluteUrl, cn } from "@/lib/utils";
-import { Analytics } from "@/components/analytics";
+import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -13,13 +13,16 @@ export const metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
+  metadataBase: new URL(`https://${siteConfig.url}}`),
   description: siteConfig.description,
   keywords: [
+    "Portfolio",
     "Next.js",
     "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
+    "Azure",
+    "Kubernetes",
+    "DevOps",
+    "Python",
   ],
   authors: [
     {
@@ -27,7 +30,7 @@ export const metadata = {
       url: siteConfig.url,
     },
   ],
-  creator: "shadcn",
+  creator: "bartvdbraak",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -64,7 +67,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-// Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
@@ -87,9 +89,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

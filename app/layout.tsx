@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "@/styles/globals.css";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@/components/analytics";
+import { Analytics } from "@vercel/analytics/react";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -89,9 +89,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
-          <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

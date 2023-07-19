@@ -1,57 +1,38 @@
-<div align="center">
-    <h1 align="center">hellob.art</h1>
-    <h5>a simple portfolio</h5>
-</div>
+# create-svelte
 
-<div align="center">
-  <a href="https://sonarcloud.io/summary/new_code?id=bartvdbraak_hellob.art"><img src="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status" /></a>
-  <a href="https://github.com/bartvdbraak/hellob.art/deployments/activity_log?environment=Production"><img src="https://img.shields.io/github/deployments/bartvdbraak/hellob.art/production?label=vercel&logo=vercel" /></a>
-</div>
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-<div align="center">
-  <a href="https://hellob.art?ref=github">hellob.art</a>
-</div>
-<br/>
+## Creating a project
 
-## Installation
+If you're seeing this, you've probably already done this step. Congrats!
 
-To install the project and its dependencies, follow these steps:
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-1.  Ensure you have `pnpm` installed on your system. If not, you can install it by running:
-
-    ```sh-session
-    npm install -g pnpm
-    ```
-
-2.  Run the following command to install the project dependencies:
-    ```sh-session
-    pnpm install
-    ```
-
-### Environment Variables
-
-After setting up the required services, you need to set the corresponding environment variables in the `/.env` file. To do this, follow these steps:
-
-1.  Make a copy of the `.env.example` file:
-
-    ```sh-session
-    cp .env.example .env
-    ```
-
-2.  Open the `.env` file in a text editor and populate the values for the services mentioned above.
-
-## Build
-
-To build the project, execute the following command:
-
-```sh-session
-pnpm build
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## Run
+## Developing
 
-To run the project locally, use the following command:
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```sh-session
-pnpm run dev
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

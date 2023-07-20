@@ -39,7 +39,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.7",
     "husky": "^8.0.3",
     "prettier": "2.8.8"
   }

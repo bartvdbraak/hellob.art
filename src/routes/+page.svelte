@@ -1,4 +1,3 @@
-<!-- Index.svelte -->
 <script>
 	import { calculateAge } from "$lib/calculate-age";
 

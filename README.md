@@ -1,38 +1,49 @@
-# create-svelte
+# hellob.art - Portfolio Project
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Introduction
 
-## Creating a project
+Welcome to hellob.art, my creative portfolio showcasing my coding journey, projects, and adventures in the world of technology! 🚀
 
-If you're seeing this, you've probably already done this step. Congrats!
+As a passionate DevOps engineer, I love solving problems with code and automation. I'm based in the beautiful Netherlands, near Amsterdam in the charming town of Zaandam.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Features
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- **Home Page:** A warm welcome and brief introduction about myself.
+- **Projects Page:** Showcase of my exciting projects and their descriptions.
+- **About Page:** Get to know me better - my skills, work, and interests.
+- **Blog Page:** Articles on various tech topics and my experiences.
+- **Contact Page:** Reach out to me for collaborations, chats, or just to say hi!
 
-## Developing
+## Installation
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+1. Clone this repository.
+2. Install dependencies using pnpm: `pnpm install`
+3. Start the development server: `pnpm run dev` or `pnpm run dev -- --open`
 
-```bash
-npm run dev
+## Technologies Used
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- **Svelte:** The framework used for building this portfolio project.
+- **SvelteKit:** The tooling and routing framework for Svelte projects.
+- **CSS:** Styling and layout designed with CSS.
 
-## Building
+## Deployment
 
-To create a production version of your app:
+The portfolio is hosted using [Vercel](https://vercel.com). You can access it at [https://hellob.art](https://hellob.art).
 
-```bash
-npm run build
-```
+## Contributing
 
-You can preview the production build with `npm run preview`.
+I'm open to contributions! If you find any bugs, have suggestions, or want to add something interesting, feel free to open an issue or submit a pull request.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## License
+
+This project is licensed under the MIT License. Feel free to explore, learn, and have fun!
+
+## Get in Touch
+
+Let's connect! You can find me on:
+
+- Website: [hellob.art](https://hellob.art)
+- GitHub: [github.com/bartvdbraak](https://github.com/bartvdbraak)
+- Email: bart@vanderbraak.nl
+
+Looking forward to hearing from you! 😊

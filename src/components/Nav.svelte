@@ -10,7 +10,6 @@
   </ul>
 </nav>
 
-
 <style>
   nav {
     background-color: #007bff;

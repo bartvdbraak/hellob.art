@@ -15,7 +15,7 @@
 	];
 </script>
 
-<Drawer>
+<Drawer width='w-[280px] md:w-[480px]'>
 	<Navigation {routes} />
 </Drawer>
 

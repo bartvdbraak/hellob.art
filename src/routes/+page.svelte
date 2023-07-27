@@ -1,7 +1,10 @@
-<!-- About.svelte -->
 <script lang='ts'>
 	import { calculateAge } from '$lib/calculate-age';
 </script>
+
+<svelte:head>
+	<title>hellob.art &mdash; home</title>
+</svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">
 	<h2 class="text-3xl font-bold mb-4">About Me</h2>

@@ -33,6 +33,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>hellob.art &mdash; projects</title>
+</svelte:head>
+
 <main class="container mx-auto px-4 py-8 text-left">
 	<h2 class="text-3xl font-bold mb-8">My Projects</h2>
 	<div class="w-full text-token grid grid-cols-1 md:grid-cols-2 gap-4">

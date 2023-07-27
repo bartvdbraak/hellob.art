@@ -1,7 +1,9 @@
 <script lang="ts">
-	import { AppBar, LightSwitch, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppBar, LightSwitch, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
+
+	export let progress: number;
 
 	function drawerOpen(): void {
 		drawerStore.open();
@@ -28,3 +30,5 @@
 		<LightSwitch />
 	</svelte:fragment>
 </AppBar>
+
+<ProgressBar label="Progress Bar" value={progress} max={100} rounded="" />

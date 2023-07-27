@@ -1,5 +1,5 @@
 <!-- About.svelte -->
-<script>
+<script lang='ts'>
 	import { calculateAge } from '$lib/calculate-age';
 </script>
 

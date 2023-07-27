@@ -1,11 +1,5 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    reviewers:
-      - "bartvdbraak"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

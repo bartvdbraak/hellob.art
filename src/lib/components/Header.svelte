@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppBar, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppBar, LightSwitch, drawerStore } from '@skeletonlabs/skeleton';
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
 
@@ -25,5 +25,6 @@
 			rel="noopener noreferrer"
 			class="btn-icon variant-primary"><GitHub /></a
 		>
+		<LightSwitch />
 	</svelte:fragment>
 </AppBar>

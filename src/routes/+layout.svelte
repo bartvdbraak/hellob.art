@@ -7,7 +7,7 @@
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
 
-	export let routes = [
+	let routes = [
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
 		{ url: '/tools', label: 'Tools' },

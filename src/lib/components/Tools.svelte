@@ -8,6 +8,8 @@
 		renderer: THREE.WebGLRenderer,
 		cube: THREE.Mesh<THREE.BoxGeometry, THREE.MeshBasicMaterial>;
 
+  const renderContainerId = 'render';
+
 	const toolsData = [
 		{ name: 'Git', info: 'Short note about Git and its usage.' },
 		{ name: 'DBeaver', info: 'Short note about DBeaver and its usage.' },
@@ -30,7 +32,10 @@
 
 		renderer = new THREE.WebGLRenderer();
 		renderer.setSize(window.innerWidth, window.innerHeight);
-		document.body.appendChild(renderer.domElement);
+		const renderContainer = document.getElementById(renderContainerId);
+		if (renderContainer) {
+			renderContainer.appendChild(renderer.domElement);
+		}
 
 		camera.position.z = 5;
 	};
@@ -87,3 +92,4 @@
 	};
 </script>
 
+<section id="render" />

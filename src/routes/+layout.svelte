@@ -2,7 +2,7 @@
 	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppShell } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer, drawerStore } from '@skeletonlabs/skeleton';
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -15,7 +15,11 @@
 	];
 </script>
 
-<AppShell>
+<Drawer>
+	<Navigation {routes} />
+</Drawer>
+
+<AppShell slotSidebarLeft="w-0 md:w-52">
 	<svelte:fragment slot="header">
 		<Header />
 	</svelte:fragment>

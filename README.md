@@ -1,30 +1,57 @@
-# hellob.art - Portfolio Project
+<div align="center">
+    <h1 align="center">hellob.art</h1>
+    <h5>a simple portfolio</h5>
+</div>
 
-## Introduction
+<div align="center">
+  <a href="https://sonarcloud.io/summary/new_code?id=bartvdbraak_hellob.art"><img src="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status" /></a>
+  <a href="https://github.com/bartvdbraak/hellob.art/deployments/activity_log?environment=Production"><img src="https://img.shields.io/github/deployments/bartvdbraak/hellob.art/production?label=vercel&logo=vercel" /></a>
+</div>
 
-Welcome to hellob.art, my creative portfolio showcasing my coding journey, projects, and adventures in the world of technology! 🚀
-
-As a passionate DevOps engineer, I love solving problems with code and automation. I'm based in the beautiful Netherlands, near Amsterdam in the charming town of Zaandam.
-
-## Features
-
-- **Home Page:** A warm welcome and brief introduction about myself.
-- **Projects Page:** Showcase of my exciting projects and their descriptions.
-- **About Page:** Get to know me better - my skills, work, and interests.
-- **Blog Page:** Articles on various tech topics and my experiences.
-- **Contact Page:** Reach out to me for collaborations, chats, or just to say hi!
+<div align="center">
+  <a href="https://hellob.art?ref=github">hellob.art</a>
+</div>
+<br/>
 
 ## Installation
 
-1. Clone this repository.
-2. Install dependencies using pnpm: `pnpm install`
-3. Start the development server: `pnpm run dev` or `pnpm run dev -- --open`
+To install the project and its dependencies, follow these steps:
+
+1.  Ensure you have `pnpm` installed on your system. If not, you can install it by running:
+
+    ```sh-session
+    npm install -g pnpm
+    ```
+
+2.  Run the following command to install the project dependencies:
+    ```sh-session
+    pnpm install
+    ```
+
+## Build
+
+To build the project, execute the following command:
+
+```sh-session
+pnpm build
+```
+
+## Run
+
+To run the project locally, use the following command:
+
+```sh-session
+pnpm run dev
+# or
+pnpm run dev -- --open
+```
 
 ## Technologies Used
 
 - **Svelte:** The framework used for building this portfolio project.
 - **SvelteKit:** The tooling and routing framework for Svelte projects.
-- **CSS:** Styling and layout designed with CSS.
+- **Tailwind CSS:** A utility-first CSS framework packed with classes.
+- **Skeleton:** UI Toolkit for Svelte + Tailwind.
 
 ## Deployment
 
@@ -36,7 +63,7 @@ I'm open to contributions! If you find any bugs, have suggestions, or want to ad
 
 ## License
 
-This project is licensed under the MIT License. Feel free to explore, learn, and have fun!
+This project is licensed under the GPLv3 License. Feel free to explore, learn, and have fun!
 
 ## Get in Touch
 

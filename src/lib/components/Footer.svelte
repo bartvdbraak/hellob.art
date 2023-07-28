@@ -4,7 +4,7 @@
 	import Vercel from './icons/Vercel.svelte';
 </script>
 
-<footer class="text-right px-4 py-2">
+<footer class="text-center px-4 py-2">
 	<p>
 		<a href="https://svelte.dev/" target="_blank" rel="noopener noreferrer">
 			Made with <Svelte />

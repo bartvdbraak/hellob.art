@@ -22,7 +22,7 @@
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<a
-			href="https://github.com/bartvdbraak/hellob.art"
+			href="https://github.com/bartvdbraak"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="btn-icon variant-primary"><GitHub /></a

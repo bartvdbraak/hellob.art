@@ -17,6 +17,9 @@ dependencies:
   three:
     specifier: ^0.155.0
     version: 0.155.0
+  web-vitals:
+    specifier: ^3.4.0
+    version: 3.4.0
 
 devDependencies:
   '@skeletonlabs/skeleton':
@@ -2339,6 +2342,10 @@ packages:
     dependencies:
       vite: 4.4.4
     dev: true
+
+  /web-vitals@3.4.0:
+    resolution: {integrity: sha512-n9fZ5/bG1oeDkyxLWyep0eahrNcPDF6bFqoyispt7xkW0xhDzpUBTgyDKqWDi1twT0MgH4HvvqzpUyh0ZxZV4A==}
+    dev: false
 
   /webgl-sdf-generator@1.1.1:
     resolution: {integrity: sha512-9Z0JcMTFxeE+b2x1LJTdnaT8rT8aEp7MVxkNwoycNmJWwPdzoXzMh0BjJSh/AEFP+KPYZUli814h8bJZFIZ2jA==}

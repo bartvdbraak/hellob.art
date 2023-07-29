@@ -1,2 +1,0 @@
-ignores: ["@types/node", "@types/react-dom", "autoprefixer", "postcss", "@commitlint/config-conventional", "prettier", "@t3-oss/env-nextjs"]
-skip-missing: false

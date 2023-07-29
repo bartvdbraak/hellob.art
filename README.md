@@ -28,18 +28,6 @@ To install the project and its dependencies, follow these steps:
     pnpm install
     ```
 
-### Environment Variables
-
-After setting up the required services, you need to set the corresponding environment variables in the `/.env` file. To do this, follow these steps:
-
-1.  Make a copy of the `.env.example` file:
-
-    ```sh-session
-    cp .env.example .env
-    ```
-
-2.  Open the `.env` file in a text editor and populate the values for the services mentioned above.
-
 ## Build
 
 To build the project, execute the following command:
@@ -54,4 +42,35 @@ To run the project locally, use the following command:
 
 ```sh-session
 pnpm run dev
+# or
+pnpm run dev -- --open
 ```
+
+## Technologies Used
+
+- **Svelte:** The framework used for building this portfolio project.
+- **SvelteKit:** The tooling and routing framework for Svelte projects.
+- **Tailwind CSS:** A utility-first CSS framework packed with classes.
+- **Skeleton:** UI Toolkit for Svelte + Tailwind.
+
+## Deployment
+
+The portfolio is hosted using [Vercel](https://vercel.com). You can access it at [https://hellob.art](https://hellob.art).
+
+## Contributing
+
+I'm open to contributions! If you find any bugs, have suggestions, or want to add something interesting, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the GPLv3 License. Feel free to explore, learn, and have fun!
+
+## Get in Touch
+
+Let's connect! You can find me on:
+
+- Website: [hellob.art](https://hellob.art)
+- GitHub: [github.com/bartvdbraak](https://github.com/bartvdbraak)
+- Email: bart@vanderbraak.nl
+
+Looking forward to hearing from you! 😊

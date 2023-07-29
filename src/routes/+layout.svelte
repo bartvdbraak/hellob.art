@@ -7,6 +7,20 @@
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
 
+  import { webVitals } from '$lib/vitals';
+  import { browser } from '$app/env';
+  import { page } from '$app/stores';
+
+  let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
+
+  $: if (browser && analyticsId) {
+    webVitals({
+      path: $page.url.pathname,
+      params: $page.params,
+      analyticsId
+    })
+  }
+
 	let routes = [
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
@@ -16,20 +30,17 @@
 
 	let progress = 0;
 
-  function handleScroll(event: Event) {
-    const { scrollTop, scrollHeight, clientHeight } = event.currentTarget as HTMLElement;
-    progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-  }
+	function handleScroll(event: Event) {
+		const { scrollTop, scrollHeight, clientHeight } = event.currentTarget as HTMLElement;
+		progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+	}
 </script>
 
 <Drawer width="w-[280px] md:w-[480px]">
 	<Navigation {routes} />
 </Drawer>
 
-<AppShell
-	slotSidebarLeft="w-0 md:w-40"
-	on:scroll={handleScroll}
->
+<AppShell slotSidebarLeft="w-0 md:w-40" on:scroll={handleScroll}>
 	<svelte:fragment slot="header">
 		<Header {progress} />
 	</svelte:fragment>

@@ -2,24 +2,25 @@
 	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppShell, Drawer, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
 
-  import { webVitals } from '$lib/vitals';
-  import { browser } from '$app/env';
-  import { page } from '$app/stores';
+	import { webVitals } from '$lib/vitals';
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
 
-  let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
+	let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
 
-  $: if (browser && analyticsId) {
-    webVitals({
-      path: $page.url.pathname,
-      params: $page.params,
-      analyticsId
-    })
-  }
+	$: if (browser && analyticsId) {
+		webVitals({
+			path: $page.url.pathname,
+			params: $page.params,
+			analyticsId,
+			debug: false
+		});
+	}
 
 	let routes = [
 		{ url: '/', label: 'Home' },

@@ -1,3 +1,4 @@
+<!-- src/routes/tools/Scene.svelte -->
 <script>
 	import Github3d from '$lib/components/gltf/Github3d.svelte';
 	import { T, useFrame } from '@threlte/core';

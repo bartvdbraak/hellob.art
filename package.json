@@ -1,6 +1,6 @@
 {
-	"name": "hellobart",
-	"version": "0.0.1",
+	"name": "hellob.art",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",

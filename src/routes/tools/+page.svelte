@@ -2,7 +2,6 @@
 <script lang="ts">
 	import { Canvas } from '@threlte/core';
 	import Scene from './Scene.svelte';
-	import Github3d from '$lib/components/gltf/Github3d.svelte';
 </script>
 
 <svelte:head>

@@ -10,7 +10,7 @@
 	}
 </script>
 
-<nav class="list-nav p-4">
+<nav class="list-nav p-3">
 	<ul>
 		{#each routes as route}
 			<li>

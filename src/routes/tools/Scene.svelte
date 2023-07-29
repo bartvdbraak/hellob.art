@@ -21,6 +21,8 @@
 	}}
 />
 
+<T.DirectionalLight position={[0, 10, 10]} />
+
 <T.Mesh
 	rotation.y={rotation}
 	position.y={1}
@@ -30,8 +32,9 @@
 	on:click={() => scale.set(3)}
 >
 	<T.BoxGeometry args={[1, 2, 1]} />
-	<T.MeshBasicMaterial color={[0, 0, 0]} />
+	<T.MeshBasicMaterial color={[255, 255, 255]} />
 </T.Mesh>
+
 
 <Github3d
   position={[0, 0, 0]}
@@ -39,4 +42,6 @@
 	on:pointerenter={() => scale.set(1.5)}
 	on:pointerleave={() => scale.set(1)}
 	on:click={() => scale.set(3)}
-/>
+>
+</Github3d>
+

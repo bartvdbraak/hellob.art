@@ -27,7 +27,7 @@
 </Drawer>
 
 <AppShell
-	slotSidebarLeft="w-0 md:w-52"
+	slotSidebarLeft="w-0 md:w-40"
 	on:scroll={handleScroll}
 >
 	<svelte:fragment slot="header">
@@ -37,7 +37,7 @@
 		<Navigation {routes} />
 	</svelte:fragment>
 	<!-- Router Slot -->
-	<div class="container p-10 mx-auto">
+	<div class="container p-4 mx-auto">
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

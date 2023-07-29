@@ -13,6 +13,5 @@
 
 	<Canvas>
 		<Scene />
-		<Github3d />
 	</Canvas>
 </main>

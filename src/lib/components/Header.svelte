@@ -2,6 +2,7 @@
 	import { AppBar, LightSwitch, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
+	import LinkedIn from './icons/LinkedIn.svelte';
 
 	export let progress: number;
 
@@ -22,10 +23,16 @@
 	</svelte:fragment>
 	<svelte:fragment slot="trail">
 		<a
+			href="https://linkedin.com/in/bartvdbraak"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="btn-icon btn-icon-sm hover:variant-soft-primary"><LinkedIn /></a
+		>
+		<a
 			href="https://github.com/bartvdbraak"
 			target="_blank"
 			rel="noopener noreferrer"
-			class="btn-icon variant-primary"><GitHub /></a
+			class="btn-icon btn-icon-sm hover:variant-soft-primary"><GitHub /></a
 		>
 		<LightSwitch />
 	</svelte:fragment>

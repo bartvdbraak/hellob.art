@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../theme.postcss';
+	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
 	import { AppShell, Drawer, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
@@ -11,7 +11,7 @@
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
 		{ url: '/tools', label: 'Tools' },
-		{ url: '/blog', label: 'Blog' }
+		// { url: '/blog', label: 'Blog' }
 	];
 
 	let progress = 0;

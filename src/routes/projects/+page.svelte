@@ -1,7 +1,9 @@
 <script>
-	import videowallImage from '$lib/assets/videowall-irl.jpeg';
-	import tripleLogo from '$lib/assets/triple-logo.png';
-	import zaantjeImage from '$lib/assets/zaantje-3d.png';
+	import videowallImage from '$lib/assets/videowall.jpeg';
+	import videowallLogo from '$lib/assets/videowall-logo.png';
+	import ticketDashboardImage from '$lib/assets/ticketdashboard.png';
+	import ticketDashboardLogo from '$lib/assets/triple-logo.png';
+	import zaantjeImage from '$lib/assets/zaantje.png';
 	import zaantjeLogo from '$lib/assets/zaantje-logo.png';
 	import ProjectCard from '$lib/components/ProjectCard.svelte';
 
@@ -10,16 +12,28 @@
 			id: 1,
 			link: '#',
 			headerImage: videowallImage,
-			headerSubTitle: 'Internal Project',
+			headerSubTitle: 'Private Project',
 			title: 'Videowall',
 			description: `An internal application to control an impressive 6x5 monitor setup with a user-friendly
-										frontend built on Next.js and a powerful backend developed in Golang.`,
-			logo: tripleLogo,
+										frontend built with React and Next.js utilizing a powerful backend developed in Golang.`,
+			logo: videowallLogo,
 			contributors: [],
 			date: '2021'
 		},
 		{
 			id: 2,
+			link: '#',
+			headerImage: ticketDashboardImage,
+			headerSubTitle: 'Private Project',
+			title: 'Ticket Dashboard',
+			description: `Web app that consolidates tickets from various sources into one view for easy navigation, filters, and search for efficient 
+			ticket management. Developed with Next.js for frontend and Golang for backend.`,
+			logo: ticketDashboardLogo,
+			contributors: [],
+			date: '2020'
+		},
+		{
+			id: 3,
 			link: 'https://zaantje.com',
 			headerImage: zaantjeImage,
 			headerSubTitle: 'Personal Project',
@@ -39,6 +53,15 @@
 
 <main class="container mx-auto px-4 py-8 text-left">
 	<h2 class="text-3xl font-bold mb-8">My Projects</h2>
+
+	<p class="text-lg leading-relaxed mb-8">
+		Here, you'll find a curated collection of projects that I've either created or contributed to as
+		a passionate DevOps engineer and developer. This portfolio encompasses a diverse range of
+		endeavors, including both public and private projects. With a mix of open-source contributions
+		and private collaborations from my corporate endeavors, this showcase represents my dedication
+		to pushing the boundaries of innovation in various domains.
+	</p>
+
 	<div class="w-full text-token grid grid-cols-1 md:grid-cols-2 gap-4">
 		{#each projects as project}
 			<ProjectCard

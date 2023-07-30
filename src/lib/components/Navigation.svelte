@@ -13,7 +13,7 @@
 <nav class="list-nav p-3">
 	<ul>
 		{#each routes as route}
-			<li>
+			<li class="pb-2">
 				<a class="{classesActive(route.url)}" href={route.url} on:click={drawerClose}>{route.label}</a>
 			</li>
 		{/each}

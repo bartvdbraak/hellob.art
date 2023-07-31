@@ -11,6 +11,8 @@ jobs:
     env:
       COMMENT_ID: unlighthouse-node${{matrix.node-version}}
       PORT: 8000
+      CLOUDFLARE_PROJECT: hellobart-unlighthouse
+      CLOUDFLARE_BRANCH: pull-${{ github.event.pull_request.number }}
     strategy:
       matrix:
         node-version: [18]
@@ -62,7 +64,7 @@ jobs:
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          command: pages publish .unlighthouse --branch=pull-${{ github.event.pull_request.number }}
+          command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}
 
       - name: Create result content
         id: create_result_content
@@ -79,7 +81,7 @@ jobs:
 
             const score = res => `${getEmoji(res)} ${formatScore(res)}`;
 
-            const reportUrl = ``;
+            const reportUrl = `https://${{ env.CLOUDFLARE_BRANCH }}.${{ env.CLOUDFLARE_PROJECT }}.pages.dev`;
 
             const comment = [
                 `⚡️ Lighthouse report for the changes in this PR:`,

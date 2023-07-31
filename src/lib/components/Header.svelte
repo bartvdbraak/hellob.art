@@ -25,7 +25,7 @@
 		<img width="32" height="24" src="./icon.svg" alt="Logo" srcset="" class="" />
 		<h1 class="h6">
 			<span
-				class="bg-gradient-to-br logo-text-gradient bg-clip-text text-transparent box-decoration-clone font-mono pl-3"
+				class="bg-gradient-to-br logo-text-gradient bg-clip-text text-transparent box-decoration-clone font-mono font-bold tracking-tighter pl-3"
 				>hellob.art</span
 			>
 		</h1>

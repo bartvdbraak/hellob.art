@@ -58,11 +58,10 @@ jobs:
             --reporter jsonExpanded \
             --build-static
 
-      - name: Upload report as artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: lighthouse-report
-          path: ./.unlighthouse
+      - name: Upload report to Cloudflare pages
+        run: |
+          wrangler init
+          wrangler pages publish .unlighthouse --site pr${{ github.event.pull_request.number }}
 
       - name: Create result content
         id: create_result_content
@@ -79,7 +78,7 @@ jobs:
 
             const score = res => `${getEmoji(res)} ${formatScore(res)}`;
 
-            const reportUrl = `https://api.github.com/repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/artifacts/${{ github.run_id }}/lighthouse-report`;
+            const reportUrl = ``;
 
             const comment = [
                 `⚡️ Lighthouse report for the changes in this PR:`,

@@ -19,8 +19,8 @@
 		<img src={headerImage} class="bg-black/50 w-full aspect-[21/9] object-cover object-top" alt="Post" />
 	</header>
 	<div class="p-4 space-y-4">
-		<h6 class="h6">{headerSubTitle}</h6>
-		<h3 class="h3" data-toc-ignore>{title}</h3>
+		<header class="h6">{headerSubTitle}</header>
+		<span class="h3" data-toc-ignore>{title}</span>
 		<article>
 			<p>
 				{description}

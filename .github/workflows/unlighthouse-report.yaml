@@ -59,9 +59,10 @@ jobs:
             --build-static
 
       - name: Upload report to Cloudflare pages
-        run: |
-          wrangler init
-          wrangler pages publish .unlighthouse --site pr${{ github.event.pull_request.number }}
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages publish .unlighthouse --branch=pull-${{ github.event.pull_request.number }}
 
       - name: Create result content
         id: create_result_content

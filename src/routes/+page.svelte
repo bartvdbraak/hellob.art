@@ -5,6 +5,7 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; home</title>
+	<meta name="description" content="Meet Bart, a passionate DevOps engineer from Zaandam, Netherlands. With expertise in Azure, Kubernetes, and automation, he loves solving challenges through code. Discover his journey, interests in cats and whiskey, and how to connect with him for exciting collaborations.">
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">

@@ -22,12 +22,12 @@ Command: npx @threlte/gltf@1.0.0-next.13 ./static/models/kubernetes.glb --transf
     <T.Mesh
       geometry={gltf.nodes.Curve.geometry}
       material={gltf.materials['SVGMat.006']}
-      rotation={[Math.PI / 2, 0, 0]}
+      rotation={[Math.PI / 2, 0, 0.9]}
     />
     <T.Mesh
       geometry={gltf.nodes.Curve001.geometry}
       material={gltf.materials['SVGMat.007']}
-      rotation={[Math.PI / 2, 0, 0]}
+      rotation={[Math.PI / 2, 0, 0.9]}
     />
   {:catch error}
     <slot name="error" {error} />

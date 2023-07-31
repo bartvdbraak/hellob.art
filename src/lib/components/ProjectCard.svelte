@@ -16,7 +16,7 @@
 
 <a class="card bg-initial card-hover overflow-hidden" href={link}>
 	<header>
-		<img src={headerImage} class="bg-black/50 w-full aspect-[21/9] object-cover" alt="Post" />
+		<img src={headerImage} class="bg-black/50 w-full aspect-[21/9] object-cover object-top" alt="Post" />
 	</header>
 	<div class="p-4 space-y-4">
 		<h6 class="h6">{headerSubTitle}</h6>

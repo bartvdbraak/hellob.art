@@ -2,6 +2,9 @@ name: Unlighthouse report
 
 on: [ pull_request ]
 
+permissions:
+  pull-requests: write
+
 jobs:
   unlighthouse:
     runs-on: ubuntu-latest

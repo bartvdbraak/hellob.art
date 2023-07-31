@@ -1,0 +1,125 @@
+name: Unlighthouse report
+
+on: [ pull_request ]
+
+jobs:
+  unlighthouse:
+    runs-on: ubuntu-latest
+    env:
+      COMMENT_ID: unlighthouse-node${{matrix.node-version}}
+      PORT: 8000
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - name: Create initial comment
+        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        with:
+          header: ${{ env.COMMENT_ID }}
+          message: |
+            ⚡️ Lighthouse report
+
+            ![loading](https://github.com/bartvdbraak/hellob.art/assets/3996360/0e00b3fc-d5f9-490b-9aa7-07cb4b59f85f)
+
+      - name: Checkout repository
+        uses: actions/checkout@v3.5.3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.6.11
+  
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3.7.0
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build production
+        run: pnpm run build
+        
+      - name: Preview production
+        run: pnpm run preview --port ${{ env.PORT }}
+
+      - name: Start Preview and Get Preview URL
+        run: |
+          pnpm run preview --port ${{ env.PORT }} & echo $! > preview_pid
+          sleep 3
+          PREVIEW_URL="http://localhost:${{ env.PORT }}"
+          echo "PREVIEW_URL=$PREVIEW_URL" >> $GITHUB_ENV
+
+      - name: Run unlighthouse
+        run: |
+          npx unlighthouse \
+            --site "${{ env.PREVIEW_URL }}" \
+            --reporter jsonExpanded \
+            --build-static
+
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: ./.unlighthouse
+
+      - name: Create result content
+        id: create_result_content
+        uses: actions/github-script@v6.4.1
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const fs = require('fs');
+
+            const result = JSON.parse(fs.readFileSync('.unlighthouse/ci-result.json', 'utf8'));
+
+            const formatScore = score => `${Math.round(score * 100)} (${score})`;
+            const getEmoji = score => score >= 0.9 ? '🟢' : score >= 0.5 ? '🟠' : '🔴';
+
+            const score = res => `${getEmoji(res)} ${formatScore(res)}`;
+
+            const reportUrl = `https://api.github.com/repos/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/artifacts/${{ github.run_id }}/lighthouse-report`;
+
+            const comment = [
+                `⚡️ Lighthouse report for the changes in this PR:`,
+                '| Category | Score |',
+                '| --- | --- |',
+                `| Performance | ${score(result.summary.categories.performance.averageScore)} |`,
+                `| Accessibility | ${score(result.summary.categories.accessibility.averageScore)} |`,
+                `| Best practices | ${score(result.summary.categories['best-practices'].averageScore)} |`,
+                `| SEO | ${score(result.summary.categories.seo.averageScore)} |`,
+                `| *Overall* | ${score(result.summary.score)} |`,
+                '',
+                '*Lighthouse scores for individual routes:*',
+                '',
+                '| Path | Performance | Accessibility | Best practices | SEO | Overall |',
+                '| --- | --- | --- | --- | --- | --- |',
+                `${result.routes.map(route => `| ${route.path} | ${score(route.categories.performance.score)} | ${score(route.categories.accessibility.score)} | ${score(route.categories['best-practices'].score)} | ${score(route.categories.seo.score)} | ${score(route.score)} |`).join('\n')}`,
+                '',
+                '*Lighthouse metrics:*',
+                '',
+                '| Metric | Average Value |',
+                '| --- | --- |',
+                `${Object.entries(result.summary.metrics).map(([metric, { averageNumericValue }]) => `| ${metric} | ${averageNumericValue} |`).join('\n')}`,
+                '',
+                `View the full Lighthouse report [here](${reportUrl}).`,
+            ].join('\n');
+
+            core.setOutput("comment", comment);
+
+      - name: Update comment with result
+        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        with:
+          header: ${{ env.COMMENT_ID }}
+          message: ${{ steps.create_result_content.outputs.comment }}
+
+      - name: Update comment on failure
+        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        if: ${{ failure() }}
+        with:
+          header: ${{ env.COMMENT_ID }}
+          message: |
+            ⚡️ Lighthouse report failed
+
+            See deployment for any errors

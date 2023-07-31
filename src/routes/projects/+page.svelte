@@ -49,6 +49,7 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; projects</title>
+	<meta name="description" content="Explore a diverse collection of web applications and virtual tours in the portfolio of a passionate DevOps engineer. Discover innovative projects in React, Golang, Next.js, and more.">
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">

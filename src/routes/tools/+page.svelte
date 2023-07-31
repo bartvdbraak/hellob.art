@@ -11,6 +11,7 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; tools</title>
+	<meta name="description" content="Explore essential DevOps tools like Kubernetes, Terraform, Warp, and version control platforms GitHub, Azure DevOps, and GitLab.">
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">

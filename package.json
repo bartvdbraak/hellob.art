@@ -36,7 +36,7 @@
 	"dependencies": {
 		"@threlte/core": "6.0.0",
 		"@threlte/extras": "5.0.0",
-		"@types/three": "^0.154.0",
+		"@types/three": "^0.155.0",
 		"@vercel/analytics": "^1.0.1",
 		"three": "^0.155.0",
 		"web-vitals": "^3.4.0"

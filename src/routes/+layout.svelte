@@ -2,7 +2,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppShell, Drawer, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -10,26 +10,23 @@
 	let routes = [
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
-		{ url: '/tools', label: 'Tools' },
+		{ url: '/tools', label: 'Tools' }
 		// { url: '/blog', label: 'Blog' }
 	];
 
 	let progress = 0;
 
-  function handleScroll(event: Event) {
-    const { scrollTop, scrollHeight, clientHeight } = event.currentTarget as HTMLElement;
-    progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-  }
+	function handleScroll(event: Event) {
+		const { scrollTop, scrollHeight, clientHeight } = event.currentTarget as HTMLElement;
+		progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
+	}
 </script>
 
 <Drawer width="w-[280px] md:w-[480px]">
 	<Navigation {routes} />
 </Drawer>
 
-<AppShell
-	slotSidebarLeft="w-0 md:w-40"
-	on:scroll={handleScroll}
->
+<AppShell slotSidebarLeft="w-0 md:w-40" on:scroll={handleScroll}>
 	<svelte:fragment slot="header">
 		<Header {progress} />
 	</svelte:fragment>

@@ -1,6 +1,6 @@
 name: Unlighthouse report
 
-on: [ pull_request ]
+on: [pull_request]
 
 permissions:
   pull-requests: write
@@ -33,7 +33,7 @@ jobs:
         uses: pnpm/action-setup@v2.2.4
         with:
           version: 8.6.11
-  
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3.7.0
         with:

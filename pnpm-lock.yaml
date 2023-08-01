@@ -9,8 +9,8 @@ dependencies:
     specifier: 6.0.0
     version: 6.0.0
   '@threlte/extras':
-    specifier: 5.0.0-next.16
-    version: 5.0.0-next.16(three@0.155.0)
+    specifier: 5.0.0
+    version: 5.0.0
   '@types/three':
     specifier: ^0.154.0
     version: 0.154.0
@@ -498,13 +498,13 @@ packages:
       three: 0.153.0
     dev: false
 
-  /@threlte/extras@5.0.0-next.16(three@0.155.0):
-    resolution: {integrity: sha512-KcjvVrRlvTtHlzHdRtvEHmQa+ijyr6CFLIIN1kISZHvvnReg4HuNOZQRgAfjXCDs8Rrmoq31H9nvcayfEDrIwA==}
+  /@threlte/extras@5.0.0:
+    resolution: {integrity: sha512-t6b45N+yfMQbwQpdalNQFfVsc67CYque83pCOPUtQFtjlgTNTYrlK6cGOxE2Cz3vncNRNz1P34Xlc4oXywsi/g==}
     dependencies:
       lodash: 4.17.21
-      troika-three-text: 0.47.2(three@0.155.0)
-    transitivePeerDependencies:
-      - three
+      svelte: 4.1.2
+      three: 0.153.0
+      troika-three-text: 0.47.2(three@0.153.0)
     dev: false
 
   /@tweenjs/tween.js@18.6.4:
@@ -2206,24 +2206,24 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /troika-three-text@0.47.2(three@0.155.0):
+  /troika-three-text@0.47.2(three@0.153.0):
     resolution: {integrity: sha512-qylT0F+U7xGs+/PEf3ujBdJMYWbn0Qci0kLqI5BJG2kW1wdg4T1XSxneypnF05DxFqJhEzuaOR9S2SjiyknMng==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
       bidi-js: 1.0.2
-      three: 0.155.0
-      troika-three-utils: 0.47.2(three@0.155.0)
+      three: 0.153.0
+      troika-three-utils: 0.47.2(three@0.153.0)
       troika-worker-utils: 0.47.2
       webgl-sdf-generator: 1.1.1
     dev: false
 
-  /troika-three-utils@0.47.2(three@0.155.0):
+  /troika-three-utils@0.47.2(three@0.153.0):
     resolution: {integrity: sha512-/28plhCxfKtH7MSxEGx8e3b/OXU5A0xlwl+Sbdp0H8FXUHKZDoksduEKmjQayXYtxAyuUiCRunYIv/8Vi7aiyg==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
-      three: 0.155.0
+      three: 0.153.0
     dev: false
 
   /troika-worker-utils@0.47.2:

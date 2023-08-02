@@ -61,7 +61,7 @@ jobs:
             --build-static
 
       - name: Upload report to Cloudflare pages
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@3.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}

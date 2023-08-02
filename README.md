@@ -58,13 +58,14 @@ I'm open to contributions! If you find any bugs, have suggestions, or want to ad
 This project is licensed under the GPLv3 License. Feel free to explore, learn, and have fun!
 
 Some dependencies may hold different licenses but are in compliance with GPLv3:
--  `MIT`: Compatible with GPLv3.
--  `Apache 2.0`: Compatible with GPLv3.
--  `BSD-3-Clause`: Compatible with GPLv3.
--  `BSD-2-Clause`: Compatible with GPLv3.
--  `ISC`: Compatible with GPLv3.
--  `Python-2.0`: Compatible with GPLv3. (Note: Python has its own license, and version 2.0 is compatible with GPLv3).
--  `CC-BY-4.0`: This is a Creative Commons license, which is not a software license. It's generally not recommended to include CC licenses in software projects due to potential compatibility issues. This might cause complications if you choose GPLv3.
--  `CC0-1.0`: Not a software license, but it is explicitly designed to waive all copyrights, making it effectively compatible with GPLv3.
--  `0BSD`: Compatible with GPLv3.
--  `(MIT OR CC0-1.0)`: MIT is compatible with GPLv3, and CC0-1.0 is effectively compatible with GPLv3.
+
+- `MIT`: Compatible with GPLv3.
+- `Apache 2.0`: Compatible with GPLv3.
+- `BSD-3-Clause`: Compatible with GPLv3.
+- `BSD-2-Clause`: Compatible with GPLv3.
+- `ISC`: Compatible with GPLv3.
+- `Python-2.0`: Compatible with GPLv3. (Note: Python has its own license, and version 2.0 is compatible with GPLv3).
+- `CC-BY-4.0`: This is a Creative Commons license, which is not a software license. It's generally not recommended to include CC licenses in software projects due to potential compatibility issues. This might cause complications if you choose GPLv3.
+- `CC0-1.0`: Not a software license, but it is explicitly designed to waive all copyrights, making it effectively compatible with GPLv3.
+- `0BSD`: Compatible with GPLv3.
+- `(MIT OR CC0-1.0)`: MIT is compatible with GPLv3, and CC0-1.0 is effectively compatible with GPLv3.

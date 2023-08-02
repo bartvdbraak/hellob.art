@@ -4,26 +4,34 @@ Command: npx @threlte/gltf@1.0.0-next.13 ./static/models/warp.glb --transform
 -->
 
 <script>
-  import { Group } from 'three'
-  import { T, forwardEventHandlers } from '@threlte/core'
-  import { useGltf } from '@threlte/extras'
+	import { Group } from 'three';
+	import { T, forwardEventHandlers } from '@threlte/core';
+	import { useGltf } from '@threlte/extras';
 
-  export const ref = new Group()
+	export const ref = new Group();
 
-  const gltf = useGltf('/models/warp-transformed.glb', { useDraco: true })
+	const gltf = useGltf('/models/warp-transformed.glb', { useDraco: true });
 
-  const component = forwardEventHandlers()
+	const component = forwardEventHandlers();
 </script>
 
 <T is={ref} dispose={false} {...$$restProps} bind:this={$component}>
-  {#await gltf}
-    <slot name="fallback" />
-  {:then gltf}
-    <T.Mesh geometry={gltf.nodes.Warp.geometry} material={gltf.materials.SVGMat} rotation={[Math.PI / 2, 0, 0.3]} />
-    <T.Mesh geometry={gltf.nodes.Warp001.geometry} material={gltf.materials.Gradient} rotation={[Math.PI / 2, 0, 0.3]} />
-  {:catch error}
-    <slot name="error" {error} />
-  {/await}
+	{#await gltf}
+		<slot name="fallback" />
+	{:then gltf}
+		<T.Mesh
+			geometry={gltf.nodes.Warp.geometry}
+			material={gltf.materials.SVGMat}
+			rotation={[Math.PI / 2, 0, 0.3]}
+		/>
+		<T.Mesh
+			geometry={gltf.nodes.Warp001.geometry}
+			material={gltf.materials.Gradient}
+			rotation={[Math.PI / 2, 0, 0.3]}
+		/>
+	{:catch error}
+		<slot name="error" {error} />
+	{/await}
 
-  <slot {ref} />
+	<slot {ref} />
 </T>

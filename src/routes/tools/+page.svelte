@@ -2,7 +2,7 @@
 <script lang="ts">
 	import { Canvas } from '@threlte/core';
 	import { T } from '@threlte/core';
-	import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras';
+	import { ContactShadows, Float, OrbitControls } from '@threlte/extras';
 	import Github from './models/Github.svelte';
 	import TerraformFlat from './models/TerraformFlat.svelte';
 	import Kubernetes from './models/Kubernetes.svelte';
@@ -11,7 +11,10 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; tools</title>
-	<meta name="description" content="Explore essential DevOps tools like Kubernetes, Terraform, Warp, and version control platforms GitHub, Azure DevOps, and GitLab.">
+	<meta
+		name="description"
+		content="Explore essential DevOps tools like Kubernetes, Terraform, Warp, and version control platforms GitHub, Azure DevOps, and GitLab."
+	/>
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">
@@ -55,15 +58,6 @@
 
 			<T.DirectionalLight intensity={0.5} position.x={5} position.y={3} />
 			<T.AmbientLight intensity={0.2} />
-
-			<!-- <Grid
-			position.y={-0.001}
-			cellColor="#ffffff"
-			sectionColor="#ffffff"
-			sectionThickness={0}
-			fadeDistance={40}
-			cellSize={2}
-		/> -->
 
 			<ContactShadows scale={10} blur={2} far={2.5} opacity={0.5} />
 

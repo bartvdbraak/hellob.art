@@ -1,17 +1,12 @@
 <div align="center">
     <h1 align="center">hellob.art</h1>
-    <h5>a simple portfolio</h5>
+    <h5>personal website built with Svelte</h5>
 </div>
 
 <div align="center">
   <a href="https://sonarcloud.io/summary/new_code?id=bartvdbraak_hellob.art"><img src="https://sonarcloud.io/api/project_badges/measure?project=bartvdbraak_hellob.art&metric=alert_status" /></a>
   <a href="https://github.com/bartvdbraak/hellob.art/deployments/activity_log?environment=Production"><img src="https://img.shields.io/github/deployments/bartvdbraak/hellob.art/production?label=vercel&logo=vercel" /></a>
 </div>
-
-<div align="center">
-  <a href="https://hellob.art?ref=github">hellob.art</a>
-</div>
-<br/>
 
 ## Installation
 
@@ -52,10 +47,7 @@ pnpm run dev -- --open
 - **SvelteKit:** The tooling and routing framework for Svelte projects.
 - **Tailwind CSS:** A utility-first CSS framework packed with classes.
 - **Skeleton:** UI Toolkit for Svelte + Tailwind.
-
-## Deployment
-
-The portfolio is hosted using [Vercel](https://vercel.com). You can access it at [https://hellob.art](https://hellob.art).
+- **Threlte:** Declarative Three.js for Svelte.
 
 ## Contributing
 
@@ -65,12 +57,15 @@ I'm open to contributions! If you find any bugs, have suggestions, or want to ad
 
 This project is licensed under the GPLv3 License. Feel free to explore, learn, and have fun!
 
-## Get in Touch
+Some dependencies may hold different licenses but are in compliance with GPLv3:
 
-Let's connect! You can find me on:
-
-- Website: [hellob.art](https://hellob.art)
-- GitHub: [github.com/bartvdbraak](https://github.com/bartvdbraak)
-- Email: bart@vanderbraak.nl
-
-Looking forward to hearing from you! 😊
+- `MIT`: Compatible with GPLv3.
+- `Apache 2.0`: Compatible with GPLv3.
+- `BSD-3-Clause`: Compatible with GPLv3.
+- `BSD-2-Clause`: Compatible with GPLv3.
+- `ISC`: Compatible with GPLv3.
+- `Python-2.0`: Compatible with GPLv3. (Note: Python has its own license, and version 2.0 is compatible with GPLv3).
+- `CC-BY-4.0`: This is a Creative Commons license, which is not a software license. It's generally not recommended to include CC licenses in software projects due to potential compatibility issues. This might cause complications if you choose GPLv3.
+- `CC0-1.0`: Not a software license, but it is explicitly designed to waive all copyrights, making it effectively compatible with GPLv3.
+- `0BSD`: Compatible with GPLv3.
+- `(MIT OR CC0-1.0)`: MIT is compatible with GPLv3, and CC0-1.0 is effectively compatible with GPLv3.

@@ -5,7 +5,10 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; home</title>
-	<meta name="description" content="Meet Bart, a passionate DevOps engineer from Zaandam, Netherlands. With expertise in Azure, Kubernetes, and automation, he loves solving challenges through code. Discover his journey, interests in cats and whiskey, and how to connect with him for exciting collaborations.">
+	<meta
+		name="description"
+		content="Meet Bart, a passionate DevOps engineer from Zaandam, Netherlands. With expertise in Azure, Kubernetes, and automation, he loves solving challenges through code. Discover his journey, interests in cats and whiskey, and how to connect with him for exciting collaborations."
+	/>
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">
@@ -38,21 +41,25 @@
 			</p>
 		</div>
 		<div class="md:col-span-1 flex justify-end">
-			<img src={picture} alt="Bart van der Braak with a noire effect" class="max-w-1/3 mb-4 object-cover" />
+			<img
+				src={picture}
+				alt="Bart van der Braak with a noire effect"
+				class="max-w-1/3 mb-4 object-cover"
+			/>
 		</div>
 	</div>
-	
+
 	<h2 class="text-3xl font-bold mb-4">Solving Problems with Code and Automation</h2>
 
 	<p class="text-lg leading-relaxed mb-8">
 		As a DevOps engineer, I thrive on solving complex challenges with the power of code and
-		automation. My passion for streamlining workflows led me to create internal tooling using
-		APIs, boosting productivity for myself and my colleagues. Outside of work, I enjoy taking on
-		side projects that push my boundaries, expanding my skill set, and exploring new
-		technologies. I strongly believe that innovation and continuous learning are key drivers of
-		success in the ever-evolving tech landscape.
+		automation. My passion for streamlining workflows led me to create internal tooling using APIs,
+		boosting productivity for myself and my colleagues. Outside of work, I enjoy taking on side
+		projects that push my boundaries, expanding my skill set, and exploring new technologies. I
+		strongly believe that innovation and continuous learning are key drivers of success in the
+		ever-evolving tech landscape.
 	</p>
-	
+
 	<h2 class="text-3xl font-bold mb-4">Cat Lover and Whiskey Enthusiast</h2>
 
 	<p class="text-lg leading-relaxed mb-8">

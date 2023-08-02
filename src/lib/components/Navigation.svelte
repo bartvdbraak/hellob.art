@@ -14,7 +14,8 @@
 	<ul>
 		{#each routes as route}
 			<li class="pb-2">
-				<a class="{classesActive(route.url)}" href={route.url} on:click={drawerClose}>{route.label}</a>
+				<a class={classesActive(route.url)} href={route.url} on:click={drawerClose}>{route.label}</a
+				>
 			</li>
 		{/each}
 	</ul>

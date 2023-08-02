@@ -1,11 +1,8 @@
-<script>
-	/** @type {import('./$types').PageData} */
-	export let data;
+<script lang="ts">
+	import { BlogPost } from 'sveltekit-notion-blog';
+	import type { PageData } from './$types';
+	
+	export let data: PageData;
 </script>
 
-<svelte:head>
-	<title>hellob.art &mdash; {data.title}</title>
-</svelte:head>
-
-<!-- <h1>{data.title}</h1>
-<div>{@html data.content}</div> -->
+<BlogPost {data} />

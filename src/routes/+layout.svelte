@@ -27,11 +27,20 @@
 		});
 	}
 
+	import { initNotion } from "sveltekit-notion-blog";
+
+	export const prerender = true;
+
+	initNotion({
+			databaseId: import.meta.env.PUBLIC_NOTION_DATABASE_ID,
+			notionToken: import.meta.env.PUBLIC_NOTION_TOKEN,
+	});
+
 	let routes = [
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
-		{ url: '/tools', label: 'Tools' }
-		// { url: '/blog', label: 'Blog' }
+		{ url: '/tools', label: 'Tools' },
+		{ url: '/blog', label: 'Blog' },
 	];
 
 	let progress = 0;

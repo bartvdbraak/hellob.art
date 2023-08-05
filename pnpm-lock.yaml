@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@threlte/core':
-    specifier: 6.0.0
-    version: 6.0.0
+    specifier: 6.0.2
+    version: 6.0.2
   '@threlte/extras':
     specifier: 5.0.4
     version: 5.0.4
@@ -494,8 +494,8 @@ packages:
       - supports-color
     dev: true
 
-  /@threlte/core@6.0.0:
-    resolution: {integrity: sha512-CS8aXTUvJh+fGmcIR3DRfUlOdaI6YOCiszfVuP6IKJMCDemEC0tBFgrZRYU76Dt70a5CMS6PpJLAUq0ZsUezZA==}
+  /@threlte/core@6.0.2:
+    resolution: {integrity: sha512-xEgCvOlQAKTKxpOhShvzP1IX/ME1pAv2yLBTdTAyqkxVGm/R/hzR5J7KhrEGrC6ixTXUhYwTZey7cHk5oOzAAQ==}
     dependencies:
       svelte: 4.1.2
       three: 0.153.0

@@ -9,8 +9,8 @@ dependencies:
     specifier: 6.0.0
     version: 6.0.0
   '@threlte/extras':
-    specifier: 5.0.3
-    version: 5.0.3
+    specifier: 5.0.4
+    version: 5.0.4
   '@types/three':
     specifier: ^0.155.0
     version: 0.155.0
@@ -501,8 +501,8 @@ packages:
       three: 0.153.0
     dev: false
 
-  /@threlte/extras@5.0.3:
-    resolution: {integrity: sha512-MD9JYUu/hVBIDxvv352uGnyveoP43PhKSVbsRowAgf8tWxf8C/cDiyKfMvbxGnnLKj9f3uwWORkN88ck1w7pMQ==}
+  /@threlte/extras@5.0.4:
+    resolution: {integrity: sha512-IDmmDJBrFbFiGpgf8NB49yfSCKdVxkJRwg2kte7kj4wxrk6Nn1bdR2FTy+ReWJ9g4fE85n4XkkLJmereIZv4AA==}
     dependencies:
       lodash-es: 4.17.21
       svelte: 4.1.2

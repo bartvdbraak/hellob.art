@@ -9,8 +9,8 @@ dependencies:
     specifier: 6.0.0
     version: 6.0.0
   '@threlte/extras':
-    specifier: 5.0.1
-    version: 5.0.1
+    specifier: 5.0.3
+    version: 5.0.3
   '@types/three':
     specifier: ^0.155.0
     version: 0.155.0
@@ -501,10 +501,10 @@ packages:
       three: 0.153.0
     dev: false
 
-  /@threlte/extras@5.0.1:
-    resolution: {integrity: sha512-bRmkkBGXuiDXQWhG8RBN3EKLw0vjwd3LpfQzZrAiPqfo/d61bw5Zrkq4SSv/iH7XVXiZjKdmlJFqWnwaL0ngNw==}
+  /@threlte/extras@5.0.3:
+    resolution: {integrity: sha512-MD9JYUu/hVBIDxvv352uGnyveoP43PhKSVbsRowAgf8tWxf8C/cDiyKfMvbxGnnLKj9f3uwWORkN88ck1w7pMQ==}
     dependencies:
-      lodash: 4.17.21
+      lodash-es: 4.17.21
       svelte: 4.1.2
       three: 0.153.0
       troika-three-text: 0.47.2(three@0.153.0)
@@ -1629,13 +1629,13 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
-
-  /lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: false
 
   /log-update@4.0.0:
     resolution: {integrity: sha512-9fkkDevMefjg0mmzWFBW8YkFP91OrizzkW3diF7CpG+S2EYdy4+TVfGwz1zeF8x7hCx1ovSPTOE9Ngib74qqUg==}

@@ -44,7 +44,7 @@
 		overall robustness and stability of our cloud infrastructure.
 	</p>
 
-	<div class="max-h-80">
+	<div class="h-72">
 		<Canvas>
 			<T.PerspectiveCamera makeDefault position={[-10, 15, 20]} fov={10}>
 				<OrbitControls

@@ -1,5 +1,5 @@
 <div align="center">
-    <h1 align="center">hellob.art</h1>
+    <a href="https://hellob.art"><h1 align="center">hellob.art</h1></a>
     <h5>personal website built with Svelte</h5>
 </div>
 

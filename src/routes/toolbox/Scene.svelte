@@ -7,7 +7,7 @@
 	import { spring } from 'svelte/motion';
 
 	interactivity();
-	const scale = spring(250 * 1);
+	const scale = spring(1);
 
 	let rotation = 0;
 	useFrame((state, delta) => {
@@ -31,7 +31,7 @@
 		position.z={-2}
 		position.x={-1}
 		scale={$scale}
-		on:pointerenter={() => scale.set(250 * 1.5)}
-		on:pointerleave={() => scale.set(250 * 1)}
+		on:pointerenter={() => scale.set(1.5)}
+		on:pointerleave={() => scale.set(1)}
 	/>
 </Float>

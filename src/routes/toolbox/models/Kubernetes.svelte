@@ -9,6 +9,13 @@ Command: npx @threlte/gltf@1.0.0-next.13 ./static/models/kubernetes.glb --transf
 	import { useGltf } from '@threlte/extras';
 
 	export const ref = new Group();
+	const initialScale = 250;
+	const offsetOrigin: [number, number, number] = [-0.0091, -0.0086, 0.0007];
+	const multipliedOffset: [number, number, number] = [
+		offsetOrigin[0] * initialScale,
+		offsetOrigin[1] * initialScale,
+		offsetOrigin[2] * initialScale
+	];
 
 	const gltf = useGltf('/models/kubernetes-transformed.glb', { useDraco: true });
 
@@ -23,11 +30,15 @@ Command: npx @threlte/gltf@1.0.0-next.13 ./static/models/kubernetes.glb --transf
 			geometry={gltf.nodes.Curve.geometry}
 			material={gltf.materials['SVGMat.006']}
 			rotation={[Math.PI / 2, 0, 0]}
+			position={multipliedOffset}
+			scale={initialScale}
 		/>
 		<T.Mesh
 			geometry={gltf.nodes.Curve001.geometry}
 			material={gltf.materials['SVGMat.007']}
 			rotation={[Math.PI / 2, 0, 0]}
+			position={multipliedOffset}
+			scale={initialScale}
 		/>
 	{:catch error}
 		<slot name="error" {error} />

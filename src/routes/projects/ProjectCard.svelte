@@ -1,17 +1,16 @@
-<script>
+<script lang="ts">
 	import { Avatar } from '@skeletonlabs/skeleton';
 
-	export let link = '';
-	export let headerImage = '';
-	export let headerSubTitle = '';
-	export let title = '';
-	export let description = '';
-	export let logo = '';
-	/**
-	 * @type {any[]}
-	 */
-	export let contributors = [];
-	export let date = '';
+	import type { Project } from './projects-cards';
+
+	export let link: Project['link'];
+	export let headerImage: Project['headerImage'];
+	export let headerSubTitle: Project['headerSubTitle'];
+	export let title: Project['title'];
+	export let description: Project['description'];
+	export let logo: Project['logo'];
+	export let contributors: Project['contributors'];
+	export let date: Project['date'];
 </script>
 
 <a class="card bg-initial card-hover overflow-hidden" href={link}>

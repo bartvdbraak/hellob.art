@@ -34,14 +34,14 @@
 		<a
 			href="https://linkedin.com/in/bartvdbraak"
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="external"
 			class="btn-icon btn-icon-sm hover:variant-soft-primary"
 			><LinkedIn /><span class="sr-only">LinkedIn Profile of Bart van der Braak</span></a
 		>
 		<a
 			href="https://github.com/bartvdbraak"
 			target="_blank"
-			rel="noopener noreferrer"
+			rel="external"
 			class="btn-icon btn-icon-sm hover:variant-soft-primary"
 			><GitHub /><span class="sr-only">GitHub Profile of Bart van der Braak</span></a
 		>

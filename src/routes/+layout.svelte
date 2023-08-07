@@ -30,7 +30,7 @@
 	let routes = [
 		{ url: '/', label: 'Home' },
 		{ url: '/projects', label: 'Projects' },
-		{ url: '/tools', label: 'Tools' }
+		{ url: '/toolbox', label: 'Toolbox' }
 		// { url: '/blog', label: 'Blog' }
 	];
 

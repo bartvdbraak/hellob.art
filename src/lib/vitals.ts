@@ -30,8 +30,8 @@ function sendToAnalytics(
 		debug: boolean;
 	}
 ) {
-	const page = Object.entries(options.params).reduce(
-		(acc, [key, value]) => acc.replace(value, `[${key}]`),
+	const page = (Object.entries(options.params) as [string, string][]).reduce(
+		(acc: string, [key, value]: [string, string]) => acc.replace(value, `[${key}]`),
 		options.path
 	);
 

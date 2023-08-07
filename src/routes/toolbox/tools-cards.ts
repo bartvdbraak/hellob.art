@@ -216,7 +216,7 @@ const tools: Tool[] = [
 		description:
 			'Azure Data Studio is a cross-platform database tool that provides a modern editor experience for managing data across multiple sources.',
 		logo: AzureDataStudioLogo,
-		toolUrl: 'https://docs.microsoft.com/sql/azure-data-studio'
+		toolUrl: 'https://azure.microsoft.com/products/data-studio'
 	},
 	{
 		name: 'Wireshark',
@@ -232,7 +232,7 @@ const tools: Tool[] = [
 		description:
 			'Rectangle is a window management tool for macOS that provides keyboard shortcuts for resizing and organizing windows efficiently.',
 		logo: RectangleLogo,
-		toolUrl: 'https://www.rectangle.com'
+		toolUrl: 'https://rectangleapp.com/'
 	},
 	{
 		name: 'PyCharm',
@@ -343,7 +343,7 @@ const tools: Tool[] = [
 		title: 'Azure Storage Management Application',
 		description: 'A standalone app that facilitates the management of Azure storage data.',
 		logo: AzureStorageExplorerLogo,
-		toolUrl: 'https://azure.microsoft.com/features/storage-explorer/'
+		toolUrl: 'https://azure.microsoft.com/products/storage/storage-explorer'
 	},
 	{
 		name: 'Meld',
@@ -399,7 +399,7 @@ const tools: Tool[] = [
 		description:
 			'An App for managing and switching hosts files, allowing me to easily switch between different environments.',
 		logo: SwitchHostsLogo,
-		toolUrl: 'https://oldj.github.io/SwitchHosts/'
+		toolUrl: 'https://switchhosts.vercel.app/'
 	},
 	{
 		name: 'Slack',

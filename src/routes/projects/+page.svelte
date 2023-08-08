@@ -1,50 +1,6 @@
 <script>
-	import videowallImage from '$lib/assets/videowall.jpeg';
-	import videowallLogo from '$lib/assets/videowall-logo.png';
-	import ticketDashboardImage from '$lib/assets/ticketdashboard.png';
-	import ticketDashboardLogo from '$lib/assets/triple-logo.png';
-	import zaantjeImage from '$lib/assets/zaantje.png';
-	import zaantjeLogo from '$lib/assets/zaantje-logo.png';
-	import ProjectCard from '$lib/components/ProjectCard.svelte';
-
-	let projects = [
-		{
-			id: 1,
-			link: '#',
-			headerImage: videowallImage,
-			headerSubTitle: 'Private Project',
-			title: 'Videowall',
-			description: `An internal application to control an impressive 6x5 monitor setup with a user-friendly
-										frontend built with React and Next.js utilizing a powerful backend developed in Golang.`,
-			logo: videowallLogo,
-			contributors: [],
-			date: '2021'
-		},
-		{
-			id: 2,
-			link: '#',
-			headerImage: ticketDashboardImage,
-			headerSubTitle: 'Private Project',
-			title: 'Ticket Dashboard',
-			description: `Web app that consolidates tickets from various sources into one view for easy navigation, filters, and search for efficient 
-			ticket management. Developed with Next.js for frontend and Golang for backend.`,
-			logo: ticketDashboardLogo,
-			contributors: [],
-			date: '2020'
-		},
-		{
-			id: 3,
-			link: 'https://zaantje.com',
-			headerImage: zaantjeImage,
-			headerSubTitle: 'Personal Project',
-			title: 'Zaantje',
-			description: `A SPA crafted with Nuxt.js and Vue.js, backed by Sanity CMS, taking you 
-										on a virtual tour of Zaandam, showcasing locations of famous music videos.`,
-			logo: zaantjeLogo,
-			contributors: [],
-			date: '2020'
-		}
-	];
+	import ProjectCard from './ProjectCard.svelte';
+	import projects from './projects-cards';
 </script>
 
 <svelte:head>
@@ -56,7 +12,7 @@
 </svelte:head>
 
 <main class="container mx-auto px-4 py-8 text-left">
-	<h2 class="text-3xl font-bold mb-8">My Projects</h2>
+	<h2 class="text-3xl font-bold mb-8">Projects</h2>
 
 	<p class="text-lg leading-relaxed mb-8">
 		Here, you'll find a curated collection of projects that I've either created or contributed to as
@@ -68,16 +24,29 @@
 
 	<div class="w-full text-token grid grid-cols-1 md:grid-cols-2 gap-4">
 		{#each projects as project}
-			<ProjectCard
-				link={project.link}
-				headerImage={project.headerImage}
-				headerSubTitle={project.headerSubTitle}
-				title={project.title}
-				description={project.description}
-				logo={project.logo}
-				contributors={project.contributors}
-				date={project.date}
-			/>
+			{#if project.link}
+				<a href={project.link}>
+					<ProjectCard
+						headerImage={project.headerImage}
+						headerSubTitle={project.headerSubTitle}
+						title={project.title}
+						description={project.description}
+						logo={project.logo}
+						contributors={project.contributors}
+						date={project.date}
+					/>
+				</a>
+			{:else}
+				<ProjectCard
+					headerImage={project.headerImage}
+					headerSubTitle={project.headerSubTitle}
+					title={project.title}
+					description={project.description}
+					logo={project.logo}
+					contributors={project.contributors}
+					date={project.date}
+				/>
+			{/if}
 		{/each}
 	</div>
 </main>

@@ -5,12 +5,21 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@theatre/core':
+    specifier: ^0.6.2
+    version: 0.6.2
+  '@theatre/studio':
+    specifier: ^0.6.2
+    version: 0.6.2(@theatre/core@0.6.2)
   '@threlte/core':
     specifier: 6.0.3
     version: 6.0.3(svelte@4.1.0)(three@0.155.0)
   '@threlte/extras':
     specifier: 5.0.5
     version: 5.0.5(svelte@4.1.0)(three@0.155.0)
+  '@threlte/theatre':
+    specifier: ^1.0.5
+    version: 1.0.5(@theatre/core@0.6.2)(@theatre/studio@0.6.2)(@threlte/core@6.0.3)(@threlte/extras@5.0.5)(svelte@4.1.0)(three@0.155.0)
   '@types/three':
     specifier: ^0.155.0
     version: 0.155.0
@@ -494,6 +503,27 @@ packages:
       - supports-color
     dev: true
 
+  /@theatre/core@0.6.2:
+    resolution: {integrity: sha512-AmIIJ4rcSREn2VbNRH6cchIBj9hG9+lEkhVrABDfXojnjMJK/ZzX5dyaJGGgyjye2jKmc4sItoyEqbF7jdkqJQ==}
+    dependencies:
+      '@theatre/dataverse': 0.6.2
+    dev: false
+
+  /@theatre/dataverse@0.6.2:
+    resolution: {integrity: sha512-wcnl6QuOVhNFzYL2rmu4lbVRR4t5A6a5ZBjZ4To+J/pKQ5MozPZtWJVPguMAa+rgoxAwVh7sZ0SNEpfYXajgaQ==}
+    dependencies:
+      lodash-es: 4.17.21
+    dev: false
+
+  /@theatre/studio@0.6.2(@theatre/core@0.6.2):
+    resolution: {integrity: sha512-jX5m7aYMIuXXZXIqc5ZJPIlgP4QnU1lc3sDRcjoNantz47Qzq3/JjRt5MIrahsKKONZwgEvl5WA57qCo7IW+hA==}
+    peerDependencies:
+      '@theatre/core': '*'
+    dependencies:
+      '@theatre/core': 0.6.2
+      '@theatre/dataverse': 0.6.2
+    dev: false
+
   /@threlte/core@6.0.3(svelte@4.1.0)(three@0.155.0):
     resolution: {integrity: sha512-5fTK+iQGeXpqU3HVKp6CkWIXa1KlUxarvChQU+GhU1ScgmqFn791S0fQsFammrufqNLEWzpG8IG0q1iE7fpQkQ==}
     peerDependencies:
@@ -514,6 +544,24 @@ packages:
       svelte: 4.1.0
       three: 0.155.0
       troika-three-text: 0.47.2(three@0.155.0)
+    dev: false
+
+  /@threlte/theatre@1.0.5(@theatre/core@0.6.2)(@theatre/studio@0.6.2)(@threlte/core@6.0.3)(@threlte/extras@5.0.5)(svelte@4.1.0)(three@0.155.0):
+    resolution: {integrity: sha512-QDTLvcKf/0wdcyJKVE9qHl8E8PgHNnz5uU+rnqeOUafNcO8bgHo+8GU2x+EcVYqP64rV0BnkjfGt/gtgRhuTSA==}
+    peerDependencies:
+      '@theatre/core': '>=0.6'
+      '@theatre/studio': '>=0.6'
+      '@threlte/core': '>=6.0.3'
+      '@threlte/extras': '>=5.0.5'
+      svelte: '>=4'
+      three: '>=0.133'
+    dependencies:
+      '@theatre/core': 0.6.2
+      '@theatre/studio': 0.6.2(@theatre/core@0.6.2)
+      '@threlte/core': 6.0.3(svelte@4.1.0)(three@0.155.0)
+      '@threlte/extras': 5.0.5(svelte@4.1.0)(three@0.155.0)
+      svelte: 4.1.0
+      three: 0.155.0
     dev: false
 
   /@tweenjs/tween.js@18.6.4:

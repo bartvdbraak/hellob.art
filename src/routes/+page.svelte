@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { calculateAge } from '$lib/calculate-age';
-	import picture from '$lib/assets/bartvdbraak_profile_noire.jpg';
+	import bartvdbraakImage from '$lib/assets/bartvdbraak.jpg';
 </script>
 
 <svelte:head>
@@ -42,7 +42,7 @@
 		</div>
 		<div class="md:col-span-1 flex justify-end">
 			<img
-				src={picture}
+				src={bartvdbraakImage}
 				alt="Bart van der Braak with a noire effect"
 				class="max-w-1/3 mb-4 object-cover"
 			/>

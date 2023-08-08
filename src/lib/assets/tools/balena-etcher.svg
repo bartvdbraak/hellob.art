@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16.959793mm"
+   height="18.550676mm"
+   viewBox="0 0 16.959793 18.550676"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-96.043749,-138.64166)">
+    <g
+       id="Ebene_1"
+       transform="matrix(0.26458333,0,0,0.26458333,95.805625,138.11588)">&#10;	&#10;	<g
+   id="g12">&#10;		<path
+   class="st2"
+   d="M 34.5,64.3 V 72 c 1.2,-0.2 2.4,-0.6 3.4,-1.2 L 60,58.2 c 3.1,-1.8 5,-5 5,-8.6 V 24.5 c 0,-1.1 -0.2,-2.2 -0.6,-3.3 l -6.7,3.9 -18.5,10.6 c -3.8,2.7 -4.6,5.2 -4.7,8.2 z"
+   id="path7"
+   style="fill:#fbbf09" />
+&#10;		<path
+   class="st3"
+   d="m 56.2,22.4 6.7,-3.9 C 62.1,17.4 61.1,16.5 60,15.9 L 37.9,3.3 C 34.8,1.5 31,1.6 28,3.3 L 6,15.9 c -1.2,0.7 -2.2,1.6 -3,2.7 l 6.7,3.9 18.5,10.6 c 2.2,1.4 3.7,2.8 4.7,4.4 1,-1.6 2.5,-3 4.7,-4.4 z"
+   id="path8"
+   style="fill:#00a275" />
+&#10;		<path
+   class="st4"
+   d="M 8.3,25.2 1.5,21.3 c -0.4,1 -0.6,2.1 -0.6,3.2 v 25.2 c 0,3.5 1.9,6.8 5,8.6 l 22,12.6 c 1,0.6 2.2,1 3.4,1.2 V 64.4 43.9 c -0.1,-3 -0.9,-5.5 -4.7,-8.2 z"
+   id="path9"
+   style="fill:#eb8a04" />
+&#10;		<path
+   class="st5"
+   d="m 64.4,21.2 -6.7,3.9 c 0.2,0.7 0.4,1.5 0.4,2.3 v 19.4 c 0,2.8 -1.5,5.5 -4,6.9 l -17,9.7 c -0.8,0.4 -1.6,0.7 -2.5,0.9 V 72 C 35.8,71.8 37,71.4 38,70.8 L 60,58.2 c 3.1,-1.8 5,-5 5,-8.6 V 24.5 c 0,-1.1 -0.2,-2.2 -0.6,-3.3 z"
+   id="path10"
+   style="fill:#f5ea64" />
+&#10;		<path
+   class="st6"
+   d="m 12,20.5 16.9,-9.7 c 2.5,-1.4 5.6,-1.4 8,0 l 17,9.7 c 0.9,0.5 1.6,1.2 2.2,1.9 l 6.7,-3.9 C 62,17.4 61,16.5 59.9,15.9 L 37.9,3.3 C 34.8,1.5 31,1.6 28,3.3 L 6,15.9 c -1.2,0.7 -2.2,1.6 -3,2.7 l 6.7,3.9 c 0.7,-0.8 1.4,-1.5 2.3,-2 z"
+   id="path11"
+   style="fill:#48c0ed" />
+&#10;		<path
+   class="st7"
+   d="M 28.9,63.4 12,53.7 C 9.5,52.3 8,49.6 8,46.8 V 27.4 C 8,26.6 8.1,25.9 8.3,25.2 L 1.5,21.3 c -0.4,1 -0.6,2.1 -0.6,3.2 v 25.2 c 0,3.5 1.9,6.8 5,8.6 l 22,12.6 c 1,0.6 2.2,1 3.4,1.2 v -7.7 c -0.8,-0.3 -1.6,-0.6 -2.4,-1 z"
+   id="path12"
+   style="fill:#fdd657" />
+&#10;	</g>
+&#10;</g>
+  </g>
+</svg>

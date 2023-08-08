@@ -24,16 +24,29 @@
 
 	<div class="w-full text-token grid grid-cols-1 md:grid-cols-2 gap-4">
 		{#each projects as project}
-			<ProjectCard
-				link={project.link}
-				headerImage={project.headerImage}
-				headerSubTitle={project.headerSubTitle}
-				title={project.title}
-				description={project.description}
-				logo={project.logo}
-				contributors={project.contributors}
-				date={project.date}
-			/>
+			{#if project.link}
+				<a href={project.link}>
+					<ProjectCard
+						headerImage={project.headerImage}
+						headerSubTitle={project.headerSubTitle}
+						title={project.title}
+						description={project.description}
+						logo={project.logo}
+						contributors={project.contributors}
+						date={project.date}
+					/>
+				</a>
+			{:else}
+				<ProjectCard
+					headerImage={project.headerImage}
+					headerSubTitle={project.headerSubTitle}
+					title={project.title}
+					description={project.description}
+					logo={project.logo}
+					contributors={project.contributors}
+					date={project.date}
+				/>
+			{/if}
 		{/each}
 	</div>
 </main>

@@ -38,7 +38,7 @@ import MeldLogo from '$lib/assets/tools/meld.svg';
 import KarabinerElementsLogo from '$lib/assets/tools/karabiner-elements.png';
 import KustomizeLogo from '$lib/assets/tools/kustomize.svg';
 import InkScapeLogo from '$lib/assets/tools/inkscape.svg';
-import OBSLogo from '$lib/assets/tools/obs.png';
+import OBSLogo from '$lib/assets/tools/obs.svg';
 import WireGuardLogo from '$lib/assets/tools/wireguard.svg';
 import SwitchHostsLogo from '$lib/assets/tools/switchhosts.svg';
 import SlackLogo from '$lib/assets/tools/slack.svg';

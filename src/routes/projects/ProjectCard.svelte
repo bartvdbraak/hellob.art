@@ -3,7 +3,6 @@
 
 	import type { Project } from './projects-cards';
 
-	export let link: Project['link'];
 	export let headerImage: Project['headerImage'];
 	export let headerSubTitle: Project['headerSubTitle'];
 	export let title: Project['title'];
@@ -13,7 +12,7 @@
 	export let date: Project['date'];
 </script>
 
-<a class="card bg-initial card-hover overflow-hidden" href={link}>
+<div class="card bg-initial card-hover overflow-hidden">
 	<header>
 		<img
 			src={headerImage}
@@ -37,8 +36,7 @@
 			{#each contributors as contributor}
 				<Avatar src={contributor.imageSrc} width="w-8" />
 			{/each}
-
 			<small>{new Date(date).toLocaleDateString()}</small>
 		</div>
 	</footer>
-</a>
+</div>

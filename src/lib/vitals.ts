@@ -3,15 +3,13 @@ import { onCLS, onFCP, onFID, onLCP, onTTFB } from 'web-vitals';
 
 const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals';
 
-// Improve type safety by defining the navigator.connection type
 interface NavigatorWithConnection extends Navigator {
 	connection: {
 		effectiveType: string;
 	};
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Params = Record<string, any>; // Define a type for 'params'
+type Params = Record<string, string>;
 
 function getConnectionSpeed() {
 	return 'connection' in navigator &&
@@ -49,10 +47,8 @@ function sendToAnalytics(
 		console.log('[Web Vitals]', metric.name, JSON.stringify(body, null, 2));
 	}
 
-	// Serialize body to a URLSearchParams object
 	const searchParams = new URLSearchParams(body);
 
-	// The type 'Record<string, string>' is compatible with 'URLSearchParams'
 	const blob = new Blob([searchParams.toString()], {
 		type: 'application/x-www-form-urlencoded'
 	});
@@ -69,7 +65,7 @@ function sendToAnalytics(
 }
 
 export function webVitals(options: {
-	params: Params; // Use the defined 'Params' type here
+	params: Params;
 	path: string;
 	analyticsId: string;
 	debug: boolean;

@@ -27,9 +27,11 @@
 			</p>
 		</div>
 		<div class="md:col-span-1 flex justify-end">
-			<Canvas>
-				<Scene />
-			</Canvas>
+			<div class="sm:h-60 w-full">
+				<Canvas>
+					<Scene />
+				</Canvas>
+			</div>
 		</div>
 	</div>
 

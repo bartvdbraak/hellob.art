@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Canvas } from '@threlte/core';
-	import Scene from './Scene.svelte';
+	import Scene from '../toolbox/Scene.svelte';
 	import { Theatre } from '@threlte/theatre';
+	import { T } from '@threlte/core';
 </script>
 
 <svelte:head>
@@ -12,6 +13,8 @@
 	<Canvas>
 		<Theatre>
 			<Scene />
+			<T.AxesHelper />
+			<T.GridHelper />
 		</Theatre>
 	</Canvas>
 </main>

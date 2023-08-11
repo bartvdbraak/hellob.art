@@ -13,7 +13,7 @@
 	/>
 </svelte:head>
 
-<main class="container mx-auto px-4 py-8 text-left">
+<div class="py-6 sm:py-8 lg:py-12 md:mt-8 mx-auto max-w-screen-xl px-4 md:px-8">
 	<h2 class="text-3xl font-bold mb-8">Toolbox</h2>
 
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-3 pb-2">
@@ -46,4 +46,4 @@
 			/>
 		{/each}
 	</div>
-</main>
+</div>

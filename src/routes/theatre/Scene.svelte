@@ -1,18 +1,21 @@
 <script>
-	import { T } from '@threlte/core';
+	import { T, useFrame } from '@threlte/core';
 	import { OrbitControls } from '@threlte/extras';
-	import { SheetObject } from '@threlte/theatre';
-	import Kubernetes from '../toolbox/models/Kubernetes.svelte';
+	import Warp from '../toolbox/models/Warp.svelte';
+
+	let githubRotation = 0;
+	useFrame((state, delta) => {
+		githubRotation += 0.1 * delta;
+	});
 </script>
 
 <T.PerspectiveCamera position={[0, 5, 10]} makeDefault>
 	<OrbitControls target.y={1.5} />
 </T.PerspectiveCamera>
+<T.DirectionalLight intensity={0.5} position.x={2} position.y={3} />
+<T.AmbientLight intensity={0.9} />
+
+<Warp rotation.y={githubRotation} />
 
 <T.AxesHelper></T.AxesHelper>
-
-<SheetObject key="Kubernetes" let:Transform>
-	<Transform>
-		<Kubernetes scale={1}></Kubernetes>
-	</Transform>
-</SheetObject>
+<T.GridHelper></T.GridHelper>

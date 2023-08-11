@@ -39,6 +39,7 @@
 
 <Drawer width="w-[280px] md:w-[200px]" position="right" bgDrawer="bg-gray-200 dark:bg-gray-800">
 	<div class="p-5 w-full mx-auto">
+		<h2 class="text-3xl font-bold mb-12 z-10 text-center">Pages</h2>
 		<Navigation {routes} />
 	</div>
 </Drawer>

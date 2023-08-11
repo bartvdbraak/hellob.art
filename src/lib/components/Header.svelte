@@ -3,7 +3,10 @@
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
-
+	import routes from '$lib/routes';
+	import { page } from '$app/stores';
+	$: classesActive = (href: string) =>
+		href === $page.url.pathname ? 'underline decoration-indigo-500' : '';
 	export let progress: number;
 
 	function drawerOpen(): void {
@@ -11,41 +14,51 @@
 	}
 </script>
 
-<AppBar>
+<AppBar background="">
 	<svelte:fragment slot="lead">
-		<button
-			aria-label="Toggle navigation menu"
-			class="md:hidden btn btn-sm mr-4"
-			on:click={drawerOpen}
-		>
-			<span>
-				<Hamburger />
-			</span>
-		</button>
-		<img width="32" height="24" src="./icon.svg" alt="Logo" srcset="" class="" />
-		<h1 class="h6">
-			<span
-				class="bg-gradient-to-br logo-text-gradient bg-clip-text text-transparent box-decoration-clone font-mono font-bold tracking-tighter pl-3"
-				>hellob.art</span
-			>
-		</h1>
+		<a href="/" class="md:ml-4 ml-1">
+			<img src="./logo@3x.png" alt="hellob.art logo" class="h-8" />
+		</a>
 	</svelte:fragment>
+
+	<nav>
+		<ul class="flex">
+			{#each routes as route}
+				<li class="mx-2">
+					<a class={classesActive(route.url)} href={route.url}>
+						<span class="flex-auto">{route.label}</span>
+					</a>
+				</li>{/each}
+		</ul>
+	</nav>
+
 	<svelte:fragment slot="trail">
 		<a
 			href="https://linkedin.com/in/bartvdbraak"
 			target="_blank"
 			rel="external"
-			class="btn-icon btn-icon-sm hover:variant-soft-primary"
-			><LinkedIn /><span class="sr-only">LinkedIn Profile of Bart van der Braak</span></a
+			class="btn-icon btn-icon-md hover:variant-soft-primary"
 		>
+			<LinkedIn />
+			<span class="sr-only">LinkedIn Profile of Bart van der Braak</span>
+		</a>
 		<a
 			href="https://github.com/bartvdbraak"
 			target="_blank"
 			rel="external"
-			class="btn-icon btn-icon-sm hover:variant-soft-primary"
-			><GitHub /><span class="sr-only">GitHub Profile of Bart van der Braak</span></a
+			class="btn-icon btn-icon-md hover:variant-soft-primary"
 		>
+			<GitHub />
+			<span class="sr-only">GitHub Profile of Bart van der Braak</span>
+		</a>
 		<LightSwitch />
+		<button
+			aria-label="Toggle navigation menu"
+			class="btn btn-sm mr-4 md:hidden"
+			on:click={drawerOpen}
+		>
+			<Hamburger />
+		</button>
 	</svelte:fragment>
 </AppBar>
 
@@ -53,7 +66,9 @@
 <ProgressBar
 	label="Progress Bar"
 	labelledby="progress-bar-label"
+	height="h-0.5"
 	value={progress}
 	max={100}
 	rounded=""
+	meter="bg-indigo-500"
 />

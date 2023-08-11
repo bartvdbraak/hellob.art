@@ -1,5 +1,6 @@
 <script lang="ts">
-	import '@skeletonlabs/skeleton/themes/theme-crimson.css';
+	// import '@skeletonlabs/skeleton/themes/theme-crimson.css';
+	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
 	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
@@ -15,6 +16,7 @@
 	import { webVitals } from '$lib/vitals';
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
+	import routes from '$lib/routes';
 
 	let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
 
@@ -27,13 +29,6 @@
 		});
 	}
 
-	let routes = [
-		{ url: '/', label: 'Home' },
-		{ url: '/projects', label: 'Projects' },
-		{ url: '/toolbox', label: 'Toolbox' }
-		// { url: '/blog', label: 'Blog' }
-	];
-
 	let progress = 0;
 
 	function handleScroll(event: Event) {
@@ -42,22 +37,19 @@
 	}
 </script>
 
-<Drawer width="w-[280px] md:w-[480px]">
-	<Navigation {routes} />
+<Drawer width="w-[280px] md:w-[200px]" position="right" bgDrawer="bg-gray-200 dark:bg-gray-800">
+	<div class="p-5 w-full mx-auto">
+		<Navigation {routes} />
+	</div>
 </Drawer>
 
-<AppShell slotSidebarLeft="w-0 md:w-40" on:scroll={handleScroll}>
+<AppShell on:scroll={handleScroll}>
 	<svelte:fragment slot="header">
 		<Header {progress} />
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarLeft">
-		<Navigation {routes} />
-	</svelte:fragment>
-	<!-- Router Slot -->
-	<div class="container p-4 mx-auto">
-		<slot />
-	</div>
-	<!-- ---- / ---- -->
+
+	<slot />
+
 	<svelte:fragment slot="pageFooter">
 		<Footer />
 	</svelte:fragment>

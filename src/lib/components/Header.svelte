@@ -5,8 +5,7 @@
 	import LinkedIn from './icons/LinkedIn.svelte';
 	import routes from '$lib/routes';
 	import { page } from '$app/stores';
-	$: classesActive = (href: string) =>
-		href === $page.url.pathname ? 'underline decoration-indigo-500' : '';
+	$: classesActive = (href: string) => (href === $page.url.pathname ? 'underline' : '');
 	export let progress: number;
 
 	function drawerOpen(): void {
@@ -17,15 +16,20 @@
 <AppBar background="">
 	<svelte:fragment slot="lead">
 		<a href="/" class="md:ml-4 ml-1">
-			<img src="./logo@3x.png" alt="hellob.art logo" class="h-8" />
+			<img src="./logo@3x.png" alt="hellob.art logo" class="max-h-8" />
 		</a>
 	</svelte:fragment>
 
-	<nav>
+	<nav class="hidden md:block">
 		<ul class="flex">
 			{#each routes as route}
 				<li class="mx-2">
-					<a class={classesActive(route.url)} href={route.url}>
+					<a
+						class={`${classesActive(
+							route.url
+						)} decoration-indigo-500 hover:underline hover:decoration-indigo-300`}
+						href={route.url}
+					>
 						<span class="flex-auto">{route.label}</span>
 					</a>
 				</li>{/each}
@@ -37,7 +41,7 @@
 			href="https://linkedin.com/in/bartvdbraak"
 			target="_blank"
 			rel="external"
-			class="btn-icon btn-icon-md hover:variant-soft-primary"
+			class="btn-icon btn-icon-sm hover:variant-soft-primary"
 		>
 			<LinkedIn />
 			<span class="sr-only">LinkedIn Profile of Bart van der Braak</span>
@@ -46,15 +50,15 @@
 			href="https://github.com/bartvdbraak"
 			target="_blank"
 			rel="external"
-			class="btn-icon btn-icon-md hover:variant-soft-primary"
+			class="btn-icon btn-icon-sm hover:variant-soft-primary"
 		>
 			<GitHub />
 			<span class="sr-only">GitHub Profile of Bart van der Braak</span>
 		</a>
-		<LightSwitch />
+		<LightSwitch bgLight="bg-white" fillLight="fill-white" width="w-8" height="h-4" />
 		<button
 			aria-label="Toggle navigation menu"
-			class="btn btn-sm mr-4 md:hidden"
+			class="btn-icon btn-icon-sm hover:variant-soft-primary md:hidden"
 			on:click={drawerOpen}
 		>
 			<Hamburger />

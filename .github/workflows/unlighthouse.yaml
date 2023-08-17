@@ -18,7 +18,7 @@ jobs:
         node-version: [18]
     steps:
       - name: Create initial comment
-        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        uses: marocchino/sticky-pull-request-comment@v2.8.0
         with:
           header: ${{ env.COMMENT_ID }}
           message: |
@@ -111,13 +111,13 @@ jobs:
             core.setOutput("comment", comment);
 
       - name: Update comment with result
-        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        uses: marocchino/sticky-pull-request-comment@v2.8.0
         with:
           header: ${{ env.COMMENT_ID }}
           message: ${{ steps.create_result_content.outputs.comment }}
 
       - name: Update comment on failure
-        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        uses: marocchino/sticky-pull-request-comment@v2.8.0
         if: ${{ failure() }}
         with:
           header: ${{ env.COMMENT_ID }}
@@ -127,7 +127,7 @@ jobs:
             See deployment for any errors
 
       - name: Update comment on cancel
-        uses: marocchino/sticky-pull-request-comment@v2.7.0
+        uses: marocchino/sticky-pull-request-comment@v2.8.0
         if: ${{ cancelled() }}
         with:
           header: ${{ env.COMMENT_ID }}

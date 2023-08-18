@@ -34,14 +34,21 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: npm install
+      - name: Retrieve Vercel Preview URL
+        uses: zentered/vercel-preview-url@v1.1.9
+        id: vercel_preview_url
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          vercel_project_id: ${{ vars.VERCEL_PROJECT_ID }}
 
-      - name: Build production
-        run: npm run build
-
-      - name: Start Preview and Get Preview URL
-        run: npm run preview -- --port=${{ env.PORT }} & echo $! > preview_pid
+      - name: Await Vercel Deployment
+        uses: UnlyEd/github-action-await-vercel@v1.2.43
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          deployment-url: ${{ steps.vercel_preview_url.outputs.preview_url }}
+          timeout: 120
 
       - name: Install Dependencies
         run: npm add -g @unlighthouse/cli puppeteer
@@ -49,7 +56,7 @@ jobs:
       - name: Run Unlighthouse
         run: |
           unlighthouse-ci \
-            --site "http://localhost:${{ env.PORT }}" \
+            --site "${{ steps.vercel_preview_url.outputs.preview_url }}" \
             --reporter jsonExpanded \
             --build-static
 

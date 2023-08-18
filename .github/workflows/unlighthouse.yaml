@@ -51,13 +51,14 @@ jobs:
           timeout: 120
 
       - name: Install Dependencies
-        run: npm add -g @unlighthouse/cli puppeteer
+        run: pnpm install -g @unlighthouse/cli puppeteer
 
       - name: Run Unlighthouse
         run: |
           unlighthouse-ci \
             --site "${{ steps.vercel_preview_url.outputs.preview_url }}" \
             --reporter jsonExpanded \
+            --samples 3 \
             --build-static
 
       - name: Upload report to Cloudflare pages

@@ -7,6 +7,11 @@
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import { fade } from 'svelte/transition';
+
+	export let data;
+
+	$: ({ pathname } = data);
 
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
@@ -49,7 +54,11 @@
 		<Header {progress} />
 	</svelte:fragment>
 
-	<slot />
+	{#key pathname}
+		<div in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
+			<slot />
+		</div>
+	{/key}
 
 	<svelte:fragment slot="pageFooter">
 		<Footer />

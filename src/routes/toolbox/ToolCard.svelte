@@ -14,7 +14,12 @@
 >
 	<div class="flex flex-col gap-6">
 		<div class="flex gap-6">
-			<img src={logo} alt={name + ' logo'} class="h-12 w-12 rounded-sm object-contain" />
+			<img
+				src={logo}
+				alt={name + ' logo'}
+				class="h-12 w-12 rounded-sm object-contain"
+				loading="lazy"
+			/>
 			<div class="grow">
 				<h4 class="mb-0">{name}</h4>
 				<p class="text-faded text-sm font-normal">{title}</p>

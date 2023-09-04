@@ -12,14 +12,14 @@ dependencies:
     specifier: ^0.7.0
     version: 0.7.0(@theatre/core@0.7.0)
   '@threlte/core':
-    specifier: 6.0.6
-    version: 6.0.6(svelte@4.1.0)(three@0.155.0)
+    specifier: 6.0.7
+    version: 6.0.7(svelte@4.1.0)(three@0.155.0)
   '@threlte/extras':
     specifier: 5.2.0
     version: 5.2.0(svelte@4.1.0)(three@0.155.0)
   '@threlte/theatre':
     specifier: ^2.0.0
-    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.6)(@threlte/extras@5.2.0)(svelte@4.1.0)(three@0.155.0)
+    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.2.0)(svelte@4.1.0)(three@0.155.0)
   '@types/three':
     specifier: ^0.155.0
     version: 0.155.0
@@ -524,8 +524,8 @@ packages:
       '@theatre/dataverse': 0.7.0
     dev: false
 
-  /@threlte/core@6.0.6(svelte@4.1.0)(three@0.155.0):
-    resolution: {integrity: sha512-nB1MgGc/3vXmsbrgPVK9m9lTrFx5EdPB368oagzZZxzmqLD60aEmbRzF9JfyWtU59HP7KBLWC3Z8pXb883a4Sg==}
+  /@threlte/core@6.0.7(svelte@4.1.0)(three@0.155.0):
+    resolution: {integrity: sha512-g3Xdvv1e+QJbM0BCwVh+507Te9cdKjCDF6njXE7o8lzbLHu7qbWu6X18z3jgjue1IqPNRSXdRhpElrmEj6I+gw==}
     peerDependencies:
       svelte: '>=4'
       three: '>=0.133'
@@ -546,7 +546,7 @@ packages:
       troika-three-text: 0.47.2(three@0.155.0)
     dev: false
 
-  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.6)(@threlte/extras@5.2.0)(svelte@4.1.0)(three@0.155.0):
+  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.2.0)(svelte@4.1.0)(three@0.155.0):
     resolution: {integrity: sha512-bNCIg3rNhc3XvDx5Xc78EJHn2N3AbNyKAdLMqeXOJGpe9m6H7lSZNiBBGZtD+UK789F0/xRk/1A8hXpUTMCwYQ==}
     peerDependencies:
       '@theatre/core': '>=0.6'
@@ -558,7 +558,7 @@ packages:
     dependencies:
       '@theatre/core': 0.7.0
       '@theatre/studio': 0.7.0(@theatre/core@0.7.0)
-      '@threlte/core': 6.0.6(svelte@4.1.0)(three@0.155.0)
+      '@threlte/core': 6.0.7(svelte@4.1.0)(three@0.155.0)
       '@threlte/extras': 5.2.0(svelte@4.1.0)(three@0.155.0)
       svelte: 4.1.0
       three: 0.155.0

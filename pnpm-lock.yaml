@@ -13,13 +13,13 @@ dependencies:
     version: 0.7.0(@theatre/core@0.7.0)
   '@threlte/core':
     specifier: 6.0.7
-    version: 6.0.7(svelte@4.1.0)(three@0.155.0)
+    version: 6.0.7(svelte@4.1.0)(three@0.156.0)
   '@threlte/extras':
     specifier: 5.6.1
-    version: 5.6.1(svelte@4.1.0)(three@0.155.0)
+    version: 5.6.1(svelte@4.1.0)(three@0.156.0)
   '@threlte/theatre':
     specifier: ^2.0.0
-    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.6.1)(svelte@4.1.0)(three@0.155.0)
+    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.6.1)(svelte@4.1.0)(three@0.156.0)
   '@types/three':
     specifier: ^0.155.0
     version: 0.155.0
@@ -27,8 +27,8 @@ dependencies:
     specifier: ^1.0.1
     version: 1.0.1
   three:
-    specifier: ^0.155.0
-    version: 0.155.0
+    specifier: ^0.156.0
+    version: 0.156.0
   web-vitals:
     specifier: ^3.4.0
     version: 3.4.0
@@ -541,17 +541,17 @@ packages:
       '@theatre/dataverse': 0.7.0
     dev: false
 
-  /@threlte/core@6.0.7(svelte@4.1.0)(three@0.155.0):
+  /@threlte/core@6.0.7(svelte@4.1.0)(three@0.156.0):
     resolution: {integrity: sha512-g3Xdvv1e+QJbM0BCwVh+507Te9cdKjCDF6njXE7o8lzbLHu7qbWu6X18z3jgjue1IqPNRSXdRhpElrmEj6I+gw==}
     peerDependencies:
       svelte: '>=4'
       three: '>=0.133'
     dependencies:
       svelte: 4.1.0
-      three: 0.155.0
+      three: 0.156.0
     dev: false
 
-  /@threlte/extras@5.6.1(svelte@4.1.0)(three@0.155.0):
+  /@threlte/extras@5.6.1(svelte@4.1.0)(three@0.156.0):
     resolution: {integrity: sha512-o9Bx89nRP9CCpRg+TJtBHxQ99fSydZp5Wry1BaMhx0H5/1okrvmElNJlFmhCvB7yfVTcI0YH4KGg5SB/Di8a2g==}
     peerDependencies:
       svelte: '>=4'
@@ -559,11 +559,11 @@ packages:
     dependencies:
       lodash-es: 4.17.21
       svelte: 4.1.0
-      three: 0.155.0
-      troika-three-text: 0.47.2(three@0.155.0)
+      three: 0.156.0
+      troika-three-text: 0.47.2(three@0.156.0)
     dev: false
 
-  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.6.1)(svelte@4.1.0)(three@0.155.0):
+  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.7)(@threlte/extras@5.6.1)(svelte@4.1.0)(three@0.156.0):
     resolution: {integrity: sha512-bNCIg3rNhc3XvDx5Xc78EJHn2N3AbNyKAdLMqeXOJGpe9m6H7lSZNiBBGZtD+UK789F0/xRk/1A8hXpUTMCwYQ==}
     peerDependencies:
       '@theatre/core': '>=0.6'
@@ -575,10 +575,10 @@ packages:
     dependencies:
       '@theatre/core': 0.7.0
       '@theatre/studio': 0.7.0(@theatre/core@0.7.0)
-      '@threlte/core': 6.0.7(svelte@4.1.0)(three@0.155.0)
-      '@threlte/extras': 5.6.1(svelte@4.1.0)(three@0.155.0)
+      '@threlte/core': 6.0.7(svelte@4.1.0)(three@0.156.0)
+      '@threlte/extras': 5.6.1(svelte@4.1.0)(three@0.156.0)
       svelte: 4.1.0
-      three: 0.155.0
+      three: 0.156.0
     dev: false
 
   /@tweenjs/tween.js@18.6.4:
@@ -2520,8 +2520,8 @@ packages:
       any-promise: 1.3.0
     dev: true
 
-  /three@0.155.0:
-    resolution: {integrity: sha512-sNgCYmDijnIqkD/bMfk+1pHg3YzsxW7V2ChpuP6HCQ8NiZr3RufsXQr8M3SSUMjW4hG+sUk7YbyuY0DncaDTJQ==}
+  /three@0.156.0:
+    resolution: {integrity: sha512-r6meetGWDk3aYjDRh6NpKuUkzoPlI3yldDQe2SkwCcqTTB5NZn7vKQBUXyMExvlwZShaLmvAbsVWaFzp1rkk3A==}
     dev: false
 
   /to-regex-range@5.0.1:
@@ -2536,24 +2536,24 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /troika-three-text@0.47.2(three@0.155.0):
+  /troika-three-text@0.47.2(three@0.156.0):
     resolution: {integrity: sha512-qylT0F+U7xGs+/PEf3ujBdJMYWbn0Qci0kLqI5BJG2kW1wdg4T1XSxneypnF05DxFqJhEzuaOR9S2SjiyknMng==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
       bidi-js: 1.0.2
-      three: 0.155.0
-      troika-three-utils: 0.47.2(three@0.155.0)
+      three: 0.156.0
+      troika-three-utils: 0.47.2(three@0.156.0)
       troika-worker-utils: 0.47.2
       webgl-sdf-generator: 1.1.1
     dev: false
 
-  /troika-three-utils@0.47.2(three@0.155.0):
+  /troika-three-utils@0.47.2(three@0.156.0):
     resolution: {integrity: sha512-/28plhCxfKtH7MSxEGx8e3b/OXU5A0xlwl+Sbdp0H8FXUHKZDoksduEKmjQayXYtxAyuUiCRunYIv/8Vi7aiyg==}
     peerDependencies:
       three: '>=0.125.0'
     dependencies:
-      three: 0.155.0
+      three: 0.156.0
     dev: false
 
   /troika-worker-utils@0.47.2:

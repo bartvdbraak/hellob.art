@@ -1,15 +1,19 @@
 <script lang="ts">
-	import { AppBar, LightSwitch, ProgressBar, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppBar, LightSwitch, ProgressBar } from '@skeletonlabs/skeleton';
+	import { getDrawerStore, type DrawerSettings } from '@skeletonlabs/skeleton';
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
 	import routes from '$lib/routes';
 	import { page } from '$app/stores';
-	$: classesActive = (href: string) => (href === $page.url.pathname ? 'underline' : '');
+	const drawerStore = getDrawerStore();
 	export let progress: number;
 
-	function drawerOpen(): void {
-		drawerStore.open();
+	$: classesActive = (href: string) => (href === $page.url.pathname ? 'underline' : '');
+
+	function trigger(position: 'right'): void {
+		const s: DrawerSettings = { id: 'navigation', position };
+		drawerStore.open(s);
 	}
 </script>
 
@@ -59,7 +63,9 @@
 		<button
 			aria-label="Toggle navigation menu"
 			class="btn-icon btn-icon-sm hover:variant-soft-primary md:hidden"
-			on:click={drawerOpen}
+			on:click={() => {
+				trigger('right');
+			}}
 		>
 			<Hamburger />
 		</button>

@@ -1,23 +1,27 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import type { Route } from '$lib/routes';
-	import { drawerStore } from '@skeletonlabs/skeleton';
+	import { getDrawerStore } from '@skeletonlabs/skeleton';
+	const drawerStore = getDrawerStore();
+
 	$: classesActive = (href: string) =>
-		href === $page.url.pathname ? '!bg-primary-500 text-indigo-100' : '';
+		href === $page.url.pathname ? '!bg-secondary-500 text-indigo-100' : '';
 
 	export let routes: Route[];
-
-	function drawerClose(): void {
-		drawerStore.close();
-	}
 </script>
 
 <nav class="list-nav">
 	<ul>
 		{#each routes as route}
 			<li class="mb-2">
-				<a class={classesActive(route.url)} href={route.url} on:click={drawerClose}>
-					<span class="badge bg-primary-500"
+				<a
+					class={classesActive(route.url)}
+					href={route.url}
+					on:click={() => {
+						drawerStore.close();
+					}}
+				>
+					<span class="badge bg-secondary-500"
 						><svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
@@ -33,7 +37,7 @@
 					>
 					<span class="flex-auto">{route.label}</span>
 				</a>
-			</li>{/each}
-		<!-- ... -->
+			</li>
+		{/each}
 	</ul>
 </nav>

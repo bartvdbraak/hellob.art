@@ -1,9 +1,7 @@
 <script lang="ts">
-	// import '@skeletonlabs/skeleton/themes/theme-crimson.css';
-	import '../theme.postcss';
-	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	import { Drawer, AppShell, initializeStores } from '@skeletonlabs/skeleton';
+	initializeStores();
 	import '../app.postcss';
-	import { AppShell, Drawer } from '@skeletonlabs/skeleton';
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
@@ -37,7 +35,7 @@
 	}
 </script>
 
-<Drawer width="w-[280px] md:w-[200px]" position="right" bgDrawer="bg-gray-200 dark:bg-gray-800">
+<Drawer width="w-[280px] md:w-[200px]" position="right" bgDrawer="bg-black/30 backdrop-blur">
 	<div class="p-5 w-full mx-auto">
 		<h2 class="text-3xl font-bold mb-12 z-10 text-center">Pages</h2>
 		<Navigation {routes} />

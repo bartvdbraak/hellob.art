@@ -1,10 +1,13 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
+import { theme } from './theme';
+import { skeleton } from '@skeletonlabs/tw-plugin';
+
+const config = {
 	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
-		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
 		extend: {
@@ -28,5 +31,13 @@ module.exports = {
 			}
 		}
 	},
-	plugins: [...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()]
-};
+	plugins: [
+		skeleton({
+			themes: {
+				custom: [theme]
+			}
+		})
+	]
+} satisfies Config;
+
+export default config;

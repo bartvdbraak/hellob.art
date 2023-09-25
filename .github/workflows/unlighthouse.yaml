@@ -27,7 +27,7 @@ jobs:
             ![loading](https://github.com/bartvdbraak/hellob.art/assets/3996360/0e00b3fc-d5f9-490b-9aa7-07cb4b59f85f)
 
       - name: Checkout repository
-        uses: actions/checkout@v4.0.0
+        uses: actions/checkout@v4.1.0
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.4.0

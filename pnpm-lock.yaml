@@ -15,11 +15,11 @@ dependencies:
     specifier: 6.0.8
     version: 6.0.8(svelte@4.1.0)(three@0.156.0)
   '@threlte/extras':
-    specifier: 5.6.3
-    version: 5.6.3(svelte@4.1.0)(three@0.156.0)
+    specifier: 5.7.0
+    version: 5.7.0(svelte@4.1.0)(three@0.156.0)
   '@threlte/theatre':
     specifier: ^2.0.0
-    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.8)(@threlte/extras@5.6.3)(svelte@4.1.0)(three@0.156.0)
+    version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.8)(@threlte/extras@5.7.0)(svelte@4.1.0)(three@0.156.0)
   '@types/three':
     specifier: ^0.156.0
     version: 0.156.0
@@ -551,8 +551,8 @@ packages:
       three: 0.156.0
     dev: false
 
-  /@threlte/extras@5.6.3(svelte@4.1.0)(three@0.156.0):
-    resolution: {integrity: sha512-vjCaNt8d31EoV8Q297R48rGTVCGKi/E2c8zTATgp4keiYrw2KmqCYgre7BEnQF7WRy8tpG8ldKt5AydYmuu2fA==}
+  /@threlte/extras@5.7.0(svelte@4.1.0)(three@0.156.0):
+    resolution: {integrity: sha512-bDdKNUz3dVeqdPqhcpTPa0iXE0AL3adhavRN7FnkS0ieu1ZQ9Tft4o3e8jdU5psaXoj2UmUKMkSFziSOYlz7Pg==}
     peerDependencies:
       svelte: '>=4'
       three: '>=0.133'
@@ -563,7 +563,7 @@ packages:
       troika-three-text: 0.47.2(three@0.156.0)
     dev: false
 
-  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.8)(@threlte/extras@5.6.3)(svelte@4.1.0)(three@0.156.0):
+  /@threlte/theatre@2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.8)(@threlte/extras@5.7.0)(svelte@4.1.0)(three@0.156.0):
     resolution: {integrity: sha512-bNCIg3rNhc3XvDx5Xc78EJHn2N3AbNyKAdLMqeXOJGpe9m6H7lSZNiBBGZtD+UK789F0/xRk/1A8hXpUTMCwYQ==}
     peerDependencies:
       '@theatre/core': '>=0.6'
@@ -576,7 +576,7 @@ packages:
       '@theatre/core': 0.7.0
       '@theatre/studio': 0.7.0(@theatre/core@0.7.0)
       '@threlte/core': 6.0.8(svelte@4.1.0)(three@0.156.0)
-      '@threlte/extras': 5.6.3(svelte@4.1.0)(three@0.156.0)
+      '@threlte/extras': 5.7.0(svelte@4.1.0)(three@0.156.0)
       svelte: 4.1.0
       three: 0.156.0
     dev: false

@@ -41,7 +41,7 @@ jobs:
         run: npm run build
 
       - name: Start Preview and Get Preview URL
-        run: PORT=${{ env.PORT }} npm run preview & echo $! > preview_pid
+        run: npm run preview -- --port=${{ env.PORT }} & echo $! > preview_pid
 
       - name: Install Dependencies
         run: npm add -g @unlighthouse/cli puppeteer

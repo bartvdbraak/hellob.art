@@ -33,15 +33,16 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           node-version: ${{ matrix.node-version }}
+          cache: npm
 
       - name: Install dependencies
-        run: npm install --frozen-lockfile
+        run: npm ci
 
       - name: Build production
         run: npm run build
 
       - name: Start Preview and Get Preview URL
-        run: npm run preview --port ${{ env.PORT }} & echo $! > preview_pid
+        run: PORT=${{ env.PORT }} npm run preview & echo $! > preview_pid
 
       - name: Install Dependencies
         run: npm add -g @unlighthouse/cli puppeteer

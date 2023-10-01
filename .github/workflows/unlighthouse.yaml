@@ -29,29 +29,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.1.0
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.4.0
-        with:
-          version: latest
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3.8.1
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install
 
       - name: Build production
-        run: pnpm run build
+        run: npm run build
 
       - name: Start Preview and Get Preview URL
-        run: |
-          pnpm run preview --port ${{ env.PORT }} & echo $! > preview_pid
+        run: npm run preview -- --port=${{ env.PORT }} & echo $! > preview_pid
 
       - name: Install Dependencies
-        run: pnpm add -g @unlighthouse/cli puppeteer
+        run: npm add -g @unlighthouse/cli puppeteer
 
       - name: Run Unlighthouse
         run: |
@@ -61,7 +54,7 @@ jobs:
             --build-static
 
       - name: Upload report to Cloudflare pages
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3.1.1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}

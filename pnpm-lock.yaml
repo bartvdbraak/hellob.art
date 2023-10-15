@@ -21,8 +21,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@6.0.10)(@threlte/extras@7.2.0)(svelte@4.1.0)(three@0.157.0)
   '@types/three':
-    specifier: ^0.156.0
-    version: 0.156.0
+    specifier: ^0.157.0
+    version: 0.157.0
   '@vercel/analytics':
     specifier: ^1.0.1
     version: 1.0.1
@@ -608,8 +608,8 @@ packages:
     resolution: {integrity: sha512-9w+a7bR8PeB0dCT/HBULU2fMqf6BAzvKbxFboYhmDtDkKPiyXYbjoe2auwsXlEFI7CFNMF1dCv3dFH5Poy9R1w==}
     dev: false
 
-  /@types/three@0.156.0:
-    resolution: {integrity: sha512-733bXDSRdlrxqOmQuOmfC1UBRuJ2pREPk8sWnx9MtIJEVDQMx8U0NQO5MVVaOrjzDPyLI+cFPim2X/ss9v0+LQ==}
+  /@types/three@0.157.0:
+    resolution: {integrity: sha512-+BG+wqEyH506w23tKpwXnCTJb/MeyeQ/wcFlSFQ26Z9hS5Qde2vc7o+aqd+z98b38PVGuHa5GYxg/3CY7qrxFw==}
     dependencies:
       '@types/stats.js': 0.17.0
       '@types/webxr': 0.5.2

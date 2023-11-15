@@ -44,9 +44,9 @@
 		"@threlte/core": "6.1.0",
 		"@threlte/extras": "7.5.1",
 		"@threlte/theatre": "^2.0.0",
-		"@types/three": "^0.157.0",
+		"@types/three": "^0.158.0",
 		"@vercel/analytics": "^1.0.1",
-		"three": "^0.157.0",
+		"three": "^0.158.0",
 		"web-vitals": "^3.4.0"
 	},
 	"lint-staged": {

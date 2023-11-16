@@ -44,7 +44,7 @@ import SwitchHostsLogo from '$lib/assets/tools/switchhosts.svg';
 import SlackLogo from '$lib/assets/tools/slack.svg';
 import NmapLogo from '$lib/assets/tools/nmap.svg';
 import DBeaverLogo from '$lib/assets/tools/dbeaver.svg';
-import TerraformLogo from '$lib/assets/tools/terraform.svg';
+import OpenTofuLogo from '$lib/assets/tools/opentofu.svg';
 import GitLensLogo from '$lib/assets/tools/gitlens.png';
 
 export {
@@ -94,6 +94,6 @@ export {
 	SlackLogo,
 	NmapLogo,
 	DBeaverLogo,
-	TerraformLogo,
+	OpenTofuLogo,
 	GitLensLogo
 };

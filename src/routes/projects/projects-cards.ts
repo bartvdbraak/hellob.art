@@ -4,7 +4,9 @@ import {
 	videowallImage,
 	videowallLogo,
 	zaantjeImage,
-	zaantjeLogo
+	zaantjeLogo,
+	keyweaveImage,
+	keyweaveLogo
 } from './projects-assets';
 
 interface Contributor {
@@ -25,6 +27,18 @@ export interface Project {
 
 const projects: Project[] = [
 	{
+		link: 'https://github.com/bartvdbraak/keyweave',
+		headerImage: keyweaveImage,
+		headerSubTitle: 'Open Source Project',
+		title: 'Keyweave',
+		description: `Keyweave is an open-source tool crafted to seamlessly fetch secrets from Azure Key Vault 
+			and weave them into a convenient .env file. Developed in Rust, Keyweave stands out for its efficiency 
+			and user-friendly design, making it an ideal choice for managing your application's secrets.`,
+		logo: keyweaveLogo,
+		contributors: [],
+		date: '11-05-2023'
+	},
+	{
 		headerImage: videowallImage,
 		headerSubTitle: 'Private Project',
 		title: 'Videowall',
@@ -32,7 +46,7 @@ const projects: Project[] = [
 										frontend built with React and Next.js utilizing a powerful backend developed in Golang.`,
 		logo: videowallLogo,
 		contributors: [],
-		date: '2021'
+		date: '05-31-2022'
 	},
 	{
 		headerImage: ticketDashboardImage,
@@ -42,7 +56,7 @@ const projects: Project[] = [
 			ticket management. Developed with Next.js for frontend and Golang for backend.`,
 		logo: ticketDashboardLogo,
 		contributors: [],
-		date: '2020'
+		date: '12-14-2021'
 	},
 	{
 		link: 'https://zaantje.com',
@@ -53,7 +67,7 @@ const projects: Project[] = [
 										on a virtual tour of Zaandam, showcasing locations of famous music videos.`,
 		logo: zaantjeLogo,
 		contributors: [],
-		date: '2020'
+		date: '01-01-2020'
 	}
 ];
 

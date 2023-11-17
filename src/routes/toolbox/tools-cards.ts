@@ -40,7 +40,7 @@ import {
 	SlackLogo,
 	Studio3TLogo,
 	SwitchHostsLogo,
-	TerraformLogo,
+	OpenTofuLogo,
 	TogglTrackLogo,
 	VimLogo,
 	VisualStudioCodeLogo,
@@ -155,10 +155,10 @@ const tools: Tool[] = [
 		toolUrl: 'https://www.royalapps.com/ts/mac/features'
 	},
 	{
-		name: 'poetry',
+		name: 'Poetry',
 		title: 'Python Dependency Management Tool',
 		description:
-			'poetry is a Python dependency management tool that simplifies package management and project environment setup.',
+			'Poetry is a Python dependency management tool that simplifies package management and project environment setup.',
 		logo: PoetryLogo,
 		toolUrl: 'https://python-poetry.org'
 	},
@@ -426,12 +426,12 @@ const tools: Tool[] = [
 		toolUrl: 'https://dbeaver.io'
 	},
 	{
-		name: 'Terraform',
+		name: 'OpenTofu',
 		title: 'Infrastructure as Code Tool',
 		description:
 			'An open-source infrastructure as code tool that enables the automated creation, modification, and versioning of complex infrastructures.',
-		logo: TerraformLogo,
-		toolUrl: 'https://www.terraform.io'
+		logo: OpenTofuLogo,
+		toolUrl: 'https://opentofu.org'
 	},
 	{
 		name: 'GitLens',

@@ -27,7 +27,7 @@
 			</p>
 		</div>
 		<div class="md:col-span-1 flex justify-end">
-			<div class="sm:h-60 w-full">
+			<div class="h-60 w-full">
 				<Canvas>
 					<Scene />
 				</Canvas>

@@ -4,7 +4,9 @@ import {
 	videowallImage,
 	videowallLogo,
 	zaantjeImage,
-	zaantjeLogo
+	zaantjeLogo,
+	keyweaveImage,
+	keyweaveLogo
 } from './projects-assets';
 
 interface Contributor {
@@ -24,6 +26,18 @@ export interface Project {
 }
 
 const projects: Project[] = [
+	{
+		link: 'https://github.com/bartvdbraak/keyweave',
+		headerImage: keyweaveImage,
+		headerSubTitle: 'Open Source Project',
+		title: 'Keyweave',
+		description: `Keyweave is an open-source tool crafted to seamlessly fetch secrets from Azure Key Vault 
+			and weave them into a convenient .env file. Developed in Rust, Keyweave stands out for its efficiency 
+			and user-friendly design, making it an ideal choice for managing your application's secrets.`,
+		logo: keyweaveLogo,
+		contributors: [],
+		date: '2023'
+	},
 	{
 		headerImage: videowallImage,
 		headerSubTitle: 'Private Project',

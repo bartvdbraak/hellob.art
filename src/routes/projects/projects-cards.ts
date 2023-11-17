@@ -36,7 +36,7 @@ const projects: Project[] = [
 			and user-friendly design, making it an ideal choice for managing your application's secrets.`,
 		logo: keyweaveLogo,
 		contributors: [],
-		date: '2023'
+		date: '11-05-2023'
 	},
 	{
 		headerImage: videowallImage,
@@ -46,7 +46,7 @@ const projects: Project[] = [
 										frontend built with React and Next.js utilizing a powerful backend developed in Golang.`,
 		logo: videowallLogo,
 		contributors: [],
-		date: '2021'
+		date: '05-31-2022'
 	},
 	{
 		headerImage: ticketDashboardImage,
@@ -56,7 +56,7 @@ const projects: Project[] = [
 			ticket management. Developed with Next.js for frontend and Golang for backend.`,
 		logo: ticketDashboardLogo,
 		contributors: [],
-		date: '2020'
+		date: '12-14-2021'
 	},
 	{
 		link: 'https://zaantje.com',
@@ -67,7 +67,7 @@ const projects: Project[] = [
 										on a virtual tour of Zaandam, showcasing locations of famous music videos.`,
 		logo: zaantjeLogo,
 		contributors: [],
-		date: '2020'
+		date: '01-01-2020'
 	}
 ];
 

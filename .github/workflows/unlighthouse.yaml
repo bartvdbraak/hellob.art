@@ -97,7 +97,7 @@ jobs:
 
             const formatScore = score => `${Math.round(score * 100)} (${score})`;
             const getEmoji = score => score >= 0.9 ? '🟢' : score >= 0.5 ? '🟠' : '🔴';
-            const getColor = score => score >= 0.9 ? 'green' : score >= 0.5 ? 'orange' : 'red';
+            const getColor = score => score >= 0.9 ? '4c1' : score >= 0.5 ? 'ffa400' : 'eb0f00';
 
             const score = res => `${getEmoji(res)} ${formatScore(res)}`;
 

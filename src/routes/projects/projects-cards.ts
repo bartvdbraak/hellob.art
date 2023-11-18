@@ -31,9 +31,8 @@ const projects: Project[] = [
 		headerImage: keyweaveImage,
 		headerSubTitle: 'Open Source Project',
 		title: 'Keyweave',
-		description: `Keyweave is an open-source tool crafted to seamlessly fetch secrets from Azure Key Vault 
-			and weave them into a convenient .env file. Developed in Rust, Keyweave stands out for its efficiency 
-			and user-friendly design, making it an ideal choice for managing your application's secrets.`,
+		description: `Keyweave is an open-source tool crafted in Rust to seamlessly fetch secrets from Azure Key Vault 
+			and weave them into a convenient .env file.`,
 		logo: keyweaveLogo,
 		contributors: [],
 		date: '11-05-2023'

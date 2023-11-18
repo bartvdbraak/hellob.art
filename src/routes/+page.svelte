@@ -21,7 +21,6 @@
 			<div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto sticky top-10">
 				<img
 					src={bartvdbraakImage}
-					loading="lazy"
 					alt="Bart van der Braak with a noire effect"
 					class="h-full w-full object-cover profile-fit"
 				/>

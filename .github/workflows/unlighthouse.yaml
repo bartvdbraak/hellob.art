@@ -29,32 +29,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.1.1
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.4.0
+        with:
+          version: latest
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4.0.0
         with:
           node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Retrieve Vercel Preview URL
+        uses: zentered/vercel-preview-url@v1.1.9
+        id: vercel_preview_url
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          vercel_project_id: ${{ vars.VERCEL_PROJECT_ID }}
 
-      - name: Build production
-        run: npm run build
-
-      - name: Start Preview and Get Preview URL
-        run: npm run preview -- --port=${{ env.PORT }} & echo $! > preview_pid
+      - name: Await Vercel Deployment
+        uses: UnlyEd/github-action-await-vercel@v1.2.43
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        with:
+          deployment-url: ${{ steps.vercel_preview_url.outputs.preview_url }}
+          timeout: 120
 
       - name: Install Dependencies
-        run: npm add -g @unlighthouse/cli puppeteer
+        run: pnpm install -g @unlighthouse/cli puppeteer
 
       - name: Run Unlighthouse
         run: |
           unlighthouse-ci \
-            --site "http://localhost:${{ env.PORT }}" \
+            --site "${{ steps.vercel_preview_url.outputs.preview_url }}" \
             --reporter jsonExpanded \
             --build-static
 
       - name: Upload report to Cloudflare pages
-        uses: cloudflare/wrangler-action@v3.3.2
+        uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}

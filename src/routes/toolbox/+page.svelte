@@ -27,7 +27,7 @@
 			</p>
 		</div>
 		<div class="md:col-span-1 flex justify-end">
-			<div class="h-60 w-full">
+			<div class="h-60 md:h-full w-full">
 				<Canvas>
 					<Scene />
 				</Canvas>
@@ -35,15 +35,17 @@
 		</div>
 	</div>
 
-	<div class="columns-1 md:columns-2 lg:columns-3 gap-6 w-full mb-12">
+	<ul class="columns-1 md:columns-2 lg:columns-3 gap-6 w-full mb-12">
 		{#each tools as tool}
-			<ToolCard
-				name={tool.name}
-				title={tool.title}
-				description={tool.description}
-				logo={tool.logo}
-				toolUrl={tool.toolUrl}
-			/>
+			<li>
+				<ToolCard
+					name={tool.name}
+					title={tool.title}
+					description={tool.description}
+					logo={tool.logo}
+					toolUrl={tool.toolUrl}
+				/>
+			</li>
 		{/each}
-	</div>
+	</ul>
 </div>

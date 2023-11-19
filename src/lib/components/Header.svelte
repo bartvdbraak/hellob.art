@@ -20,7 +20,7 @@
 <AppBar background="">
 	<svelte:fragment slot="lead">
 		<a href="/" class="md:ml-4 ml-1">
-			<img width="212" height="32" src="./logo@3x.png" alt="hellob.art logo" />
+			<enhanced:img width="212" height="32" src="./logo@3x.png" alt="hellob.art logo" />
 		</a>
 	</svelte:fragment>
 

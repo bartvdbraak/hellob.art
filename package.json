@@ -16,6 +16,7 @@
 		"@skeletonlabs/skeleton": "^2.5.0",
 		"@skeletonlabs/tw-plugin": "^0.2.4",
 		"@sveltejs/adapter-auto": "^2.1.1",
+		"@sveltejs/enhanced-img": "^0.1.5",
 		"@sveltejs/kit": "^1.27.6",
 		"@types/node": "^20.9.1",
 		"@typescript-eslint/eslint-plugin": "^6.11.0",

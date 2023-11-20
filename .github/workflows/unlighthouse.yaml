@@ -67,7 +67,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
           deployment-url: ${{ steps.vercel_preview_url.outputs.preview_url }}
-          timeout: 240
+          timeout: 360
 
       - name: Install Dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer

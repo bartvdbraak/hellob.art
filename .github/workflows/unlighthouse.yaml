@@ -147,7 +147,7 @@ jobs:
           gistID: 795a3d6af5b0db5754cf7279898c3c16
           filename: hellob.art-unlighthouse.json
           namedLogo: Lighthouse
-          label: Lighthouse
+          label: lighthouse
           message: ${{ steps.create_result_content.outputs.score }}
           color: ${{ steps.create_result_content.outputs.scoreColor }}
 

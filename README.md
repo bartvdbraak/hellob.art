@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://github.com/bartvdbraak/hellob.art/assets/3996360/365337f4-0ad8-4107-bcb1-8a4843ceae94" alt="hellob.art" width="30%">
+    <a href="https://hellob.art/"><img src="https://github.com/bartvdbraak/hellob.art/assets/3996360/365337f4-0ad8-4107-bcb1-8a4843ceae94" alt="hellob.art" width="30%"></a>
     <p><em>Personal website built with Svelte</em></p>
 </div>
 

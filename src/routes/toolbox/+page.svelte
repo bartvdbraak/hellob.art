@@ -36,15 +36,9 @@
 	</div>
 
 	<ul class="columns-1 md:columns-2 lg:columns-3 gap-6 w-full mb-12">
-		{#each tools as tool}
+		{#each tools as { name, title, description, logo, toolUrl }}
 			<li>
-				<ToolCard
-					name={tool.name}
-					title={tool.title}
-					description={tool.description}
-					logo={tool.logo}
-					toolUrl={tool.toolUrl}
-				/>
+				<ToolCard {name} {title} {description} {logo} {toolUrl} />
 			</li>
 		{/each}
 	</ul>

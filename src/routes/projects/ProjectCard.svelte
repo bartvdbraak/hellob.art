@@ -20,10 +20,11 @@
 			src={headerImage}
 			class="bg-black/50 w-full aspect-[21/9] object-cover object-top"
 			alt={headerSubTitle}
+			loading="lazy"
 		/>
 	</header>
 	<div class="p-4 space-y-4">
-		<header class="h6">{headerSubTitle}</header>
+		<header class="h6 opacity-50">{headerSubTitle}</header>
 		<span class="h3" data-toc-ignore>{title}</span>
 		<article>
 			<p>
@@ -33,8 +34,8 @@
 	</div>
 	<hr class="opacity-50" />
 	<footer class="p-4 flex justify-start items-center space-x-4">
-		<Avatar src={logo} width="w-8" />
 		<div class="flex-auto flex justify-between items-center">
+			<Avatar src={logo} width="w-8" />
 			{#each contributors as contributor}
 				<Avatar src={contributor.imageSrc} width="w-8" />
 			{/each}

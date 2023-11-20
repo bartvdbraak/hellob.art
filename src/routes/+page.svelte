@@ -17,8 +17,8 @@
 
 	<div class="grid gap-8 md:grid-cols-2 lg:gap-12">
 		<div class="relative">
-			<div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-transparent bg-repeat"></div>
-			<div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto sticky top-10">
+			<div class="absolute inset-0 bg-repeat"></div>
+			<div class="h-64 overflow-hidden rounded-lg shadow-lg md:h-auto sticky top-10">
 				<enhanced:img
 					src={bartvdbraakImage}
 					alt="Bart van der Braak with a noire effect"

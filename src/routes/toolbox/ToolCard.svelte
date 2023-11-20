@@ -1,9 +1,12 @@
 <script lang="ts">
-	export let name: string;
-	export let title: string;
-	export let description: string;
-	export let logo: string;
-	export let toolUrl: string;
+	import type { Tool } from './tools-cards';
+
+	export let name: Tool['name'];
+	export let title: Tool['title'];
+	export let description: Tool['description'];
+	export let logo: Tool['logo'];
+	export let toolUrl: Tool['toolUrl'];
+	export let enhanced: Tool['enhanced'];
 </script>
 
 <a
@@ -14,12 +17,21 @@
 >
 	<div class="flex flex-col gap-6">
 		<div class="flex gap-6">
-			<img
-				src={logo}
-				alt={name + ' logo'}
-				class="h-12 w-12 rounded-sm object-contain"
-				loading="lazy"
-			/>
+			{#if enhanced}
+				<enhanced:img
+					src={logo}
+					alt={name + ' logo'}
+					class="h-12 w-12 rounded-sm object-contain"
+					loading="lazy"
+				/>
+			{:else}
+				<img
+					src={logo}
+					alt={name + ' logo'}
+					class="h-12 w-12 rounded-sm object-contain"
+					loading="lazy"
+				/>
+			{/if}
 			<div class="grow">
 				<h4 class="mb-0">{name}</h4>
 				<p class="text-faded text-sm font-normal">{title}</p>

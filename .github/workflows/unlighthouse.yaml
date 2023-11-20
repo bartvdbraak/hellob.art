@@ -75,7 +75,7 @@ jobs:
       - name: Run Unlighthouse
         run: |
           unlighthouse-ci \
-            --site "${{ steps.vercel_preview_url.outputs.preview_url }}" \
+            --site "${{ github.ref == 'refs/heads/main' && 'https://hellob.art' || steps.vercel_preview_url.outputs.preview_url }}" \
             --reporter jsonExpanded \
             --build-static
 

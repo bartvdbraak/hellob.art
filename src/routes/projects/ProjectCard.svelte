@@ -12,12 +12,14 @@
 	export let date: Project['date'];
 </script>
 
-<div class="card bg-initial card-hover overflow-hidden">
+<div
+	class="card border border-white/10 bg-white/5 shadow-xl duration-200 hover:bg-white/10 hover:shadow-2xl rounded overflow-hidden"
+>
 	<header>
-		<img
+		<enhanced:img
 			src={headerImage}
 			class="bg-black/50 w-full aspect-[21/9] object-cover object-top"
-			alt="Post"
+			alt={headerSubTitle}
 		/>
 	</header>
 	<div class="p-4 space-y-4">

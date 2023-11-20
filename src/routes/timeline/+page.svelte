@@ -5,7 +5,11 @@
 
 <svelte:head>
 	<title>hellob.art &mdash; timeline</title>
-	<meta name="description" content="Timeline showing " />
+	<meta
+		name="description"
+		content="A timeline showing a multitude of endeavors in my career, education as well as personal
+	milestones."
+	/>
 </svelte:head>
 
 <div class="py-6 sm:py-8 lg:py-12 md:mt-8 mx-auto max-w-screen-xl px-4 md:px-8">

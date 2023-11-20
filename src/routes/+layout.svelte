@@ -5,6 +5,7 @@
 	import Footer from '../lib/components/Footer.svelte';
 	import Navigation from '../lib/components/Navigation.svelte';
 	import Header from '$lib/components/Header.svelte';
+
 	import { fade } from 'svelte/transition';
 
 	export let data;
@@ -40,9 +41,8 @@
 	}
 </script>
 
-<Drawer width="w-[280px] md:w-[200px]" position="right" bgDrawer="bg-black/30 backdrop-blur">
-	<div class="p-5 w-full mx-auto">
-		<h2 class="text-3xl font-bold mb-12 z-10 text-center">Pages</h2>
+<Drawer width="w-full" position="top" bgDrawer="bg-black/20 backdrop-blur">
+	<div class="p-5 w-full align-center">
 		<Navigation {routes} />
 	</div>
 </Drawer>

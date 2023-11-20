@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { calculateAge } from '$lib/calculate-age';
-	import bartvdbraakImage from '$lib/assets/bartvdbraak.jpg';
-	import catWhiskeyImage from '$lib/assets/cat-whiskey.jpg';
+	import bartvdbraakImage from '$lib/assets/bartvdbraak.jpg?enhanced';
+	import catWhiskeyImage from '$lib/assets/cat-whiskey.jpg?enhanced';
 </script>
 
 <svelte:head>
@@ -19,7 +19,7 @@
 		<div class="relative">
 			<div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-transparent bg-repeat"></div>
 			<div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto sticky top-10">
-				<img
+				<enhanced:img
 					src={bartvdbraakImage}
 					alt="Bart van der Braak with a noire effect"
 					class="h-full w-full object-cover profile-fit"
@@ -118,7 +118,7 @@
 		<div class="relative">
 			<div class="absolute inset-0 bg-gradient-to-tr from-blue-500 to-transparent bg-repeat"></div>
 			<div class="h-64 overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-auto sticky top-10">
-				<img
+				<enhanced:img
 					src={catWhiskeyImage}
 					loading="lazy"
 					alt="Poes (my cat) and a bottle of Lagavulin 8 (whiskey) with a noire effect"

@@ -4,6 +4,7 @@
 	import GitHub from './icons/GitHub.svelte';
 	import Hamburger from './icons/Hamburger.svelte';
 	import LinkedIn from './icons/LinkedIn.svelte';
+	import logo from '$lib/assets/logo.svg';
 	import routes from '$lib/routes';
 	import { page } from '$app/stores';
 	const drawerStore = getDrawerStore();
@@ -20,23 +21,24 @@
 <AppBar background="">
 	<svelte:fragment slot="lead">
 		<a href="/" class="md:ml-4 ml-1">
-			<img width="212" height="32" src="./logo@3x.png" alt="hellob.art logo" />
+			<img width="212" height="32" src={logo} alt="hellob.art logo" />
 		</a>
 	</svelte:fragment>
 
 	<nav class="hidden md:block">
 		<ul class="flex">
-			{#each routes as route}
+			{#each routes as { url, label }}
 				<li class="mx-2">
 					<a
 						class={`${classesActive(
-							route.url
+							url
 						)} decoration-indigo-500 hover:underline hover:decoration-indigo-300`}
-						href={route.url}
+						href={url}
 					>
-						<span class="flex-auto">{route.label}</span>
+						<span class="flex-auto">{label}</span>
 					</a>
-				</li>{/each}
+				</li>
+			{/each}
 		</ul>
 	</nav>
 

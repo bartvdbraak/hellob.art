@@ -67,7 +67,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:
           deployment-url: ${{ steps.vercel_preview_url.outputs.preview_url }}
-          timeout: 120
+          timeout: 360
 
       - name: Install Dependencies
         run: pnpm install -g @unlighthouse/cli puppeteer
@@ -75,7 +75,7 @@ jobs:
       - name: Run Unlighthouse
         run: |
           unlighthouse-ci \
-            --site "${{ steps.vercel_preview_url.outputs.preview_url }}" \
+            --site "${{ github.ref == 'refs/heads/main' && 'https://hellob.art' || steps.vercel_preview_url.outputs.preview_url }}" \
             --reporter jsonExpanded \
             --build-static
 
@@ -147,7 +147,7 @@ jobs:
           gistID: 795a3d6af5b0db5754cf7279898c3c16
           filename: hellob.art-unlighthouse.json
           namedLogo: Lighthouse
-          label: Lighthouse
+          label: lighthouse
           message: ${{ steps.create_result_content.outputs.score }}
           color: ${{ steps.create_result_content.outputs.scoreColor }}
 

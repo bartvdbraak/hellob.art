@@ -23,28 +23,28 @@
 	</p>
 
 	<div class="w-full text-token grid grid-cols-1 md:grid-cols-2 gap-4">
-		{#each projects as project}
-			{#if project.link}
-				<a href={project.link}>
+		{#each projects as { link, headerImage, headerSubTitle, title, description, logo, contributors, date }}
+			{#if link}
+				<a href={link}>
 					<ProjectCard
-						headerImage={project.headerImage}
-						headerSubTitle={project.headerSubTitle}
-						title={project.title}
-						description={project.description}
-						logo={project.logo}
-						contributors={project.contributors}
-						date={project.date}
+						{headerImage}
+						{headerSubTitle}
+						{title}
+						{description}
+						{logo}
+						{contributors}
+						{date}
 					/>
 				</a>
 			{:else}
 				<ProjectCard
-					headerImage={project.headerImage}
-					headerSubTitle={project.headerSubTitle}
-					title={project.title}
-					description={project.description}
-					logo={project.logo}
-					contributors={project.contributors}
-					date={project.date}
+					{headerImage}
+					{headerSubTitle}
+					{title}
+					{description}
+					{logo}
+					{contributors}
+					{date}
 				/>
 			{/if}
 		{/each}

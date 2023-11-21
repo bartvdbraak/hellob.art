@@ -36,9 +36,9 @@
 	</div>
 
 	<ul class="columns-1 md:columns-2 lg:columns-3 gap-6 w-full mb-12">
-		{#each tools as { name, title, description, logo, toolUrl }}
+		{#each tools as { name, title, description, logo, toolUrl, enhanced }}
 			<li>
-				<ToolCard {name} {title} {description} {logo} {toolUrl} />
+				<ToolCard {name} {title} {description} {logo} {toolUrl} {enhanced} />
 			</li>
 		{/each}
 	</ul>

@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let title: string;
-	export let logo: string;
-	export let description: string;
-	export let date: string;
+	import type { TimelineItem } from './timeline-items';
+
+	export let title: TimelineItem['title'];
+	export let logo: TimelineItem['logo'];
+	export let description: TimelineItem['description'];
+	export let date: TimelineItem['date'];
 </script>
 
 <div

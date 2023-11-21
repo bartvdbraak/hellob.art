@@ -8,7 +8,7 @@ import bijlmerweideLogo from '$lib/assets/timeline/bijlmerweide.svg';
 
 export interface TimelineItem {
 	title: string;
-	logo?: string;
+	logo: string;
 	link?: string;
 	image?: string;
 	description: string;

@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^5.0.5
     version: 5.0.5(@types/node@20.9.2)
   vite-plugin-tailwind-purgecss:
-    specifier: ^0.1.3
-    version: 0.1.3(vite@5.0.5)
+    specifier: ^0.2.0
+    version: 0.2.0(vite@5.0.5)
 
 packages:
 
@@ -2876,7 +2876,7 @@ packages:
     dependencies:
       commander: 10.0.1
       glob: 8.1.0
-      postcss: 8.4.31
+      postcss: 8.4.32
       postcss-selector-parser: 6.0.13
     dev: true
 
@@ -3597,10 +3597,10 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-tailwind-purgecss@0.1.3(vite@5.0.5):
-    resolution: {integrity: sha512-VVz9fwKBEEFSbj/rKxtwtczvoSrIqbzbo6S+MT7gH0CsmKNwlx947VMoV8B085ocxGCuFlddOPRDszNXLi2nTQ==}
+  /vite-plugin-tailwind-purgecss@0.2.0(vite@5.0.5):
+    resolution: {integrity: sha512-6Q+SaalUd0t3BOIIiCQPlbZQuYARVgjoC78X+fLbQJqIEy/9fC58aQgHMgi+CmYfVfZmJToA8YiLueSGEo2mng==}
     peerDependencies:
-      vite: ^4.1.1
+      vite: ^4.1.1 || ^5.0.0
     dependencies:
       estree-walker: 3.0.3
       purgecss: 6.0.0-alpha.0

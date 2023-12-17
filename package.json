@@ -17,7 +17,7 @@
 		"@skeletonlabs/tw-plugin": "^0.3.0",
 		"@sveltejs/adapter-vercel": "^4.0.0",
 		"@sveltejs/enhanced-img": "^0.1.5",
-		"@sveltejs/kit": "^1.27.6",
+		"@sveltejs/kit": "^2.0.0",
 		"@types/node": "^20.9.2",
 		"@typescript-eslint/eslint-plugin": "^6.11.0",
 		"@typescript-eslint/parser": "^6.11.0",

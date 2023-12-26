@@ -15,11 +15,11 @@ dependencies:
     specifier: 7.0.12
     version: 7.0.12(svelte@4.2.7)(three@0.160.0)
   '@threlte/extras':
-    specifier: 8.0.10
-    version: 8.0.10(svelte@4.2.7)(three@0.160.0)
+    specifier: 8.1.0
+    version: 8.1.0(svelte@4.2.7)(three@0.160.0)
   '@threlte/theatre':
     specifier: ^2.1.3
-    version: 2.1.3(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@7.0.12)(@threlte/extras@8.0.10)(svelte@4.2.7)(three@0.160.0)
+    version: 2.1.3(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@7.0.12)(@threlte/extras@8.1.0)(svelte@4.2.7)(three@0.160.0)
   '@types/three':
     specifier: ^0.160.0
     version: 0.160.0
@@ -907,8 +907,8 @@ packages:
       three: 0.160.0
     dev: false
 
-  /@threlte/extras@8.0.10(svelte@4.2.7)(three@0.160.0):
-    resolution: {integrity: sha512-w22/wl+E63Mm1JWT3iwRQhYpX4kAN5oJff3xaU7I1VNRp81TWn3Wqpubfn0T91QNVnwwexH4gqSJOpL2SAzMMg==}
+  /@threlte/extras@8.1.0(svelte@4.2.7)(three@0.160.0):
+    resolution: {integrity: sha512-Pd950komky4UQYNEA31vwgc6bvD18Siq5tgoLjMxmS9/w7qq0xUBMsM33gkDoZav4YAaCeltFKZIc8gmUhzpcg==}
     peerDependencies:
       svelte: '>=4'
       three: '>=0.133'
@@ -918,7 +918,7 @@ packages:
       troika-three-text: 0.47.2(three@0.160.0)
     dev: false
 
-  /@threlte/theatre@2.1.3(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@7.0.12)(@threlte/extras@8.0.10)(svelte@4.2.7)(three@0.160.0):
+  /@threlte/theatre@2.1.3(@theatre/core@0.7.0)(@theatre/studio@0.7.0)(@threlte/core@7.0.12)(@threlte/extras@8.1.0)(svelte@4.2.7)(three@0.160.0):
     resolution: {integrity: sha512-yscNIDWBoaNFQDicF+ulI1Px589bKsQtfzwNgxGbdIwRgjX6gk2bWfmZ6cgBml25yksAufroh9gZSfvfOpLtMg==}
     peerDependencies:
       '@theatre/core': '>=0.6'
@@ -931,7 +931,7 @@ packages:
       '@theatre/core': 0.7.0
       '@theatre/studio': 0.7.0(@theatre/core@0.7.0)
       '@threlte/core': 7.0.12(svelte@4.2.7)(three@0.160.0)
-      '@threlte/extras': 8.0.10(svelte@4.2.7)(three@0.160.0)
+      '@threlte/extras': 8.1.0(svelte@4.2.7)(three@0.160.0)
       svelte: 4.2.7
       three: 0.160.0
     dev: false

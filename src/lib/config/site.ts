@@ -6,6 +6,7 @@ export const siteConfig = {
 	description: 'Personal website of Bart van der Braak, DevOps/Platform Engineer at Triple.',
 	links: {
 		twitter: 'https://twitter.com/bartvdbraak',
+		linkedIn: 'https://www.linkedin.com/in/bartvdbraak',
 		gitHubProfile: 'https://github.com/bartvdbraak',
 		gitHubProject: 'https://github.com/bartvdbraak',
 		shadcnSvelte: 'https://www.shadcn-svelte.com/',

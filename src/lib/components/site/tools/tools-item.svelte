@@ -6,7 +6,7 @@
 	let { description, enhanced, logo, name, tagLine } = toolItem;
 </script>
 
-<Card.Root class="mb-4 inline-block h-full w-full hover:bg-muted/50">
+<Card.Root class="mb-4 inline-block hover:bg-muted/50">
 	<Card.Header class="flex flex-row items-center justify-between space-y-0 pb-1">
 		<div>
 			<Card.Title tag="h2" class="text-2xl font-bold">

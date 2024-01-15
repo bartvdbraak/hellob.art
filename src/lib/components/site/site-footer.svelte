@@ -38,8 +38,6 @@
 					class="font-medium underline underline-offset-4">GitHub</a
 				>
 			</div>
-			<Separator orientation="vertical" />
-			<div>Enhanced using LLMs</div>
 		</div>
 	</div>
 </footer>

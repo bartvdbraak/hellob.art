@@ -10,6 +10,7 @@
 >
 	<div class="container flex h-14 items-center">
 		<a href="/" class="mr-6 flex items-center space-x-2">
+			<span class="sr-only">Return to home</span>
 			<Icons.logo />
 		</a>
 		<MainNav />

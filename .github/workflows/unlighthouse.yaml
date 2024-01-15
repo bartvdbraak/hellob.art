@@ -48,7 +48,7 @@ jobs:
           version: latest
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
@@ -80,7 +80,7 @@ jobs:
             --build-static
 
       - name: Upload report to Cloudflare pages
-        uses: cloudflare/wrangler-action@2.0.0
+        uses: cloudflare/wrangler-action@v3.4.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}

@@ -3,7 +3,7 @@
 	import tools from '$lib/content/tools';
 </script>
 
-<div class="columns-1 gap-4 md:columns-2 lg:columns-3">
+<div class="w-full columns-1 gap-6 md:columns-2 lg:columns-3">
 	{#each tools as tool}
 		<a href={tool.url} target="_blank">
 			<Tools.Item toolItem={tool} />

@@ -40,7 +40,7 @@
 	"dependencies": {
 		"bits-ui": "^0.11.8",
 		"clsx": "^2.1.0",
-		"lucide-svelte": "^0.298.0",
+		"lucide-svelte": "^0.309.0",
 		"mode-watcher": "^0.1.2",
 		"radix-icons-svelte": "^1.2.1",
 		"svelte-wrap-balancer": "^0.0.4",

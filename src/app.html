@@ -4,31 +4,14 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="apple-touch-icon" sizes="180x180" href="%sveltekit.assets%/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="%sveltekit.assets%/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="%sveltekit.assets%/favicon-16x16.png" />
-		<link rel="manifest" href="%sveltekit.assets%/site.webmanifest" />
-		<link rel="mask-icon" href="%sveltekit.assets%/safari-pinned-tab.svg" color="#000000" />
-		<meta name="msapplication-TileColor" content="#da532c" />
-		<meta name="theme-color" content="#ffffff" />
-		<title>hellob.art - home of bart van der braak</title>
-		<meta property="twitter:image" content="https://hellob.art/og.png" />
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:title" content="hellob.art - home of bart van der braak" />
-		<meta
-			property="twitter:description"
-			content="Personal website of Bart van der Braak showcasing milestones, tools and ideas."
-		/>
-		<meta property="og:image" content="https://hellob.art/og.png" />
-		<meta property="og:title" content="hellob.art - home of bart van der braak" />
-		<meta
-			property="og:description"
-			content="Personal website of Bart van der Braak showcasing milestones, tools and ideas."
-		/>
-		<meta property="og:url" content="https://hellob.art/" />
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="theme">
-		<div style="display: contents" class="h-full overflow-hidden">%sveltekit.body%</div>
+	<body
+		data-sveltekit-preload-data="hover"
+		class="min-h-screen bg-background font-sans antialiased"
+	>
+		<div style="display: contents" class="relative flex min-h-screen flex-col">
+			%sveltekit.body%
+		</div>
 	</body>
 </html>

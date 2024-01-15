@@ -1,64 +1,28 @@
 <script lang="ts">
-	import { Drawer, AppShell, initializeStores } from '@skeletonlabs/skeleton';
-	initializeStores();
-	import '../app.postcss';
-	import Footer from '../lib/components/Footer.svelte';
-	import Navigation from '../lib/components/Navigation.svelte';
-	import Header from '$lib/components/Header.svelte';
-
-	import { fade } from 'svelte/transition';
+	import { dev } from '$app/environment';
+	import { Metadata, SiteFooter, SiteHeader, TailwindIndicator } from '$lib/components/site';
+	import '../styles/globals.css';
+	import { ModeWatcher } from 'mode-watcher';
+	import { fly } from 'svelte/transition';
 
 	export let data;
-
-	$: ({ pathname } = data);
-
-	import { dev } from '$app/environment';
-	import { inject } from '@vercel/analytics';
-
-	inject({ mode: dev ? 'development' : 'production' });
-
-	import { webVitals } from '$lib/vitals';
-	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
-	import routes from '$lib/routes';
-
-	let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
-
-	$: if (browser && analyticsId) {
-		webVitals({
-			path: $page.url.pathname,
-			params: $page.params,
-			analyticsId,
-			debug: false
-		});
-	}
-
-	let progress = 0;
-
-	function handleScroll(event: Event) {
-		const { scrollTop, scrollHeight, clientHeight } = event.currentTarget as HTMLElement;
-		progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-	}
 </script>
 
-<Drawer width="w-full" position="top" bgDrawer="bg-black/20 backdrop-blur">
-	<div class="p-5 w-full align-center">
-		<Navigation {routes} />
-	</div>
-</Drawer>
+<ModeWatcher />
 
-<AppShell on:scroll={handleScroll}>
-	<svelte:fragment slot="header">
-		<Header {progress} />
-	</svelte:fragment>
+<Metadata />
 
-	{#key pathname}
-		<div in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
-			<slot />
-		</div>
-	{/key}
-
-	<svelte:fragment slot="pageFooter">
-		<Footer />
-	</svelte:fragment>
-</AppShell>
+<div class="relative flex min-h-screen flex-col" id="page">
+	<SiteHeader />
+	<main class="mb-4 flex-1">
+		{#key data.url}
+			<div in:fly={{ x: -200, duration: 200, delay: 200 }} out:fly={{ x: 200, duration: 200 }}>
+				<slot />
+			</div>
+		{/key}
+	</main>
+	<SiteFooter />
+	{#if dev}
+		<TailwindIndicator />
+	{/if}
+</div>

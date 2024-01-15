@@ -6,7 +6,7 @@
 
 <Card.Root>
 	<Card.Header class="pb-3">
-		<Card.Title>Timeline</Card.Title>
+		<Card.Title tag="h2">Timeline</Card.Title>
 		<Card.Description>
 			A time-based overview showcasing when I embarked on projects, jobs, certifications, and
 			various events.

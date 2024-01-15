@@ -12,7 +12,7 @@
 <Card.Root class="hover:bg-muted/50">
 	<Card.Header class="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
 		<div class="space-y-1">
-			<Card.Title>{title}</Card.Title>
+			<Card.Title tag="h2">{title}</Card.Title>
 			<Card.Description>
 				{description}
 			</Card.Description>

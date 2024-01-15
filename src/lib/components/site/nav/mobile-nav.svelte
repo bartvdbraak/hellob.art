@@ -23,6 +23,7 @@
 	</Sheet.Trigger>
 	<Sheet.Content side="right" class="pr-0">
 		<MobileLink href="/" class="flex items-center" bind:open>
+			<span class="sr-only">Return to home</span>
 			<img src={Icons.logoIcon} class="mr-2 h-4 w-4" alt="icon of hellob.art" />
 			<span class="font-mono font-bold tracking-tighter">{siteConfig.name}</span>
 		</MobileLink>

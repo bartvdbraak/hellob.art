@@ -2,7 +2,7 @@ import type { Icons } from '$lib/components/site/icons';
 
 export type NavItem = {
 	title: string;
-	href?: string;
+	href: string;
 	disabled?: boolean;
 	external?: boolean;
 	icon?: keyof typeof Icons;

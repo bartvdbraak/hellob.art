@@ -56,9 +56,10 @@
 							rel="noreferrer"
 							class="font-medium underline underline-offset-4"
 							href="https://www.wearetriple.com">Triple</a
-						>, I've been diving deep into Azure and Azure DevOps. Nailed down certifications like
-						AZ-104 and CKA. I'm not just pushing code, but building and managing solid, scalable
-						cloud setups.
+						>, my role involves providing services to clients including HEINEKEN, BAM, and citizenM.
+						I utilize tools like Akamai, Azure, Azure DevOps and SendGrid to create and maintain
+						robust, scalable cloud infrastructures. For operational purposes, I employ technologies
+						like SaltStack, PRTG, and LogicMonitor.
 					</p>
 					<p class="mt-2">
 						I love to work on personal projects or playing games with friends. Beyond the screens,

@@ -38,6 +38,7 @@
 		"vite": "^5.0.11"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.1.1",
 		"bits-ui": "^0.14.0",
 		"clsx": "^2.1.0",
 		"lucide-svelte": "^0.309.0",
@@ -45,7 +46,8 @@
 		"radix-icons-svelte": "^1.2.1",
 		"svelte-wrap-balancer": "^0.0.4",
 		"tailwind-merge": "^2.2.0",
-		"tailwind-variants": "^0.1.20"
+		"tailwind-variants": "^0.1.20",
+		"web-vitals": "^3.5.1"
 	},
 	"lint-staged": {
 		"*.{js,ts,svelte,css,scss,postcss,md,json}": [

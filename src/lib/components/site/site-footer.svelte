@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { Blocks, Cloud } from 'lucide-svelte';
 	import { siteConfig } from '$lib/config/site';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
+	import { Code } from 'radix-icons-svelte';
 </script>
 
 <footer class="container py-6">
@@ -13,7 +15,9 @@
 	<div class="flex justify-center">
 		<div class="flex h-5 items-center space-x-4 text-xs">
 			<div>
-				Built using <a
+				<span class="hidden sm:inline">Built using</span>
+				<Blocks class="inline h-[1rem] w-[1rem] sm:hidden" />
+				<a
 					href={siteConfig.links.shadcnSvelte}
 					target="_blank"
 					rel="noreferrer"
@@ -22,7 +26,9 @@
 			</div>
 			<Separator orientation="vertical" />
 			<div>
-				Hosted on <a
+				<span class="hidden sm:inline">Hosted on</span>
+				<Cloud class="inline h-[1rem] w-[1rem] sm:hidden" />
+				<a
 					href={siteConfig.links.vercel}
 					target="_blank"
 					rel="noreferrer"
@@ -31,7 +37,9 @@
 			</div>
 			<Separator orientation="vertical" />
 			<div>
-				Source code at <a
+				<span class="hidden sm:inline">Source code at</span>
+				<Code class="inline h-[1rem] w-[1rem] sm:hidden" />
+				<a
 					href={siteConfig.links.gitHubProject}
 					target="_blank"
 					rel="noreferrer"

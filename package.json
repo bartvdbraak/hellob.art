@@ -42,7 +42,7 @@
 		"@vercel/speed-insights": "^1.0.3",
 		"bits-ui": "^0.14.0",
 		"clsx": "^2.1.0",
-		"lucide-svelte": "^0.311.0",
+		"lucide-svelte": "^0.312.0",
 		"mode-watcher": "^0.1.2",
 		"radix-icons-svelte": "^1.2.1",
 		"svelte-wrap-balancer": "^0.0.4",

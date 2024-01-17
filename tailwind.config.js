@@ -17,7 +17,7 @@ const config = {
 			colors: {
 				border: 'hsl(var(--border) / <alpha-value>)',
 				input: 'hsl(var(--input) / <alpha-value>)',
-				ring: 'hsl(var(--ring) / <alpha-value>)',
+				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background) / <alpha-value>)',
 				foreground: 'hsl(var(--foreground) / <alpha-value>)',
 				primary: {
@@ -55,7 +55,7 @@ const config = {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans]
+				sans: ['var(--font-geist-sans)', ...fontFamily.sans]
 			}
 		}
 	}

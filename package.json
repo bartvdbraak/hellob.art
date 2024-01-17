@@ -38,6 +38,8 @@
 		"vite": "^5.0.11"
 	},
 	"dependencies": {
+		"@ethercorps/sveltekit-og": "^3.0.0",
+		"@types/node": "^20.11.5",
 		"@vercel/analytics": "^1.1.1",
 		"@vercel/speed-insights": "^1.0.3",
 		"bits-ui": "^0.14.0",

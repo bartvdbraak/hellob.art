@@ -1,19 +1,32 @@
 <script lang="ts">
-	import { Icons } from '$lib/components/site';
+	import fs from 'fs';
+	import { Icons } from '.';
 
 	export let title: string = 'I made this for you';
 	export let subTitle: string =
 		'Featuring current work and studies in a SvelteKit-based portfolio.';
+
+	const buffer = fs.readFileSync('src/lib/assets/og/me.jpg');
+	const imageData = buffer.toString('base64');
 </script>
 
 <div class="flex h-full w-full items-center justify-center bg-black">
-	<div class="flex w-full flex-col justify-between p-8 px-4 py-12 md:flex-row md:items-center">
-		<h2 class="flex flex-col text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-			<span class="text-6xl text-white">{title}</span>
-			<span class="text-3xl text-gray-600">{subTitle}</span>
-		</h2>
-		<div class="mt-8 flex md:mt-0">
-			<Icons.logo></Icons.logo>
+	<div class="flex flex-row items-center rounded-lg p-4 shadow-md">
+		<div class="ml-10 flex w-7/12 flex-col">
+			<Icons.logo />
+			<h2 class="leading-tighter mb-0 text-6xl font-bold tracking-tighter text-white">{title}</h2>
+			<p class="mt-0 text-3xl font-thin text-gray-400">
+				{subTitle}
+			</p>
+		</div>
+		<div class="mt-0 flex w-5/12">
+			<img class="rounded-xl" src={`data:image/jpeg;base64,${imageData}`} width={400} alt="" />
 		</div>
 	</div>
 </div>
+
+<style>
+	h2 {
+		font-family: 'Geist Bold', 'geist-sans';
+	}
+</style>

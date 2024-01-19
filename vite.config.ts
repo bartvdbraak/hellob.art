@@ -9,7 +9,7 @@ export default defineConfig({
 		noExternal: ['three']
 	},
 	define: {
-		'import.meta.env.VERCEL_ANALYTICS_ID': JSON.stringify(process.env.VERCEL_ANALYTICS_ID)
+		'import.meta.env.VERCEL_URL': JSON.stringify(process.env.VERCEL_URL)
 	}
 });
 

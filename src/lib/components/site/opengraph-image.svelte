@@ -27,6 +27,6 @@
 
 <style>
 	h2 {
-		font-family: 'Geist Bold', 'geist-sans';
+		font-family: 'Geist Bold', 'Geist Sans';
 	}
 </style>

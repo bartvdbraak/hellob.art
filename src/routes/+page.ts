@@ -1,6 +1,8 @@
 /** @type {import('./$types').PageLoad} */
 export function load() {
 	return {
-		title: `Home`
+		name: `Home`,
+		title: `I made this for you`,
+		subTitle: `Featuring current work and studies in a SvelteKit-based portfolio.`
 	};
 }

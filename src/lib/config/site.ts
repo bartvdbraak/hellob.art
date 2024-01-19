@@ -2,7 +2,7 @@ export const siteConfig = {
 	name: 'hellob.art',
 	author: 'Bart van der Braak',
 	url: import.meta.env.VERCEL_URL,
-	ogImage: 'https://${import.meta.env.VERCEL_URL}/og.png',
+	ogImage: `https://${import.meta.env.VERCEL_URL}/og.png`,
 	description: 'Personal website of Bart van der Braak, DevOps/Platform Engineer at Triple.',
 	links: {
 		twitter: 'https://twitter.com/bartvdbraak',

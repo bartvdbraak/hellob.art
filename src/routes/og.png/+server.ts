@@ -5,8 +5,13 @@ import { OgImage } from '$lib/components/site';
 import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
 
+import { readFileSync } from 'fs';
+
 const height = 630;
 const width = 1200;
+
+const meImage = readFileSync(`${process.cwd()}/src/lib/assets/og/me.jpg`);
+const imageData = Buffer.from(meImage).toString('base64');
 
 /** @type {import('./$types').RequestHandler} */
 export const GET = async ({ url }) => {
@@ -14,7 +19,7 @@ export const GET = async ({ url }) => {
 	const subTitle = url.searchParams.get('subTitle') ?? undefined;
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const result = (OgImage as any).render({ title, subTitle });
+	const result = (OgImage as any).render({ title, subTitle, imageData });
 	const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
 
 	const svg = await satori(element, {

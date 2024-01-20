@@ -1,13 +1,10 @@
 <script lang="ts">
-	import fs from 'fs';
 	import { Icons } from '.';
 
 	export let title: string = 'I made this for you';
 	export let subTitle: string =
 		'Featuring current work and studies in a SvelteKit-based portfolio.';
-
-	const buffer = fs.readFileSync('src/lib/assets/og/me.jpg');
-	const imageData = buffer.toString('base64');
+	export let imageData: string = '';
 </script>
 
 <div class="flex h-full w-full items-center justify-center bg-black">

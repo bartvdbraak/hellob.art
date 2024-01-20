@@ -5,7 +5,9 @@
 	export let title: string = siteConfig.name;
 
 	$: title = $page.data?.name ? `${$page.data.name} — ${siteConfig.name}` : siteConfig.name;
-	$: ogImage = `${siteConfig.ogImage}?title=${$page.data.title}&subTitle=${$page.data.subTitle}`;
+	$: ogImage = encodeURI(
+		`${siteConfig.ogImage}?title=${$page.data.title}&subTitle=${$page.data.subTitle}`
+	);
 </script>
 
 <svelte:head>

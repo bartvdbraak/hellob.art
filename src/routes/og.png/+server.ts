@@ -6,8 +6,6 @@ import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
 import { readFileSync } from 'fs';
 
-export const prerender = true;
-
 const height = 630;
 const width = 1200;
 

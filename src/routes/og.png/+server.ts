@@ -4,6 +4,7 @@ import { html as toReactNode } from 'satori-html';
 import { OgImage } from '$lib/components/site';
 import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
+import Me from '$lib/assets/og/me.jpg';
 import { readFile } from 'fs/promises';
 import path from 'path';
 
@@ -12,7 +13,7 @@ const width = 1200;
 
 const getImageData = async () => {
 	// try {
-	const imagePath = path.join(process.cwd(), 'src', 'lib', 'assets', 'og', 'me.jpg');
+	const imagePath = path.join(process.cwd(), Me);
 	const meImage = await readFile(imagePath);
 	return Buffer.from(meImage).toString('base64');
 	// } catch (error) {

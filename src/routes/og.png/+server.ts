@@ -4,23 +4,23 @@ import { html as toReactNode } from 'satori-html';
 import { OgImage } from '$lib/components/site';
 import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
-import Me from '$lib/assets/og/me.jpg';
-import { readFile } from 'fs/promises';
-import path from 'path';
+import imageData from '$lib/assets/og/me.jpg?base64';
+// import { readFile } from 'fs/promises';
+// import path from 'path';
 
 const height = 630;
 const width = 1200;
 
-const getImageData = async () => {
-	// try {
-	const imagePath = path.join(process.cwd(), Me);
-	const meImage = await readFile(imagePath);
-	return Buffer.from(meImage).toString('base64');
-	// } catch (error) {
-	// 	console.error('Error reading image:', error);
-	// 	throw error;
-	// }
-};
+// const getImageData = async () => {
+// 	// try {
+// 	const imagePath = path.join(process.cwd(), Me);
+// 	const meImage = await readFile(imagePath);
+// 	return Buffer.from(meImage).toString('base64');
+// 	// } catch (error) {
+// 	// 	console.error('Error reading image:', error);
+// 	// 	throw error;
+// 	// }
+// };
 
 /** @type {import('./$types').RequestHandler} */
 export const GET = async ({ url }) => {
@@ -28,7 +28,7 @@ export const GET = async ({ url }) => {
 	const title = url.searchParams.get('title') ?? undefined;
 	const subTitle = url.searchParams.get('subTitle') ?? undefined;
 
-	const imageData = await getImageData();
+	// const imageData = await getImageData();
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const result = (OgImage as any).render({ title, subTitle, imageData });
@@ -62,7 +62,8 @@ export const GET = async ({ url }) => {
 
 	return new Response(image.asPng(), {
 		headers: {
-			'content-type': 'image/png'
+			'content-type': 'image/png',
+			'cache-control': 'public, max-age=86400, immutable'
 		}
 	});
 	// } catch (error) {

@@ -4,12 +4,7 @@ import { defineConfig } from 'vite';
 import fs from 'fs';
 
 export default defineConfig({
-	plugins: [enhancedImages(), sveltekit(), rawFonts(['.woff']), base64()],
-	server: {
-		fs: {
-			allow: ['./']
-		}
-	},
+	plugins: [base64(['.jpg']), enhancedImages(), rawFonts(['.woff']), sveltekit()],
 	define: {
 		'import.meta.env.VERCEL_URL': JSON.stringify(process.env.VERCEL_URL)
 	}
@@ -27,18 +22,14 @@ function rawFonts(ext: string[]) {
 	};
 }
 
-function base64() {
+function base64(ext: string[]) {
 	return {
 		name: 'vite-plugin-base64-loader',
 		transform(_code: string, id: string) {
-			const [path, query] = id.split('?');
-
-			if (query !== 'base64') {
-				return null;
+			if (id.includes('inline') && ext.some((e) => id.endsWith(e))) {
+				const base64 = fs.readFileSync(id, { encoding: 'base64' });
+				return { code: `export default ${JSON.stringify(base64)}`, map: null };
 			}
-
-			const base64 = fs.readFileSync(path, { encoding: 'base64' });
-			return { code: `export default ${JSON.stringify(base64)}`, map: null };
 		}
 	};
 }

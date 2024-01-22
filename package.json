@@ -14,9 +14,9 @@
 		"prepare": "npx husky install && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^4.0.5",
+		"@sveltejs/adapter-vercel": "^5.1.0",
 		"@sveltejs/enhanced-img": "^0.1.8",
-		"@sveltejs/kit": "^2.3.4",
+		"@sveltejs/kit": "^2.4.1",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@typescript-eslint/eslint-plugin": "^6.19.0",
 		"@typescript-eslint/parser": "^6.19.0",
@@ -35,13 +35,13 @@
 		"tailwindcss": "^3.4.1",
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.3",
-		"vite": "^5.0.11"
+		"vite": "^5.0.12"
 	},
 	"dependencies": {
 		"@resvg/resvg-js": "^2.6.0",
 		"@types/node": "^20.11.5",
-		"@vercel/analytics": "^1.1.1",
-		"@vercel/speed-insights": "^1.0.4",
+		"@vercel/analytics": "^1.1.2",
+		"@vercel/speed-insights": "^1.0.6",
 		"bits-ui": "^0.14.0",
 		"clsx": "^2.1.0",
 		"lucide-svelte": "^0.312.0",

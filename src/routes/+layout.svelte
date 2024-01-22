@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
-	import { Metadata, SiteFooter, SiteHeader, TailwindIndicator } from '$lib/components/site';
+	import { Metadata, SiteFooter, SiteNavBar, TailwindIndicator } from '$lib/components/site';
 	import '../styles/globals.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import { fly } from 'svelte/transition';
@@ -17,10 +17,10 @@
 <Metadata />
 
 <div class="relative flex min-h-screen flex-col" id="page">
-	<SiteHeader />
-	<main class="mb-4 flex-1">
+	<SiteNavBar />
+	<main class="container relative mb-4 max-w-[980px] flex-1">
 		{#key data.url}
-			<div in:fly={{ x: -200, duration: 200, delay: 200 }} out:fly={{ x: 200, duration: 200 }}>
+			<div in:fly={{ x: -200, duration: 200, delay: 100 }} out:fly={{ x: 200, duration: 100 }}>
 				<slot />
 			</div>
 		{/key}

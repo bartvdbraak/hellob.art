@@ -31,7 +31,7 @@ export async function GET() {
  * @returns {string} robots.txt content.
  */
 function generateRobotsTxt(siteUrl: string, config: { agent: string; disallow: string[] }[]) {
-	return `Sitemap: ${siteUrl}/sitemap.xml
+	return `Sitemap: https://${siteUrl}/sitemap.xml
 
 # https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap#addsitemap
 # https://www.robotstxt.org/robotstxt.html

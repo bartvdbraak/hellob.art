@@ -1,17 +1,14 @@
 <script lang="ts">
-	import * as PageHeader from '$lib/components/site/page-header';
 	import { Projects } from '$lib/components/site/projects';
+	import { page } from '$app/stores';
+	import { SiteHeader } from '$lib/components/site';
+
+	$: title = $page.data.title;
+	$: subTitle = $page.data.subTitle;
 </script>
 
-<div class="container relative max-w-[980px]">
-	<PageHeader.Root class="pb-8">
-		<PageHeader.Heading>Projects I've realized</PageHeader.Heading>
-		<PageHeader.Description>
-			Explore some of the projects I worked on in the past.
-		</PageHeader.Description>
-	</PageHeader.Root>
+<SiteHeader {title} {subTitle} />
 
-	<section class="flex justify-center">
-		<Projects />
-	</section>
-</div>
+<section class="flex justify-center">
+	<Projects />
+</section>

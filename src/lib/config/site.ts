@@ -1,8 +1,8 @@
 export const siteConfig = {
 	name: 'hellob.art',
 	author: 'Bart van der Braak',
-	url: 'https://hellob.art',
-	ogImage: 'https://hellob.art/og.png',
+	url: import.meta.env.VERCEL_URL,
+	ogImage: `https://${import.meta.env.VERCEL_URL}/og.png`,
 	description: 'Personal website of Bart van der Braak, DevOps/Platform Engineer at Triple.',
 	links: {
 		twitter: 'https://twitter.com/bartvdbraak',

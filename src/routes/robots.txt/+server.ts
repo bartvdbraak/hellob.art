@@ -10,7 +10,7 @@ export async function GET() {
 	const robotsConfig = [
 		{
 			agent: '*',
-			disallow: ['/']
+			disallow: import.meta.env.VERCEL_ENV === 'preview' ? ['/'] : ['/og.png/preview']
 		}
 	];
 

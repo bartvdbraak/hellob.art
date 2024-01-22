@@ -4,7 +4,7 @@ import { html as toReactNode } from 'satori-html';
 import { OgImage } from '$lib/components/site';
 import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
-import imageData from '$lib/assets/og/me-inline.jpg';
+import imageData from '$lib/assets/og/me-inline.jpg?base64';
 
 const height = 630;
 const width = 1200;

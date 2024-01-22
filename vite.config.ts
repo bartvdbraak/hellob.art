@@ -26,8 +26,9 @@ function base64(ext: string[]) {
 	return {
 		name: 'vite-plugin-base64-loader',
 		transform(_code: string, id: string) {
-			if (id.includes('inline') && ext.some((e) => id.endsWith(e))) {
-				const base64 = fs.readFileSync(id, { encoding: 'base64' });
+			const [path, query] = id.split('?');
+			if (query === 'base64' && ext.some((e) => id.endsWith(e))) {
+				const base64 = fs.readFileSync(path, { encoding: 'base64' });
 				return { code: `export default ${JSON.stringify(base64)}`, map: null };
 			}
 		}

@@ -32,7 +32,7 @@
 	{/each}
 	<div class="absolute bottom-[5%] left-[50%] grid translate-x-[-50%] grid-flow-col gap-2">
 		{#each images as _, i (_.src)}
-			<button on:click={() => handleMarkerClick(i)}>
+			<button on:click={() => handleMarkerClick(i)} aria-label="select image">
 				<svg height="20" width="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					<circle
 						cx="8"

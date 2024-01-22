@@ -1,6 +1,6 @@
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
-import { html as toReactNode } from 'satori-html';
+import { html } from 'satori-html';
 import { OgImage } from '$lib/components/site';
 import GeistRegular from '$lib/assets/og/Geist-Regular.woff';
 import GeistBold from '$lib/assets/og/Geist-Bold.woff';
@@ -16,7 +16,7 @@ export const GET = async ({ url }) => {
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const result = (OgImage as any).render({ title, subTitle, imageData });
-	const element = toReactNode(`${result.html}<style>${result.css.code}</style>`);
+	const element = html(`${result.html}<style>${result.css.code}</style>`);
 
 	const svg = await satori(element, {
 		fonts: [

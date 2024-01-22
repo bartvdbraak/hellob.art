@@ -26,4 +26,7 @@
 	h2 {
 		font-family: 'Geist Bold', 'Geist Sans';
 	}
+	p {
+		font-family: 'Geist Regular', 'Geist Sans';
+	}
 </style>

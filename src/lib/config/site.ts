@@ -1,14 +1,17 @@
+const SITE_URL =
+	import.meta.env.VERCEL_ENV === 'preview' ? import.meta.env.VERCEL_URL : 'https://hellob.art';
+
 export const siteConfig = {
 	name: 'hellob.art',
 	author: 'Bart van der Braak',
-	url: import.meta.env.VERCEL_URL,
-	ogImage: `https://${import.meta.env.VERCEL_URL}/og.png`,
+	url: SITE_URL,
 	description: 'Personal website of Bart van der Braak, DevOps/Platform Engineer at Triple.',
+	ogImage: `https://${SITE_URL}/og.png`,
 	links: {
 		twitter: 'https://twitter.com/bartvdbraak',
 		linkedIn: 'https://www.linkedin.com/in/bartvdbraak',
 		gitHubProfile: 'https://github.com/bartvdbraak',
-		gitHubProject: 'https://github.com/bartvdbraak',
+		gitHubProject: 'https://github.com/bartvdbraak/hellob.art',
 		shadcnSvelte: 'https://www.shadcn-svelte.com/',
 		vercel: 'https://vercel.com/'
 	},

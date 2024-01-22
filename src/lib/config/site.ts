@@ -1,5 +1,5 @@
 const SITE_URL =
-	import.meta.env.VERCEL_ENV === 'preview' ? import.meta.env.VERCEL_URL : 'https://hellob.art';
+	import.meta.env.VERCEL_ENV === 'preview' ? import.meta.env.VERCEL_URL : 'hellob.art';
 
 export const siteConfig = {
 	name: 'hellob.art',

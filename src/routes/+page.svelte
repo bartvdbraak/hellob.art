@@ -1,10 +1,17 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { Icons, ImageFade } from '$lib/components/site';
-	import { SiteHeader } from '$lib/components/site';
+	import { Icons, ImageFadeCarousel, SiteHeader } from '$lib/components/site';
 	import { buttonVariants } from '$lib/components/ui/button';
 	import { siteConfig } from '$lib/config/site';
 	import { cn } from '$lib/utils';
+
+	import catImg from '$lib/assets/root-cat.jpg?enhanced';
+	import meImg from '$lib/assets/root-me.jpg?enhanced';
+
+	const images = [
+		{ src: meImg, alt: 'Portrait of Bart van der Braak', style: 'object-[50%_10%]' },
+		{ src: catImg, alt: 'Noire yawning cat and a bottle of whiskey with glass', style: '' }
+	];
 
 	$: title = $page.data.title;
 	$: subTitle = $page.data.subTitle;
@@ -71,7 +78,7 @@
 			</div>
 
 			<div class="flex-1">
-				<ImageFade />
+				<ImageFadeCarousel {images} />
 			</div>
 		</div>
 	</div>

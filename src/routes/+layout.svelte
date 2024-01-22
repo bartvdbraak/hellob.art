@@ -20,7 +20,7 @@
 	<SiteNavBar />
 	<main class="container relative mb-4 max-w-[980px] flex-1">
 		{#key data.url}
-			<div in:fly={{ x: -200, duration: 200, delay: 200 }} out:fly={{ x: 200, duration: 200 }}>
+			<div in:fly={{ x: -200, duration: 200, delay: 100 }} out:fly={{ x: 200, duration: 100 }}>
 				<slot />
 			</div>
 		{/key}

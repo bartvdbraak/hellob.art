@@ -2,7 +2,7 @@
 export function load() {
 	return {
 		name: `Projects`,
-		title: `Projects Ive realized`,
+		title: `Projects I've realized`,
 		subTitle: `Explore some of the projects I worked on in the past.`
 	};
 }

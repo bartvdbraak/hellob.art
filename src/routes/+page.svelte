@@ -7,10 +7,21 @@
 
 	import catImg from '$lib/assets/root-cat.jpg?enhanced';
 	import meImg from '$lib/assets/root-me.jpg?enhanced';
+	import { Cat, PersonStanding } from 'lucide-svelte';
 
 	const images = [
-		{ src: meImg, alt: 'Portrait of Bart van der Braak', style: 'object-[50%_10%]' },
-		{ src: catImg, alt: 'Noire yawning cat and a bottle of whiskey with glass', style: '' }
+		{
+			src: meImg,
+			alt: 'Portrait of Bart van der Braak',
+			style: 'object-[50%_10%]',
+			icon: PersonStanding
+		},
+		{
+			src: catImg,
+			alt: 'Noire yawning cat and a bottle of whiskey with glass',
+			style: '',
+			icon: Cat
+		}
 	];
 
 	$: title = $page.data.title;

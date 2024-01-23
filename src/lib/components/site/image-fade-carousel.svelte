@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, type ComponentType } from 'svelte';
 	import { Button } from '../ui/button';
-	import { Eye } from 'lucide-svelte';
+	import type { Icon } from 'lucide-svelte';
 
-	export let images: { src: string; alt: string; style?: string }[] = [];
+	export let images: { src: string; alt: string; style?: string; icon: ComponentType<Icon> }[] = [];
 
 	let index = 0;
 	/* global NodeJS */
@@ -28,30 +28,25 @@
 		<enhanced:img
 			src={img.src}
 			alt={img.alt}
-			class:current-img={index === i}
-			class="absolute inset-0 h-full w-full rounded-xl object-cover opacity-0 transition-opacity duration-1000 ease-out {img.style}"
+			class="absolute inset-0 h-full w-full rounded-xl object-cover opacity-0 transition-opacity duration-1000 ease-out {img.style} {index ===
+				i && 'opacity-100'}"
 		/>
 	{/each}
 	<div class="absolute bottom-[2.5%] left-[50%] grid translate-x-[-50%] grid-flow-col gap-2">
-		{#each images as _, i (_.src)}
+		{#each images as img, i}
 			<Button
 				variant="outline"
-				class={index === i ? 'opacity-80' : 'opacity-30'}
+				class={index === i ? '' : 'opacity-60'}
 				size="icon"
 				aria-label={`Toggle image ${i + 1}`}
 				on:click={() => handleMarkerClick(i)}
 			>
-				<Eye class="transition-fill ease-outmuted h-4 w-4 " />
+				<svelte:component
+					this={img.icon}
+					{...$$props}
+					class="transition-fill ease-outmuted h-4 w-4"
+				/>
 			</Button>
 		{/each}
 	</div>
 </div>
-
-<style>
-	.current-img {
-		opacity: 1;
-	}
-	.current-marker {
-		fill: white;
-	}
-</style>

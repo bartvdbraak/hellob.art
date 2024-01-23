@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://hellob.art/"><img src="https://github.com/bartvdbraak/hellob.art/assets/3996360/365337f4-0ad8-4107-bcb1-8a4843ceae94" alt="hellob.art" width="30%"></a>
-    <p><em>Personal website built with Svelte</em></p>
+    <p><em>current work and studies in a SvelteKit-based portfolio</em></p>
 </div>
 
 <div align="center">
@@ -8,6 +8,10 @@
   <a href="https://hellobart-unlighthouse.pages.dev"><img src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/bartvdbraak/795a3d6af5b0db5754cf7279898c3c16/raw/hellob.art-unlighthouse.json" /></a>
   <a href="https://github.com/bartvdbraak/hellob.art/deployments/activity_log?environment=Production"><img src="https://img.shields.io/github/deployments/bartvdbraak/hellob.art/production?label=vercel&logo=vercel" /></a>
 </div>
+
+## Description
+
+This is a personal website built with Svelte and SvelteKit. It includes a variety of components and routes, and it's styled with Tailwind CSS. The project is set up with a number of quality assurance tools, including ESLint, Prettier, and Husky.
 
 ## Installation
 
@@ -42,13 +46,18 @@ pnpm run dev
 pnpm run dev -- --open
 ```
 
-## Technologies Used
+## Project Structure
 
-- **Svelte:** The framework used for building this portfolio project.
-- **SvelteKit:** The tooling and routing framework for Svelte projects.
-- **Tailwind CSS:** A utility-first CSS framework packed with classes.
-- **Skeleton:** UI Toolkit for Svelte + Tailwind.
-- **Threlte:** Declarative Three.js for Svelte.
+This project has the following structure:
+
+- `src/`: This is where the main application code is stored. This includes:
+  - `app.d.ts`, `app.html`, `app.pcss`: Main application files.
+  - `lib/`: Contains assets, components, config, content, etc.
+  - `routes/`: Contains routing layout, pages and server-side code.
+  - `styles/`: Contains style files.
+- `static/`: Contains static files like `browserconfig.xml`, `site.webmanifest`, and fonts.
+- `.github/`: Contains GitHub related files like `dependabot.yml`, `renovate.json`, and workflows.
+- Configuration files: `.eslintignore`, `.eslintrc.cjs`, `.gitignore`, `.npmrc`, `.prettierignore`, `.prettierrc`, `postcss.config.cjs`, `svelte.config.js`, `tailwind.config.js`, `tsconfig.json`, `vite.config.ts`.
 
 ## Contributing
 
@@ -56,17 +65,4 @@ I'm open to contributions! If you find any bugs, have suggestions, or want to ad
 
 ## License
 
-This project is licensed under the GPLv3 License. Feel free to explore, learn, and have fun!
-
-Some dependencies may hold different licenses but are in compliance with GPLv3:
-
-- `MIT`: Compatible with GPLv3.
-- `Apache 2.0`: Compatible with GPLv3.
-- `BSD-3-Clause`: Compatible with GPLv3.
-- `BSD-2-Clause`: Compatible with GPLv3.
-- `ISC`: Compatible with GPLv3.
-- `Python-2.0`: Compatible with GPLv3. (Note: Python has its own license, and version 2.0 is compatible with GPLv3).
-- `CC-BY-4.0`: This is a Creative Commons license, which is not a software license. It's generally not recommended to include CC licenses in software projects due to potential compatibility issues. This might cause complications if you choose GPLv3.
-- `CC0-1.0`: Not a software license, but it is explicitly designed to waive all copyrights, making it effectively compatible with GPLv3.
-- `0BSD`: Compatible with GPLv3.
-- `(MIT OR CC0-1.0)`: MIT is compatible with GPLv3, and CC0-1.0 is effectively compatible with GPLv3.
+This project is licensed under the terms of the [LICENSE](LICENSE) file.

@@ -38,6 +38,7 @@
 				variant="outline"
 				class={index === i ? 'opacity-80' : 'opacity-30'}
 				size="icon"
+				aria-label={`Toggle image ${i + 1}`}
 				on:click={() => handleMarkerClick(i)}
 			>
 				<Eye class="transition-fill ease-outmuted h-4 w-4 " />

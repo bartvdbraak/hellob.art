@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { Button } from '../ui/button';
+	import { Eye } from 'lucide-svelte';
 
 	export let images: { src: string; alt: string; style?: string }[] = [];
 
@@ -30,19 +32,17 @@
 			class="absolute inset-0 h-full w-full rounded-xl object-cover opacity-0 transition-opacity duration-1000 ease-out {img.style}"
 		/>
 	{/each}
-	<div class="absolute bottom-[5%] left-[50%] grid translate-x-[-50%] grid-flow-col gap-2">
+	<div class="absolute bottom-[2.5%] left-[50%] grid translate-x-[-50%] grid-flow-col gap-2">
 		{#each images as _, i (_.src)}
-			<button on:click={() => handleMarkerClick(i)} aria-label="select image">
-				<svg height="20" width="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<circle
-						cx="8"
-						cy="8"
-						r="8"
-						class:current-marker={index === i}
-						class="transition-fill fill-gray-500 duration-500 ease-out"
-					/>
-				</svg>
-			</button>
+			<Button
+				variant="outline"
+				class={index === i ? 'opacity-80' : 'opacity-30'}
+				size="icon"
+				aria-label={`Toggle image ${i + 1}`}
+				on:click={() => handleMarkerClick(i)}
+			>
+				<Eye class="transition-fill ease-outmuted h-4 w-4 " />
+			</Button>
 		{/each}
 	</div>
 </div>

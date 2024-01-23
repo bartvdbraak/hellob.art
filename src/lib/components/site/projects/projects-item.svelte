@@ -8,7 +8,7 @@
 	let { logo, title, description, languages, license, year } = projectsItem;
 </script>
 
-<Card.Root class="hover:bg-muted/50">
+<Card.Root class="mb-6 inline-block hover:bg-muted/50">
 	<Card.Header class="grid grid-cols-[1fr_72px] items-start gap-4 space-y-0">
 		<div class="space-y-1">
 			<Card.Title tag="h2" class="mb-2">{title}</Card.Title>

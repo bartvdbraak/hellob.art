@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Circle, ExternalLink, GithubLogo } from 'radix-icons-svelte';
+	import { Circle, GithubLogo, Globe } from 'radix-icons-svelte';
 	import { Calendar, Scale } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
 	import type { Project } from '$lib/content/projects';
@@ -42,13 +42,13 @@
 			{#if gitHubUrl || projectUrl}
 				<div class="flex items-center">
 					{#if gitHubUrl}
-						<Button variant="ghost" size="icon" href={gitHubUrl}>
+						<Button variant="ghost" size="icon" href={gitHubUrl} target="_blank">
 							<GithubLogo />
 						</Button>
 					{/if}
 					{#if projectUrl}
-						<Button variant="ghost" size="icon" href={projectUrl}>
-							<ExternalLink />
+						<Button variant="ghost" size="icon" href={projectUrl} target="_blank">
+							<Globe />
 						</Button>
 					{/if}
 				</div>

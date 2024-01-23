@@ -65,7 +65,7 @@ const projects: Project[] = [
 		description:
 			'Keyweave is an open-source tool crafted in Rust to seamlessly fetch secrets from Azure Key Vault and weave them into a convenient .env file.',
 		gitHubUrl: 'https://www.github.com/bartvdbraak/keyweave',
-		projectUrl: 'https://docs.rs/crate/keyweave/latest',
+		projectUrl: 'https://crates.io/crates/keyweave',
 		year: '2023',
 		license: 'GPLv3',
 		languages: [

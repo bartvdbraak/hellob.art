@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { Circle } from 'radix-icons-svelte';
+	import { Circle, GithubLogo, Globe } from 'radix-icons-svelte';
 	import { Calendar, Scale } from 'lucide-svelte';
 	import * as Card from '$lib/components/ui/card';
 	import type { Project } from '$lib/content/projects';
+	import { Button } from '$lib/components/ui/button';
 
 	export let projectsItem: Project;
-	let { logo, title, description, languages, license, year } = projectsItem;
+	let { logo, title, description, gitHubUrl, projectUrl, languages, license, year } = projectsItem;
 </script>
 
 <Card.Root class="mb-6 inline-block hover:bg-muted/50">
@@ -16,26 +17,42 @@
 				{description}
 			</Card.Description>
 		</div>
-		<div class="justify-self-end">
-			<enhanced:img src={logo} class="rounded-sm" alt={`${title} logo`} />
+		<div class="h-full justify-self-end">
+			<enhanced:img src={logo} class="mb-2 rounded-sm" alt={`${title} logo`} />
 		</div>
 	</Card.Header>
 	<Card.Content>
-		<div class="flex space-x-4 text-sm text-muted-foreground">
-			{#each languages as language}
+		<div class="flex justify-between">
+			<div class="flex space-x-4 text-sm text-muted-foreground">
+				{#each languages as language}
+					<div class="flex items-center">
+						<Circle class="mr-1 h-3 w-3 {language.color}" />
+						{language.name}
+					</div>
+				{/each}
 				<div class="flex items-center">
-					<Circle class="mr-1 h-3 w-3 {language.color}" />
-					{language.name}
+					<Scale class="mr-1 h-3 w-3" />
+					{license}
 				</div>
-			{/each}
-			<div class="flex items-center">
-				<Scale class="mr-1 h-3 w-3" />
-				{license}
+				<div class="flex items-center">
+					<Calendar class="mr-1 h-3 w-3" />
+					{year}
+				</div>
 			</div>
-			<div class="flex items-center">
-				<Calendar class="mr-1 h-3 w-3" />
-				{year}
-			</div>
+			{#if gitHubUrl || projectUrl}
+				<div class="flex items-center">
+					{#if gitHubUrl}
+						<Button variant="ghost" size="icon" href={gitHubUrl} target="_blank">
+							<GithubLogo />
+						</Button>
+					{/if}
+					{#if projectUrl}
+						<Button variant="ghost" size="icon" href={projectUrl} target="_blank">
+							<Globe />
+						</Button>
+					{/if}
+				</div>
+			{/if}
 		</div>
 	</Card.Content>
 </Card.Root>

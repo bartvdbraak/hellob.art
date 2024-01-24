@@ -159,10 +159,6 @@ const projects: Project[] = [
 			{
 				name: 'Vue.js',
 				color: 'text-emerald-400'
-			},
-			{
-				name: 'Python',
-				color: 'text-blue-400'
 			}
 		]
 	}

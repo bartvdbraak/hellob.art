@@ -2,7 +2,7 @@ import { siteConfig } from '$lib/config/site';
 import { navConfig } from '$lib/config/nav';
 import type { NavItem } from '$lib/types/nav';
 
-const SITE_URL = siteConfig.url;
+const SITE_URL = `https://${siteConfig.url}`;
 
 /**
  * SvelteKit RequestHandler for generating sitemap.

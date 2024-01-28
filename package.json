@@ -42,7 +42,7 @@
 		"@types/node": "^20.11.5",
 		"@vercel/analytics": "^1.1.2",
 		"@vercel/speed-insights": "^1.0.6",
-		"bits-ui": "^0.15.0",
+		"bits-ui": "^0.16.0",
 		"clsx": "^2.1.0",
 		"lucide-svelte": "^0.316.0",
 		"mode-watcher": "^0.1.2",

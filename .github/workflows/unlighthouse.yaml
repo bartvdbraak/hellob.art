@@ -20,7 +20,7 @@ jobs:
         node-version: [20]
     steps:
       - name: Create initial comment
-        uses: marocchino/sticky-pull-request-comment@v2.8.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
         if: github.ref != 'refs/heads/main'
         with:
           header: ${{ env.COMMENT_ID }}
@@ -133,7 +133,7 @@ jobs:
             core.setOutput("scoreColor", getColor(result.summary.score));
 
       - name: Update comment with result
-        uses: marocchino/sticky-pull-request-comment@v2.8.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
         if: github.ref != 'refs/heads/main'
         with:
           header: ${{ env.COMMENT_ID }}
@@ -152,7 +152,7 @@ jobs:
           color: ${{ steps.create_result_content.outputs.scoreColor }}
 
       - name: Update comment on failure
-        uses: marocchino/sticky-pull-request-comment@v2.8.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
         if: failure() && github.ref != 'refs/heads/main'
         with:
           header: ${{ env.COMMENT_ID }}
@@ -162,7 +162,7 @@ jobs:
             See deployment for any errors
 
       - name: Update comment on cancel
-        uses: marocchino/sticky-pull-request-comment@v2.8.0
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
         if: cancelled() && github.ref != 'refs/heads/main'
         with:
           header: ${{ env.COMMENT_ID }}

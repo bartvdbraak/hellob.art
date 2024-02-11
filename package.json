@@ -51,7 +51,7 @@
 		"satori-html": "^0.3.2",
 		"svelte-wrap-balancer": "^0.0.4",
 		"tailwind-merge": "^2.2.0",
-		"tailwind-variants": "^0.1.20"
+		"tailwind-variants": "^0.2.0"
 	},
 	"lint-staged": {
 		"*.{js,ts,svelte,css,scss,postcss,md,json}": [

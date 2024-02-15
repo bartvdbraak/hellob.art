@@ -21,6 +21,12 @@ export type TimelineItem = {
 
 const timeline: TimelineItem[] = [
 	{
+		title: 'Azure Network Engineer Associate (AZ-700)',
+		subTitle: 'Microsoft',
+		icon: Badge,
+		startYear: 2024
+	},
+	{
 		title: 'Azure Administrator Associate (AZ-104)',
 		subTitle: 'Microsoft',
 		icon: Badge,

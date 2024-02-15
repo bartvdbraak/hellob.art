@@ -46,6 +46,7 @@ import slackLogo from '$lib/assets/tools/slack.svg';
 import nmapLogo from '$lib/assets/tools/nmap.svg';
 import dBeaverLogo from '$lib/assets/tools/dbeaver.svg';
 import openTofuLogo from '$lib/assets/tools/opentofu.svg';
+import terraformLogo from '$lib/assets/tools/terraform.svg';
 import gitLensLogo from '$lib/assets/tools/gitlens.png?enhanced';
 
 export {
@@ -537,6 +538,15 @@ const tools: Tool[] = [
 		description:
 			'An open-source infrastructure as code tool that enables the automated creation, modification, and versioning of complex infrastructures.',
 		logo: openTofuLogo,
+		url: 'https://opentofu.org',
+		enhanced: false
+	},
+	{
+		name: 'Terraform',
+		tagLine: 'Infrastructure as Code Tool',
+		description:
+			'Terraform is infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services.',
+		logo: terraformLogo,
 		url: 'https://opentofu.org',
 		enhanced: false
 	},

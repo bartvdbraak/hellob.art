@@ -28,7 +28,7 @@ dependencies:
     version: 0.340.0(svelte@4.2.9)
   mode-watcher:
     specifier: ^0.2.0
-    version: 0.2.0(svelte@4.2.9)
+    version: 0.2.1(svelte@4.2.9)
   radix-icons-svelte:
     specifier: ^1.2.1
     version: 1.2.1
@@ -2529,8 +2529,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mode-watcher@0.2.0(svelte@4.2.9):
-    resolution: {integrity: sha512-NCo72EColWhNjMWXr+U9hjJS6ixCFEADfvj44XFLUWEkR/dsbJxnOX6bkxM+i1DWmP/nRhKI+rr2Z2nt+TZSGA==}
+  /mode-watcher@0.2.1(svelte@4.2.9):
+    resolution: {integrity: sha512-HLmJgG5kmJCFR/+rcG2te54HjIxqk7BTAsFnsygZR5hcOYlhLEJQ0V8rh1axv2JQIbOAZs1yPlUBSpVATRFtUw==}
     peerDependencies:
       svelte: ^4.0.0
     dependencies:

@@ -16,7 +16,7 @@ dependencies:
     version: 1.1.2
   '@vercel/speed-insights':
     specifier: ^1.0.6
-    version: 1.0.6(@sveltejs/kit@2.4.3)(svelte@4.2.9)
+    version: 1.0.10(@sveltejs/kit@2.4.3)(svelte@4.2.9)
   bits-ui:
     specifier: ^0.18.0
     version: 0.18.0(svelte@4.2.9)
@@ -1227,11 +1227,11 @@ packages:
       - supports-color
     dev: true
 
-  /@vercel/speed-insights@1.0.6(@sveltejs/kit@2.4.3)(svelte@4.2.9):
-    resolution: {integrity: sha512-T+6AxPhGMqj4hwY7t1kjtsPFI/alOfakNgzTfB0ujGAddQLqjAlvhWmNgWHcYWqcYoG3r53efzQEnXyjqgmKSg==}
+  /@vercel/speed-insights@1.0.10(@sveltejs/kit@2.4.3)(svelte@4.2.9):
+    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==}
     requiresBuild: true
     peerDependencies:
-      '@sveltejs/kit': ^1
+      '@sveltejs/kit': ^1 || ^2
       next: '>= 13'
       react: ^18 || ^19
       svelte: ^4

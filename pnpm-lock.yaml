@@ -13,7 +13,7 @@ dependencies:
     version: 20.11.20
   '@vercel/analytics':
     specifier: ^1.1.2
-    version: 1.1.2
+    version: 1.2.2
   '@vercel/speed-insights':
     specifier: ^1.0.6
     version: 1.0.10(@sveltejs/kit@2.4.3)(svelte@4.2.12)
@@ -1193,8 +1193,16 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vercel/analytics@1.1.2:
-    resolution: {integrity: sha512-CodhkLCQ/EHzjX8k+Qg+OzTBY0UadykrcfolfSOJVZZY/ZJM5nbhztm9KdbYvMfqKlasAr1+OYy0ThZnDA/MYA==}
+  /@vercel/analytics@1.2.2:
+    resolution: {integrity: sha512-X0rctVWkQV1e5Y300ehVNqpOfSOufo7ieA5PIdna8yX/U7Vjz0GFsGf4qvAhxV02uQ2CVt7GYcrFfddXXK2Y4A==}
+    peerDependencies:
+      next: '>= 13'
+      react: ^18 || ^19
+    peerDependenciesMeta:
+      next:
+        optional: true
+      react:
+        optional: true
     dependencies:
       server-only: 0.0.1
     dev: false

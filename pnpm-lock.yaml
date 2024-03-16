@@ -54,7 +54,7 @@ devDependencies:
     version: 5.1.1(@sveltejs/kit@2.5.4)
   '@sveltejs/enhanced-img':
     specifier: ^0.1.8
-    version: 0.1.8(svelte@4.2.12)
+    version: 0.1.9(svelte@4.2.12)
   '@sveltejs/kit':
     specifier: ^2.4.3
     version: 2.5.4(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@4.2.12)(vite@5.1.6)
@@ -964,10 +964,10 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/enhanced-img@0.1.8(svelte@4.2.12):
-    resolution: {integrity: sha512-0cLVR9KiO0/t3VVm64OM7bPHTkdaT2aaz1rwoAhao+EBXR3vMvLoYXLHvz8o9/552PSV8G844RkH7qkGc3YAiQ==}
+  /@sveltejs/enhanced-img@0.1.9(svelte@4.2.12):
+    resolution: {integrity: sha512-gUgaiG88P6moWcxZx4YrzMhAlw1TgggKRp7n9gdfCREDeXHysCd1l9GpQR3sh109SM3rNlkiaAzt+iPLT0aG1w==}
     dependencies:
-      magic-string: 0.30.5
+      magic-string: 0.30.8
       svelte-parse-markup: 0.1.2(svelte@4.2.12)
       vite-imagetools: 6.2.9
     transitivePeerDependencies:
@@ -2427,13 +2427,6 @@ packages:
     dependencies:
       svelte: 4.2.12
     dev: false
-
-  /magic-string@0.30.5:
-    resolution: {integrity: sha512-7xlpfBaQaP/T6Vh8MO/EqXSW5En6INHEvEXQiuff7Gku0PWjU3uf6w/j9o7O+SpB5fOAkrI5HeoNgwjEO0pFsA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /magic-string@0.30.7:
     resolution: {integrity: sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==}

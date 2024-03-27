@@ -18,8 +18,8 @@ dependencies:
     specifier: ^1.0.6
     version: 1.0.10(@sveltejs/kit@2.5.4)(svelte@4.2.12)
   bits-ui:
-    specifier: ^0.20.0
-    version: 0.20.1(svelte@4.2.12)
+    specifier: ^0.21.0
+    version: 0.21.0(svelte@4.2.12)
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
@@ -937,6 +937,15 @@ packages:
     dev: false
     optional: true
 
+  /@resvg/resvg-js-darwin-x64@2.6.1:
+    resolution: {integrity: sha512-aW15HMQSk85GPHE4gsc56G0Fqi2IGVkDfPWEWHEyDBpCZ17RKweAwg5V3ioz9aGX1nmhjQa9tJ2xgVwX+sqIjw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
   /@resvg/resvg-js-linux-arm-gnueabihf@2.6.1:
     resolution: {integrity: sha512-7vpBFzCMONnRzK0uCBT5h+Dmsa8dWsoLFqB6xgutNfKkldjuCOiLNe0tT7hneGF8tw5H+W6hX/VLx2ktDwsS4Q==}
     engines: {node: '>= 10'}
@@ -1016,6 +1025,7 @@ packages:
       '@resvg/resvg-js-android-arm-eabi': 2.6.1
       '@resvg/resvg-js-android-arm64': 2.6.1
       '@resvg/resvg-js-darwin-arm64': 2.6.1
+      '@resvg/resvg-js-darwin-x64': 2.6.1
       '@resvg/resvg-js-linux-arm-gnueabihf': 2.6.1
       '@resvg/resvg-js-linux-arm64-gnu': 2.6.1
       '@resvg/resvg-js-linux-arm64-musl': 2.6.1
@@ -1611,8 +1621,8 @@ packages:
       file-uri-to-path: 1.0.0
     dev: true
 
-  /bits-ui@0.20.1(svelte@4.2.12):
-    resolution: {integrity: sha512-P0JRuWn+XpFYsAbGnPlyPVKab88v2S8Q57cUI3LZdh0nulO7fgxbXgBHgEAmmgNk63XxyvhmfYz44kZFRrHtLA==}
+  /bits-ui@0.21.0(svelte@4.2.12):
+    resolution: {integrity: sha512-bmRiQhHNcK7oRyIg/6l094NYmr4zvkFWzRrZXG5trLv4aFdCcNJ2SAnfCI7cXDWwv6t3rzerWsGs3wl1JNMIvQ==}
     peerDependencies:
       svelte: ^4.0.0
     dependencies:

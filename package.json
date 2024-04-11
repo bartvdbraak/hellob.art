@@ -10,6 +10,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
+		"lint-ci": "prettier --check . && eslint . --no-fix --max-warnings=0",
 		"format": "prettier --write .",
 		"prepare": "npx husky && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
 	},

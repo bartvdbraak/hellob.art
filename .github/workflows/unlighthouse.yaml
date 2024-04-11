@@ -62,7 +62,7 @@ jobs:
           vercel_project_id: ${{ vars.VERCEL_PROJECT_ID }}
 
       - name: Await Vercel Deployment
-        uses: UnlyEd/github-action-await-vercel@v1.2.43
+        uses: UnlyEd/github-action-await-vercel@v2.0.0
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         with:

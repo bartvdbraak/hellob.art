@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as Sheet from '$lib/components/ui/sheet/';
-	import { HamburgerMenu } from 'radix-icons-svelte';
+	import { Menu } from 'lucide-svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { navConfig } from '$lib/config/nav';
 	import { siteConfig } from '$lib/config/site';
@@ -17,7 +17,7 @@
 			variant="ghost"
 			class="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
 		>
-			<HamburgerMenu class="h-5 w-5" />
+			<Menu class="h-5 w-5" />
 			<span class="sr-only">Toggle Menu</span>
 		</Button>
 	</Sheet.Trigger>

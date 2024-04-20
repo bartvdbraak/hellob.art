@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Balancer from 'svelte-wrap-balancer';
 	import { cn } from '$lib/utils';
 
 	let className: string | undefined | null = undefined;
@@ -7,10 +6,11 @@
 </script>
 
 <p
-	class={cn('max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl', className)}
+	class={cn(
+		'max-w-[750px] text-balance text-center text-lg text-muted-foreground sm:text-xl',
+		className
+	)}
 	{...$$restProps}
 >
-	<Balancer>
-		<slot />
-	</Balancer>
+	<slot />
 </p>

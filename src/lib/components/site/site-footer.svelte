@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { Blocks, Cloud } from 'lucide-svelte';
+	import { Blocks, Cloud, CodeXml } from 'lucide-svelte';
 	import { siteConfig } from '$lib/config/site';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
-	import { Code } from 'radix-icons-svelte';
 </script>
 
 <footer class="container py-6">
@@ -38,7 +37,7 @@
 			<Separator orientation="vertical" />
 			<div>
 				<span class="hidden sm:inline">Source code at</span>
-				<Code class="inline h-[1rem] w-[1rem] sm:hidden" />
+				<CodeXml class="inline h-[1rem] w-[1rem] sm:hidden" />
 				<a
 					href={siteConfig.links.gitHubProject}
 					target="_blank"

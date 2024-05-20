@@ -54,7 +54,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Retrieve Vercel Preview URL
-        uses: zentered/vercel-preview-url@v1.1.9
+        uses: zentered/vercel-preview-url@v1.2.0
         id: vercel_preview_url
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

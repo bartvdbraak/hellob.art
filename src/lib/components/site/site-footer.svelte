@@ -7,7 +7,8 @@
 <footer class="container py-6">
 	<div class="space-y-1">
 		<p class="text-center text-sm text-muted-foreground">
-			&copy; {new Date().getFullYear()} &mdash; {siteConfig.author}. Licensed under GPL-3.0.
+			&copy; {new Date().getFullYear()} &mdash;
+			<a rel="me" href={siteConfig.links.mastodon}>{siteConfig.author}</a>. Licensed under GPL-3.0.
 		</p>
 	</div>
 	<Separator class="my-2" />

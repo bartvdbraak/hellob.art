@@ -10,6 +10,7 @@ export const siteConfig = {
 	links: {
 		twitter: 'https://twitter.com/bartvdbraak',
 		linkedIn: 'https://www.linkedin.com/in/bartvdbraak',
+		mastodon: 'https://mstdn.social/@bartvdbraak',
 		gitHubProfile: 'https://github.com/bartvdbraak',
 		gitHubProject: 'https://github.com/bartvdbraak/hellob.art',
 		shadcnSvelte: 'https://www.shadcn-svelte.com/',

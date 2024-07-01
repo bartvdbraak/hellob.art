@@ -1,11 +1,11 @@
-import keyweaveLogo from '$lib/assets/projects/keyweave-logo.png?enhanced';
-import videoWallLogo from '$lib/assets/projects/videowall-logo.png?enhanced';
-import ticketDashboardLogo from '$lib/assets/projects/triple-logo.png?enhanced';
-import zaantjeLogo from '$lib/assets/projects/zaantje-logo.png?enhanced';
-import helloBartLogo from '$lib/assets/logo-icon.png?enhanced';
-import omnidashLogo from '$lib/assets/projects/omnidash-logo.png?enhanced';
-import azureGeocodeMappingLogo from '$lib/assets/projects/azure-geocode-mapping-logo.png?enhanced';
-import slayerWeightCalcLogo from '$lib/assets/projects/slayerweightcalc-logo.png?enhanced';
+import keyweaveLogo from '$lib/assets/projects/keyweave-logo.png';
+import videoWallLogo from '$lib/assets/projects/videowall-logo.png';
+import ticketDashboardLogo from '$lib/assets/projects/triple-logo.png';
+import zaantjeLogo from '$lib/assets/projects/zaantje-logo.png';
+import helloBartLogo from '$lib/assets/logo-icon.png';
+import omnidashLogo from '$lib/assets/projects/omnidash-logo.png';
+import azureGeocodeMappingLogo from '$lib/assets/projects/azure-geocode-mapping-logo.png';
+import slayerWeightCalcLogo from '$lib/assets/projects/slayerweightcalc-logo.png';
 
 // TODO: Use vite glob import to import all images from a folder and select them based on their name
 // const gallery = Object.values(import.meta.glob('@assets/asso/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' }))

@@ -5,8 +5,8 @@
 	import { siteConfig } from '$lib/config/site';
 	import { cn } from '$lib/utils';
 
-	import catImg from '$lib/assets/root-cat.jpg?enhanced';
-	import meImg from '$lib/assets/root-me.jpg?enhanced';
+	import catImg from '$lib/assets/root-cat.jpg';
+	import meImg from '$lib/assets/root-me.jpg';
 	import { Cat, PersonStanding } from 'lucide-svelte';
 
 	const images = [

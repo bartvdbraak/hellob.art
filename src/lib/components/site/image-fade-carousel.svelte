@@ -25,7 +25,7 @@
 
 <div class="relative h-[500px]">
 	{#each images as img, i}
-		<enhanced:img
+		<img
 			src={img.src}
 			alt={img.alt}
 			class="absolute inset-0 h-full w-full rounded-xl object-cover opacity-0 transition-opacity duration-1000 ease-out {img.style} {index ===

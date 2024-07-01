@@ -40,10 +40,10 @@ jobs:
           fi
 
       - name: Checkout repository
-        uses: actions/checkout@v4.1.4
+        uses: actions/checkout@v4.1.6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v3.0.0
+        uses: pnpm/action-setup@v4.0.0
         with:
           version: latest
 
@@ -54,7 +54,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Retrieve Vercel Preview URL
-        uses: zentered/vercel-preview-url@v1.1.9
+        uses: zentered/vercel-preview-url@v1.2.0
         id: vercel_preview_url
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
@@ -80,7 +80,7 @@ jobs:
             --build-static
 
       - name: Upload report to Cloudflare pages
-        uses: cloudflare/wrangler-action@v3.4.1
+        uses: cloudflare/wrangler-action@v3.6.1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy .unlighthouse --project-name="${{ env.CLOUDFLARE_PROJECT }}" --branch=${{ env.CLOUDFLARE_BRANCH }}

@@ -61,30 +61,34 @@
 		<div class="text-md mt-12 flex flex-col gap-8 md:flex-row">
 			<div class="flex-1 empty:hidden">
 				<p>
-					I'm a DevOps and Platform Engineering enthusiast from Zaandam, The Netherlands. Started my
-					journey in Information Sciences at the Vrije Universiteit Amsterdam, quickly learning and
-					adopting Python, Javascript and Linux. These days, I'm also working alot with Terraform,
-					Bicep, and Kubernetes, creating cloud infra solutions that are sustainable.
+					I'm a DevOps and Platform Engineering enthusiast from Zaandam, The Netherlands. I studied
+					data science and machine learning at the Vrije Universiteit, where I adopted skills in
+					Python, JavaScript, and Linux.
 				</p>
 				<p class="mt-2">
-					Over at <a
+					In my free time, I enjoy working on personal projects or playing games with friends.
+					Beyond the screens, you can find me vibing to vinyl, watching movies, attending concerts
+					and festivals, and sharing laughs with my oversized cat and amazing girlfriend. I also
+					enjoy a good whiskey and am always up for a chat or ready to help.
+				</p>
+				<p class="mt-2">
+					At <a
 						target="_blank"
 						rel="noreferrer"
 						class="font-medium underline underline-offset-4"
 						href="https://www.wearetriple.com">Triple</a
-					>, my role involves providing services to clients including HEINEKEN, BAM, and citizenM. I
-					utilize tools like Akamai, Azure, Azure DevOps and SendGrid to create and maintain robust,
-					scalable cloud infrastructures. For operational purposes, I employ technologies like
-					SaltStack, PRTG, and LogicMonitor.
+					>, I provided cloud services for clients like HEINEKEN, BAM, and citizenM, using Akamai,
+					Azure, and Azure DevOps to create and maintain robust, scalable cloud infrastructures.
 				</p>
 				<p class="mt-2">
-					I love to work on personal projects or playing games with friends. Beyond the screens, you
-					can catch me vibing to vinyl, watching movies, hitting concerts and festivals.
-				</p>
-				<p class="mt-2">
-					When the dust settles, my life is all about sharing laughs with my oversized cat and with
-					my amazing girlfriend. I also enjoy a good whiskey, and I'm always up for a chat or down
-					to help.
+					Currently, I work at <a
+						target="_blank"
+						rel="noreferrer"
+						class="font-medium underline underline-offset-4"
+						href="https://www.blender.org">Blender</a
+					>, creating free and open-source 3D software. I streamline the build, test, and release
+					processes for Blender and related services, aiming to improve both the user and developer
+					experience.
 				</p>
 			</div>
 

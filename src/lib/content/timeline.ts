@@ -21,6 +21,12 @@ export type TimelineItem = {
 
 const timeline: TimelineItem[] = [
 	{
+		title: 'DevOps Engineer',
+		subTitle: 'Blender',
+		icon: Briefcase,
+		startYear: 2021
+	},
+	{
 		title: 'Linux Foundation Certified Systems Administrator (LFCS)',
 		subTitle: 'The Linux Foundation',
 		icon: Badge,

@@ -47,7 +47,7 @@ importers:
     devDependencies:
       '@sveltejs/adapter-vercel':
         specifier: ^5.4.0
-        version: 5.4.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))
+        version: 5.4.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))
       '@sveltejs/kit':
         specifier: ^2.5.18
         version: 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9))
@@ -522,8 +522,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     hasBin: true
 
-  '@sveltejs/adapter-vercel@5.4.0':
-    resolution: {integrity: sha512-wVamxMvJkK793J2gMLO8/vlu29tzSZkMbFc594+GWTH0n6rheZ33orVYK2Cu3oDlDl/5A03YK+zaXYWxUUc0VA==}
+  '@sveltejs/adapter-vercel@5.4.1':
+    resolution: {integrity: sha512-JLcD1OgMnu9lQ8EssxVGxv7w0waWuyVzItTT1eqIH98Krufd9qfr1uC9zgo82z3dJ9v1AfPEbvIX5tonceg7XQ==}
     peerDependencies:
       '@sveltejs/kit': ^2.4.0
 
@@ -687,6 +687,11 @@ packages:
 
   acorn@8.12.0:
     resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.12.1:
+    resolution: {integrity: sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -2465,7 +2470,7 @@ snapshots:
       fflate: 0.7.4
       string.prototype.codepointat: 0.2.1
 
-  '@sveltejs/adapter-vercel@5.4.0(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))':
+  '@sveltejs/adapter-vercel@5.4.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))':
     dependencies:
       '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9))
       '@vercel/nft': 0.27.2
@@ -2627,8 +2632,8 @@ snapshots:
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11
       '@rollup/pluginutils': 4.2.1
-      acorn: 8.12.0
-      acorn-import-attributes: 1.9.5(acorn@8.12.0)
+      acorn: 8.12.1
+      acorn-import-attributes: 1.9.5(acorn@8.12.1)
       async-sema: 3.1.1
       bindings: 1.5.0
       estree-walker: 2.0.2
@@ -2648,15 +2653,17 @@ snapshots:
 
   abbrev@1.1.1: {}
 
-  acorn-import-attributes@1.9.5(acorn@8.12.0):
+  acorn-import-attributes@1.9.5(acorn@8.12.1):
     dependencies:
-      acorn: 8.12.0
+      acorn: 8.12.1
 
   acorn-jsx@5.3.2(acorn@8.12.0):
     dependencies:
       acorn: 8.12.0
 
   acorn@8.12.0: {}
+
+  acorn@8.12.1: {}
 
   agent-base@6.0.2:
     dependencies:

@@ -3,7 +3,6 @@ import Logo from './logo.svelte';
 import LogoIcon from '$lib/assets/logo-icon.png';
 import Github from './github.svelte';
 import Svelte from './svelte.svelte';
-import Vercel from './vercel.svelte';
 import LinkedIn from './linkedin.svelte';
 
 export type Icon = LucideIcon;
@@ -13,6 +12,5 @@ export const Icons = {
 	logoIcon: LogoIcon,
 	gitHub: Github,
 	svelte: Svelte,
-	vercel: Vercel,
 	linkedIn: LinkedIn
 };

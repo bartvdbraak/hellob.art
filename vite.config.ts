@@ -3,11 +3,7 @@ import { defineConfig } from 'vite';
 import fs from 'fs';
 
 export default defineConfig({
-	plugins: [base64(), rawFonts(['.woff']), sveltekit()],
-	define: {
-		'import.meta.env.VERCEL_URL': JSON.stringify(process.env.VERCEL_URL),
-		'import.meta.env.VERCEL_ENV': JSON.stringify(process.env.VERCEL_ENV)
-	}
+	plugins: [base64(), rawFonts(['.woff']), sveltekit()]
 });
 
 function rawFonts(ext: string[]) {

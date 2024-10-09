@@ -26,13 +26,13 @@
 			</div>
 			<Separator orientation="vertical" />
 			<div>
-				<span class="hidden sm:inline">Hosted on</span>
+				<span class="hidden sm:inline">Selfhosted with</span>
 				<Cloud class="inline h-[1rem] w-[1rem] sm:hidden" />
 				<a
-					href={siteConfig.links.vercel}
+					href={siteConfig.links.coolify}
 					target="_blank"
 					rel="noreferrer"
-					class="font-medium underline underline-offset-4">Vercel</a
+					class="font-medium underline underline-offset-4">Coolify</a
 				>
 			</div>
 			<Separator orientation="vertical" />

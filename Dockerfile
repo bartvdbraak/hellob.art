@@ -17,5 +17,5 @@ RUN pnpm install vite && pnpm run build
 FROM base
 COPY --from=prod /app/node_modules /app/node_modules
 COPY --from=prod /app/build /app/build
-EXPOSE 3000
+EXPOSE 8000
 CMD [ "node", "/app/build/index.js" ]

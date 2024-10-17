@@ -12,7 +12,7 @@ WORKDIR /app
 RUN pnpm fetch --prod
 
 COPY . /app
-RUN pnpm run build
+RUN pnpm install vite && pnpm run build
 
 FROM base
 COPY --from=prod /app/node_modules /app/node_modules

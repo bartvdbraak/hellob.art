@@ -16,6 +16,6 @@ RUN pnpm install vite && pnpm run build
 
 FROM base
 COPY --from=prod /app/node_modules /app/node_modules
-COPY --from=prod /app/dist /app/dist
+COPY --from=prod /app/build /app/build
 EXPOSE 8000
 CMD [ "pnpm", "preview", "--", "--port", "8000", "--host" ]

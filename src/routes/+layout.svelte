@@ -4,11 +4,6 @@
 	import '../styles/globals.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import { fly } from 'svelte/transition';
-	import { inject } from '@vercel/analytics';
-	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
-	inject({ mode: dev ? 'development' : 'production' });
-	injectSpeedInsights();
-
 	export let data;
 </script>
 

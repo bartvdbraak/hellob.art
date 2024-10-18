@@ -1,5 +1,4 @@
-const SITE_URL =
-	import.meta.env.VERCEL_ENV === 'preview' ? import.meta.env.VERCEL_URL : 'hellob.art';
+const SITE_URL = 'hellob.art';
 
 export const siteConfig = {
 	name: 'hellob.art',
@@ -14,7 +13,7 @@ export const siteConfig = {
 		gitHubProfile: 'https://github.com/bartvdbraak',
 		gitHubProject: 'https://github.com/bartvdbraak/hellob.art',
 		shadcnSvelte: 'https://www.shadcn-svelte.com/',
-		vercel: 'https://vercel.com/'
+		coolify: 'https://coolify.io/'
 	},
 	keywords: `Bart van der Braak,DevOps,Azure,Triple,Cloud`
 };

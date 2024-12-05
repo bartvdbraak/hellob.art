@@ -50,7 +50,7 @@
 		"satori": "^0.10.13",
 		"satori-html": "^0.3.2",
 		"tailwind-merge": "^2.3.0",
-		"tailwind-variants": "^0.2.1"
+		"tailwind-variants": "^0.3.0"
 	},
 	"lint-staged": {
 		"*.{js,ts,svelte,css,scss,postcss,md,json}": [

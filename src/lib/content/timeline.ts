@@ -24,7 +24,7 @@ const timeline: TimelineItem[] = [
 		title: 'DevOps Engineer',
 		subTitle: 'Blender',
 		icon: Briefcase,
-		startYear: 2021
+		startYear: 2024
 	},
 	{
 		title: 'Linux Foundation Certified Systems Administrator (LFCS)',

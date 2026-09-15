@@ -36,7 +36,7 @@
 		"tailwindcss": "^3.4.4",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.3",
-		"vite": "^5.3.2"
+		"vite": "^6.0.0"
 	},
 	"dependencies": {
 		"@resvg/resvg-js": "^2.6.2",
